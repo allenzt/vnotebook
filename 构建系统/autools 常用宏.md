@@ -101,3 +101,58 @@ bluez 定义在acinclude.m4 中
 
 ## 22. AC_ARG_ENABLE (FEATURE, HELP-STRING, [ACTION-IF-GIVEN],[ACTION-IF-NOT-GIVEN])
 --disable-FEATURE，在用户指定时运行ACTION-IF-GIVEN（可用shell变量enableval获取参数值，没有则yes或no），否则ACTION-IF-NOT-GIVEN
+也可以参考：[http://itren.xiaolee.net/p/1154093.html](http://itren.xiaolee.net/p/1154093.html)
+
+## 23. AC_CHECK_FUNC (FUNCTION, [ACTION-IF-FOUND], [ACTION-IF-NOT-FOUND]) 
+按C函数是否已声明做不同工作
+
+## 24. AC_CHECK_LIB (LIBRARY, FUNCTION, [ACTION-IF-FOUND], [ACTION-IF-NOT-FOUND], [OTHER-LIBRARIES])
+e.g. AC_CHECK_LIB(rt, clock_gettime, dummy=yes, AC_MSG_ERROR(realtime clock support is required)) 
+按是否存在库函数做不同事情
+
+## 25. PKG_CHECK_MODULES(prefix, list-of-modules, action-if-found, action-if-not-found)
+provides a very basic and easy way to check for the presence of a given package in the system. Nonetheless, there are some caveats that require attention when using the macro
+
+## 26. AC_SUBST (VARIABLE, [VALUE])
+AC_SUBST的目的，就是输出变量，使得后面的Makefile.am能用
+参考：[https://blog.csdn.net/jackred/article/details/5755527](https://blog.csdn.net/jackred/article/details/5755527)
+
+## 27. AC_DEFINE (VARIABLE, VALUE, [DESCRIPTION])
+定义C宏，一般会出现在config.h文件
+
+## 28. AC_ARG_WITH (PACKAGE, HELP-STRING, [ACTION-IF-GIVEN], [ACTION-IF-NOT-GIVEN])
+提供一个用户开关选项--with-PACKAGE和--without-PACKAGE，在用户指定时运行ACTION-IF-GIVEN（可用shell变量withval获取参数值，没有则yes或no），否则ACTION-IF-NOT-GIVEN
+
+## 29. AC_MSG_RESULT
+打印checking结果并另起新行
+
+## 30. AC_DEFINE_UNQUOTED (VARIABLE, VALUE, [DESCRIPTION])
+定义C宏（键值进行shell的变量、反引号和反斜杠替换）， 就是说value可以是shell变量引用
+
+## 31. AC_OUTPUT
+e.g. AC_OUTPUT(Makefile src/bluetoothd.8 lib/bluez.pc)
+关注其中的参数，请参考：[https://stackoom.com/question/3a83E/%E5%9C%A8AC-OUTPUT-%E7%9A%84%E5%8F%82%E6%95%B0%E4%B8%AD%E4%BD%BF%E7%94%A8PACKAGE-VERSION](https://stackoom.com/question/3a83E/在AC-OUTPUT-的参数中使用PACKAGE-VERSION)
+
+## 32. m4_include([m4/autotools_mythbuster.m4])
+The m4_include directive works quite like the #include directive of the C programming language, and simply copies over the content of the file
+
+## 33. AC_CONFIG_MACRO_DIR
+指定使用具体目录存放第三方宏，即一些m4宏没在默认搜索路径下，通常是在别的地方把宏拷到具体目录中（比如m4目录）
+e.g. AC_CONFIG_AUX_DIR([sntp/libevent/build-aux])
+AC_CONFIG_MACRO_DIR([m4])指定使用m4目录存放第三方宏；然后在最外层的Makefile.am中加入ACLOCAL_AMFLAGS = -I m4
+
+## 34. AC_PRESERVE_HELP_ORDER
+要求分栏--help格式，要在AC_ARG_ENABLE或AC_ARG_WITH前
+
+## 35. AC_CANONICAL_BUILD
+计算构建系统类型变量build，及其三个私有部分build_cpu, build_vendor, build_os。
+如果指定了选项--build，那么build是config.sub对build_alias的规范化；否则由shell脚本config.guess指定。
+如果使用这些宏，必须将config.guess于config.sub跟源码一起发布
+
+## 36. AC_CANONICAL_HOST
+同上
+
+## 37. AC_CANONICAL_TARGET
+同上
+
+## 38. AC_CACHE_CHECK
