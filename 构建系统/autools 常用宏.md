@@ -53,6 +53,7 @@ AC_LANG (language) ： Do compilation tests using the compiler, preprocessor, an
 寻找C编译器以决定CC变量的值
 
 ## 11. AC_PROG_CC_PIE
+```sh
 AC_DEFUN([AC_PROG_CC_PIE], [
 	AC_CACHE_CHECK([whether ${CC-cc} accepts -fPIE], ac_cv_prog_cc_pie, [
 		echo 'void f(){}' > conftest.c
@@ -64,6 +65,7 @@ AC_DEFUN([AC_PROG_CC_PIE], [
 		rm -rf conftest*
 	])
 ])
+```
 
 ## 12. AM_PROG_CC_C_O
 若C编译器不支持同时-c -o选项，则定义NO_MINUS_C_MINUS_O
@@ -155,4 +157,29 @@ AC_CONFIG_MACRO_DIR([m4])指定使用m4目录存放第三方宏；然后在最�
 ## 37. AC_CANONICAL_TARGET
 同上
 
-## 38. AC_CACHE_CHECK
+## 38. AC_CACHE_CHECK (MESSAGE, CACHE-ID, COMMANDS-TO-SET-IT)
+确保指定缓存结果存在
+e.g. 
+```sh
+AC_CACHE_CHECK(
+    [for struct rtattr],
+    [ntp_cv_rtattr],
+    [AC_COMPILE_IFELSE(
+    [AC_LANG_PROGRAM(
+        [[
+        #include <stddef.h>
+        #include <sys/socket.h>
+        #include <linux/rtnetlink.h>
+        ]],
+        [[
+        struct rtattr p;
+        ]]
+    )],
+    [ntp_cv_rtattr=yes],
+    [ntp_cv_rtattr=no]
+    )]
+)
+```
+
+## 39. AS_IF (test1, [run-if-true1], ..., [run-if-false])
+Run shell code test1. If test1 exits with a zero status then run shell code run-if-true1, else examine further tests. If no test exits with a zero status, run shell code run-if-false, with simplifications if either run-if-true1 or run-if-false is empty
