@@ -1,0 +1,1670 @@
+NAME="Ubuntu"
+VERSION="16.04.6 LTS (Xenial Xerus)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 16.04.6 LTS"
+VERSION_ID="16.04"
+HOME_URL="http://www.ubuntu.com/"
+SUPPORT_URL="http://help.ubuntu.com/"
+BUG_REPORT_URL="http://bugs.launchpad.net/ubuntu/"
+VERSION_CODENAME=xenial
+UBUNTU_CODENAME=xenial
+Get:1 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial InRelease [247 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports xenial InRelease [247 kB]
+Get:4 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [1143 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports xenial-updates InRelease [109 kB]
+Get:7 http://ports.ubuntu.com/ubuntu-ports xenial-backports InRelease [107 kB]
+Get:8 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]
+Get:9 http://ports.ubuntu.com/ubuntu-ports xenial-security InRelease [109 kB]
+Get:10 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages [12.7 kB]
+Get:11 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [631 kB]
+Ign:12 http://archive.ubuntu.com/ubuntu trusty InRelease
+Get:13 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages [1558 kB]
+Get:14 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages [6679 B]
+Ign:15 http://ports.ubuntu.com/ubuntu-ports trusty InRelease
+Get:16 http://ports.ubuntu.com/ubuntu-ports xenial/main armhf Packages [1486 kB]
+Get:17 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages [14.1 kB]
+Get:18 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages [9827 kB]
+Get:19 http://ports.ubuntu.com/ubuntu-ports xenial/restricted armhf Packages [8491 B]
+Get:20 http://ports.ubuntu.com/ubuntu-ports xenial/universe armhf Packages [9531 kB]
+Get:21 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages [176 kB]
+Get:22 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [1507 kB]
+Get:23 http://ports.ubuntu.com/ubuntu-ports xenial/multiverse armhf Packages [149 kB]
+Get:24 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf Packages [1080 kB]
+Get:25 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [13.1 kB]
+Get:26 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [1033 kB]
+Get:27 http://ports.ubuntu.com/ubuntu-ports xenial-updates/restricted armhf Packages [8488 B]
+Get:28 http://ports.ubuntu.com/ubuntu-ports xenial-updates/universe armhf Packages [926 kB]
+Get:29 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [19.7 kB]
+Get:30 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages [7942 B]
+Get:31 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages [9084 B]
+Get:32 http://ports.ubuntu.com/ubuntu-ports xenial-updates/multiverse armhf Packages [14.0 kB]
+Get:33 http://ports.ubuntu.com/ubuntu-ports xenial-backports/main armhf Packages [7936 B]
+Get:34 http://ports.ubuntu.com/ubuntu-ports xenial-backports/universe armhf Packages [8707 B]
+Get:35 http://ports.ubuntu.com/ubuntu-ports xenial-security/main armhf Packages [754 kB]
+Get:36 http://ports.ubuntu.com/ubuntu-ports xenial-security/restricted armhf Packages [8480 B]
+Get:37 http://ports.ubuntu.com/ubuntu-ports xenial-security/universe armhf Packages [553 kB]
+Get:38 http://ports.ubuntu.com/ubuntu-ports xenial-security/multiverse armhf Packages [3561 B]
+Get:39 http://archive.ubuntu.com/ubuntu trusty Release [58.5 kB]
+Get:40 http://ports.ubuntu.com/ubuntu-ports trusty Release [58.5 kB]
+Get:41 http://archive.ubuntu.com/ubuntu trusty Release.gpg [933 B]
+Get:42 http://ports.ubuntu.com/ubuntu-ports trusty Release.gpg [933 B]
+Get:43 http://archive.ubuntu.com/ubuntu trusty/main amd64 Packages [1743 kB]
+Get:44 http://ports.ubuntu.com/ubuntu-ports trusty/main armhf Packages [1672 kB]
+Get:45 http://archive.ubuntu.com/ubuntu trusty/universe amd64 Packages [7589 kB]
+Get:46 http://ports.ubuntu.com/ubuntu-ports trusty/universe armhf Packages [7393 kB]
+Fetched 50.2 MB in 6s (7652 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  libc-bin libc6 libseccomp2 multiarch-support
+4 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 3256 kB of archives.
+After this operation, 23.6 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libc6 amd64 2.23-0ubuntu11.2 [2584 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libc-bin amd64 2.23-0ubuntu11.2 [625 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libseccomp2 amd64 2.4.3-1ubuntu3.16.04.2 [39.8 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 multiarch-support amd64 2.23-0ubuntu11.2 [6828 B]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 3256 kB in 2s (1395 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4781 files and directories currently installed.)
+Preparing to unpack .../libc6_2.23-0ubuntu11.2_amd64.deb ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.22.1 /usr/local/share/perl/5.22.1 /usr/lib/x86_64-linux-gnu/perl5/5.22 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.22 /usr/share/perl/5.22 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Unpacking libc6:amd64 (2.23-0ubuntu11.2) over (2.23-0ubuntu11) ...
+Setting up libc6:amd64 (2.23-0ubuntu11.2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.22.1 /usr/local/share/perl/5.22.1 /usr/lib/x86_64-linux-gnu/perl5/5.22 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.22 /usr/share/perl/5.22 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Processing triggers for libc-bin (2.23-0ubuntu11) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4781 files and directories currently installed.)
+Preparing to unpack .../libc-bin_2.23-0ubuntu11.2_amd64.deb ...
+Unpacking libc-bin (2.23-0ubuntu11.2) over (2.23-0ubuntu11) ...
+Setting up libc-bin (2.23-0ubuntu11.2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4781 files and directories currently installed.)
+Preparing to unpack .../libseccomp2_2.4.3-1ubuntu3.16.04.2_amd64.deb ...
+Unpacking libseccomp2:amd64 (2.4.3-1ubuntu3.16.04.2) over (2.4.1-0ubuntu0.16.04.2) ...
+Processing triggers for libc-bin (2.23-0ubuntu11.2) ...
+Setting up libseccomp2:amd64 (2.4.3-1ubuntu3.16.04.2) ...
+Processing triggers for libc-bin (2.23-0ubuntu11.2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4781 files and directories currently installed.)
+Preparing to unpack .../multiarch-support_2.23-0ubuntu11.2_amd64.deb ...
+Unpacking multiarch-support (2.23-0ubuntu11.2) over (2.23-0ubuntu11) ...
+Setting up multiarch-support (2.23-0ubuntu11.2) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  autotools-dev binutils-arm-linux-gnueabihf bsdmainutils bzip2 cmake-data cpp
+  cpp-5 cpp-5-arm-linux-gnueabihf cpp-arm-linux-gnueabihf
+  dh-strip-nondeterminism dpkg-dev g++-5 g++-5-arm-linux-gnueabihf gcc-5
+  gcc-5-arm-linux-gnueabihf gcc-5-arm-linux-gnueabihf-base gcc-5-cross-base
+  gcc-6-base:armhf gettext gettext-base git-man groff-base intltool-debian
+  libarchive-zip-perl libarchive13 libasan2 libasan2-armhf-cross
+  libasn1-8-heimdal libasn1-8-heimdal:armhf libasprintf0v5 libatomic1
+  libatomic1-armhf-cross libc-dev-bin libc6:armhf libc6-armhf-cross libc6-dev
+  libc6-dev:armhf libc6-dev-armhf-cross libcc1-0 libcilkrts5 libcomerr2:armhf
+  libcroco3 libcurl3 libcurl3:armhf libcurl3-gnutls libdb5.3:armhf
+  libdpkg-perl liberror-perl libexpat1 libffi6 libffi6:armhf
+  libfile-stripnondeterminism-perl libgcc-5-dev libgcc-5-dev-armhf-cross
+  libgcc1:armhf libgcc1-armhf-cross libgdbm3 libglib2.0-0 libgmp10
+  libgmp10:armhf libgnutls30 libgnutls30:armhf libgomp1 libgomp1-armhf-cross
+  libgssapi-krb5-2 libgssapi-krb5-2:armhf libgssapi3-heimdal
+  libgssapi3-heimdal:armhf libhcrypto4-heimdal libhcrypto4-heimdal:armhf
+  libheimbase1-heimdal libheimbase1-heimdal:armhf libheimntlm0-heimdal
+  libheimntlm0-heimdal:armhf libhogweed4 libhogweed4:armhf libhx509-5-heimdal
+  libhx509-5-heimdal:armhf libicu55 libidn11 libidn11:armhf libisl15 libitm1
+  libjsoncpp1 libk5crypto3 libk5crypto3:armhf libkeyutils1 libkeyutils1:armhf
+  libkrb5-26-heimdal libkrb5-26-heimdal:armhf libkrb5-3 libkrb5-3:armhf
+  libkrb5support0 libkrb5support0:armhf libldap-2.4-2 libldap-2.4-2:armhf
+  liblsan0 liblzo2-2 libmagic1 libmpc3 libmpfr4 libmpx0 libnettle6
+  libnettle6:armhf libp11-kit0 libp11-kit0:armhf libperl5.22 libpipeline1
+  libquadmath0 libroken18-heimdal libroken18-heimdal:armhf librtmp1
+  librtmp1:armhf libsasl2-2 libsasl2-2:armhf libsasl2-modules-db
+  libsasl2-modules-db:armhf libsqlite3-0 libsqlite3-0:armhf libssl1.0.0
+  libssl1.0.0:armhf libstdc++-5-dev libstdc++-5-dev-armhf-cross
+  libstdc++6-armhf-cross libtasn1-6 libtasn1-6:armhf libtimedate-perl libtsan0
+  libubsan0 libubsan0-armhf-cross libunistring0 libuuid1:armhf
+  libwind0-heimdal libwind0-heimdal:armhf libxml2 linux-libc-dev
+  linux-libc-dev:armhf linux-libc-dev-armhf-cross man-db openssl patch perl
+  perl-modules-5.22 po-debconf xz-utils zlib1g:armhf zlib1g-dev:armhf
+Suggested packages:
+  binutils-doc wamerican | wordlist whois vacation bzip2-doc codeblocks
+  eclipse ninja-build cpp-doc gcc-5-locales dh-make augeas-tools
+  debian-keyring g++-multilib g++-5-multilib gcc-5-doc libstdc++6-5-dbg
+  g++-5-multilib-arm-linux-gnueabihf libstdc++6-5-dbg-armhf-cross gcc-multilib
+  manpages-dev autoconf automake libtool flex bison gdb gcc-doc gcc-5-multilib
+  libgcc1-dbg libgomp1-dbg libitm1-dbg libatomic1-dbg libasan2-dbg
+  liblsan0-dbg libtsan0-dbg libubsan0-dbg libcilkrts5-dbg libmpx0-dbg
+  libquadmath0-dbg gcc-5-multilib-arm-linux-gnueabihf libgcc1-dbg-armhf-cross
+  libgomp1-dbg-armhf-cross libitm1-dbg-armhf-cross libatomic1-dbg-armhf-cross
+  libasan2-dbg-armhf-cross liblsan0-dbg-armhf-cross libtsan0-dbg-armhf-cross
+  libubsan0-dbg-armhf-cross libcilkrts5-dbg-armhf-cross
+  libmpx0-dbg-armhf-cross libquadmath0-dbg-armhf-cross gdb-arm-linux-gnueabihf
+  gettext-doc autopoint git-daemon-run | git-daemon-sysvinit git-doc git-el
+  git-email git-gui gitk gitweb git-arch git-cvs git-mediawiki git-svn groff
+  lrzip glibc-doc:armhf locales:armhf glibc-doc manpages-dev:armhf
+  libcurl4-doc:armhf libcurl3-dbg:armhf libidn11-dev:armhf libkrb5-dev:armhf
+  libldap2-dev:armhf librtmp-dev:armhf pkg-config:armhf gnutls-bin
+  gnutls-bin:armhf krb5-doc krb5-user krb5-doc:armhf krb5-user:armhf
+  libstdc++-5-doc make-doc less www-browser ed diffutils-doc perl-doc
+  libterm-readline-gnu-perl | libterm-readline-perl-perl libmail-box-perl
+Recommended packages:
+  fakeroot libalgorithm-merge-perl libasprintf-dev libgettextpo-dev less rsync
+  ssh-client manpages manpages-dev libfile-fcntllock-perl libglib2.0-data
+  shared-mime-info xdg-user-dirs krb5-locales krb5-locales:armhf
+  libsasl2-modules libsasl2-modules:armhf libssl-doc:armhf uuid-runtime:armhf
+  xml-core netbase rename libmail-sendmail-perl
+The following NEW packages will be installed:
+  autotools-dev binutils binutils-arm-linux-gnueabihf bsdmainutils
+  build-essential bzip2 ca-certificates cmake cmake-data cpp cpp-5
+  cpp-5-arm-linux-gnueabihf cpp-arm-linux-gnueabihf curl debhelper
+  dh-strip-nondeterminism dh-systemd dpkg-dev file g++ g++-5
+  g++-5-arm-linux-gnueabihf g++-arm-linux-gnueabihf gcc gcc-5
+  gcc-5-arm-linux-gnueabihf gcc-5-arm-linux-gnueabihf-base gcc-5-cross-base
+  gcc-6-base:armhf gcc-arm-linux-gnueabihf gettext gettext-base git git-man
+  groff-base intltool-debian libarchive-zip-perl libarchive13 libasan2
+  libasan2-armhf-cross libasn1-8-heimdal libasn1-8-heimdal:armhf
+  libasprintf0v5 libatomic1 libatomic1-armhf-cross libc-dev-bin libc6:armhf
+  libc6-armhf-cross libc6-dev libc6-dev:armhf libc6-dev-armhf-cross libcc1-0
+  libcilkrts5 libcomerr2:armhf libcroco3 libcurl3 libcurl3:armhf
+  libcurl3-gnutls libcurl4-openssl-dev:armhf libdb5.3:armhf libdpkg-perl
+  liberror-perl libexpat1 libffi6 libffi6:armhf
+  libfile-stripnondeterminism-perl libgcc-5-dev libgcc-5-dev-armhf-cross
+  libgcc1:armhf libgcc1-armhf-cross libgdbm3 libglib2.0-0 libgmp10
+  libgmp10:armhf libgnutls30 libgnutls30:armhf libgomp1 libgomp1-armhf-cross
+  libgssapi-krb5-2 libgssapi-krb5-2:armhf libgssapi3-heimdal
+  libgssapi3-heimdal:armhf libhcrypto4-heimdal libhcrypto4-heimdal:armhf
+  libheimbase1-heimdal libheimbase1-heimdal:armhf libheimntlm0-heimdal
+  libheimntlm0-heimdal:armhf libhogweed4 libhogweed4:armhf libhx509-5-heimdal
+  libhx509-5-heimdal:armhf libicu55 libidn11 libidn11:armhf libisl15 libitm1
+  libjsoncpp1 libk5crypto3 libk5crypto3:armhf libkeyutils1 libkeyutils1:armhf
+  libkrb5-26-heimdal libkrb5-26-heimdal:armhf libkrb5-3 libkrb5-3:armhf
+  libkrb5support0 libkrb5support0:armhf libldap-2.4-2 libldap-2.4-2:armhf
+  liblsan0 liblzo2-2 libmagic1 libmpc3 libmpfr4 libmpx0 libnettle6
+  libnettle6:armhf libp11-kit0 libp11-kit0:armhf libperl5.22 libpipeline1
+  libquadmath0 libroken18-heimdal libroken18-heimdal:armhf librtmp1
+  librtmp1:armhf libsasl2-2 libsasl2-2:armhf libsasl2-modules-db
+  libsasl2-modules-db:armhf libsqlite3-0 libsqlite3-0:armhf libssl-dev:armhf
+  libssl1.0.0 libssl1.0.0:armhf libstdc++-5-dev libstdc++-5-dev-armhf-cross
+  libstdc++6-armhf-cross libtasn1-6 libtasn1-6:armhf libtimedate-perl libtsan0
+  libubsan0 libubsan0-armhf-cross libunistring0 libuuid1:armhf
+  libwind0-heimdal libwind0-heimdal:armhf libxml2 linux-libc-dev
+  linux-libc-dev:armhf linux-libc-dev-armhf-cross make man-db openssl patch
+  perl perl-modules-5.22 po-debconf uuid-dev:armhf xz-utils zlib1g:armhf
+  zlib1g-dev:armhf
+0 upgraded, 164 newly installed, 0 to remove and 0 not upgraded.
+Need to get 108 MB of archives.
+After this operation, 433 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports xenial/main armhf gcc-6-base armhf 6.0.1-0ubuntu1 [14.4 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgdbm3 amd64 1.8.3-13.1 [16.9 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports xenial/main armhf libgcc1 armhf 1:6.0.1-0ubuntu1 [38.6 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial/main amd64 libffi6 amd64 3.2.1-4 [17.8 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libglib2.0-0 amd64 2.48.2-0ubuntu4.6 [1120 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libc6 armhf 2.23-0ubuntu11.2 [2143 kB]
+Get:7 http://archive.ubuntu.com/ubuntu xenial/main amd64 groff-base amd64 1.22.3-7 [1151 kB]
+Get:8 http://archive.ubuntu.com/ubuntu xenial/main amd64 bsdmainutils amd64 9.0.6ubuntu3 [174 kB]
+Get:9 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpipeline1 amd64 1.4.1-2 [24.6 kB]
+Get:10 http://archive.ubuntu.com/ubuntu xenial/main amd64 man-db amd64 2.7.5-1 [854 kB]
+Get:11 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 cmake-data all 3.5.1-1ubuntu3 [1121 kB]
+Get:12 http://archive.ubuntu.com/ubuntu xenial/main amd64 liblzo2-2 amd64 2.08-1.2 [48.7 kB]
+Get:13 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libnettle6 amd64 3.2-1ubuntu0.16.04.1 [93.5 kB]
+Get:14 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libicu55 amd64 55.1-7ubuntu0.5 [7650 kB]
+Get:15 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libxml2 amd64 2.9.3+dfsg1-1ubuntu0.7 [698 kB]
+Get:16 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libarchive13 amd64 3.1.2-11ubuntu0.16.04.8 [262 kB]
+Get:17 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libkrb5support0 amd64 1.13.2+dfsg-5ubuntu2.1 [31.2 kB]
+Get:18 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libk5crypto3 amd64 1.13.2+dfsg-5ubuntu2.1 [81.3 kB]
+Get:19 http://archive.ubuntu.com/ubuntu xenial/main amd64 libkeyutils1 amd64 1.5.9-8ubuntu1 [9904 B]
+Get:20 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libkrb5-3 amd64 1.13.2+dfsg-5ubuntu2.1 [273 kB]
+Get:21 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgssapi-krb5-2 amd64 1.13.2+dfsg-5ubuntu2.1 [120 kB]
+Get:22 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libidn11 amd64 1.32-3ubuntu1.2 [46.5 kB]
+Get:23 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgmp10 amd64 2:6.1.0+dfsg-2 [240 kB]
+Get:24 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhogweed4 amd64 3.2-1ubuntu0.16.04.1 [136 kB]
+Get:25 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libp11-kit0 amd64 0.23.2-5~ubuntu16.04.1 [105 kB]
+Get:26 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtasn1-6 amd64 4.7-3ubuntu0.16.04.3 [43.5 kB]
+Get:27 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgnutls30 amd64 3.4.10-4ubuntu1.8 [548 kB]
+Get:28 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libroken18-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [41.4 kB]
+Get:29 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libasn1-8-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [174 kB]
+Get:30 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhcrypto4-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [85.0 kB]
+Get:31 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libheimbase1-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [29.3 kB]
+Get:32 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libwind0-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [47.8 kB]
+Get:33 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhx509-5-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [107 kB]
+Get:34 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libsqlite3-0 amd64 3.11.0-1ubuntu1.5 [398 kB]
+Get:35 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libkrb5-26-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [202 kB]
+Get:36 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libheimntlm0-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [15.1 kB]
+Get:37 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgssapi3-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [96.1 kB]
+Get:38 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libsasl2-modules-db amd64 2.1.26.dfsg1-14ubuntu0.2 [14.5 kB]
+Get:39 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libsasl2-2 amd64 2.1.26.dfsg1-14ubuntu0.2 [48.7 kB]
+Get:40 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libldap-2.4-2 amd64 2.4.42+dfsg-2ubuntu3.8 [159 kB]
+Get:41 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d-1ubuntu0.1 [54.4 kB]
+Get:42 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libssl1.0.0 amd64 1.0.2g-1ubuntu4.16 [1084 kB]
+Get:43 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcurl3 amd64 7.47.0-1ubuntu2.15 [186 kB]
+Get:44 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libexpat1 amd64 2.1.0-7ubuntu0.16.04.5 [71.5 kB]
+Get:45 http://archive.ubuntu.com/ubuntu xenial/main amd64 libjsoncpp1 amd64 1.7.2-1 [73.0 kB]
+Get:46 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 cmake amd64 3.5.1-1ubuntu3 [2623 kB]
+Get:47 http://archive.ubuntu.com/ubuntu xenial/main amd64 libunistring0 amd64 0.9.3-5.2ubuntu1 [279 kB]
+Get:48 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libcomerr2 armhf 1.42.13-1ubuntu1.2 [65.1 kB]
+Get:49 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libdb5.3 armhf 5.3.28-11ubuntu0.2 [590 kB]
+Get:50 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 perl-modules-5.22 all 5.22.1-9ubuntu0.6 [2629 kB]
+Get:51 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libperl5.22 amd64 5.22.1-9ubuntu0.6 [3405 kB]
+Get:52 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 perl amd64 5.22.1-9ubuntu0.6 [237 kB]
+Get:53 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmpfr4 amd64 3.1.4-1 [191 kB]
+Get:54 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmpc3 amd64 1.0.3-1 [39.7 kB]
+Get:55 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 bzip2 amd64 1.0.6-8ubuntu0.2 [32.5 kB]
+Get:56 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libmagic1 amd64 1:5.25-2ubuntu1.4 [216 kB]
+Get:57 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 file amd64 1:5.25-2ubuntu1.4 [21.2 kB]
+Get:58 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 openssl amd64 1.0.2g-1ubuntu4.16 [492 kB]
+Get:59 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 ca-certificates all 20190110~16.04.1 [146 kB]
+Get:60 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libasprintf0v5 amd64 0.19.7-2ubuntu3.1 [6568 B]
+Get:61 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libuuid1 armhf 2.27.1-6ubuntu3.10 [13.8 kB]
+Get:62 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 gettext-base amd64 0.19.7-2ubuntu3.1 [48.0 kB]
+Get:63 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcurl3-gnutls amd64 7.47.0-1ubuntu2.15 [184 kB]
+Get:64 http://archive.ubuntu.com/ubuntu xenial/main amd64 autotools-dev all 20150820.1 [39.8 kB]
+Get:65 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 binutils amd64 2.26.1-1ubuntu1~16.04.8 [2312 kB]
+Get:66 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf zlib1g armhf 1:1.2.8.dfsg-2ubuntu4.3 [45.7 kB]
+Get:67 http://ports.ubuntu.com/ubuntu-ports xenial/main armhf libffi6 armhf 3.2.1-4 [16.2 kB]
+Get:68 http://ports.ubuntu.com/ubuntu-ports xenial/main armhf libgmp10 armhf 2:6.1.0+dfsg-2 [184 kB]
+Get:69 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libc-dev-bin amd64 2.23-0ubuntu11.2 [68.8 kB]
+Get:70 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 linux-libc-dev amd64 4.4.0-185.215 [850 kB]
+Get:71 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libc6-dev amd64 2.23-0ubuntu11.2 [2083 kB]
+Get:72 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libnettle6 armhf 3.2-1ubuntu0.16.04.1 [111 kB]
+Get:73 http://archive.ubuntu.com/ubuntu xenial/main amd64 libisl15 amd64 0.16.1-1 [524 kB]
+Get:74 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libhogweed4 armhf 3.2-1ubuntu0.16.04.1 [126 kB]
+Get:75 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 cpp-5 amd64 5.4.0-6ubuntu1~16.04.12 [7783 kB]
+Get:76 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libidn11 armhf 1.32-3ubuntu1.2 [43.1 kB]
+Get:77 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libp11-kit0 armhf 0.23.2-5~ubuntu16.04.1 [91.0 kB]
+Get:78 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libtasn1-6 armhf 4.7-3ubuntu0.16.04.3 [37.9 kB]
+Get:79 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libgnutls30 armhf 3.4.10-4ubuntu1.8 [487 kB]
+Get:80 http://archive.ubuntu.com/ubuntu xenial/main amd64 cpp amd64 4:5.3.1-1ubuntu1 [27.7 kB]
+Get:81 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcc1-0 amd64 5.4.0-6ubuntu1~16.04.12 [38.8 kB]
+Get:82 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgomp1 amd64 5.4.0-6ubuntu1~16.04.12 [55.2 kB]
+Get:83 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libitm1 amd64 5.4.0-6ubuntu1~16.04.12 [27.4 kB]
+Get:84 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libatomic1 amd64 5.4.0-6ubuntu1~16.04.12 [8892 B]
+Get:85 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libasan2 amd64 5.4.0-6ubuntu1~16.04.12 [265 kB]
+Get:86 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 liblsan0 amd64 5.4.0-6ubuntu1~16.04.12 [105 kB]
+Get:87 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtsan0 amd64 5.4.0-6ubuntu1~16.04.12 [244 kB]
+Get:88 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libubsan0 amd64 5.4.0-6ubuntu1~16.04.12 [95.3 kB]
+Get:89 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcilkrts5 amd64 5.4.0-6ubuntu1~16.04.12 [40.0 kB]
+Get:90 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libmpx0 amd64 5.4.0-6ubuntu1~16.04.12 [9762 B]
+Get:91 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libquadmath0 amd64 5.4.0-6ubuntu1~16.04.12 [131 kB]
+Get:92 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgcc-5-dev amd64 5.4.0-6ubuntu1~16.04.12 [2239 kB]
+Get:93 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 gcc-5 amd64 5.4.0-6ubuntu1~16.04.12 [8612 kB]
+Get:94 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libsqlite3-0 armhf 3.11.0-1ubuntu1.5 [339 kB]
+Get:95 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libssl1.0.0 armhf 1.0.2g-1ubuntu4.16 [712 kB]
+Get:96 http://archive.ubuntu.com/ubuntu xenial/main amd64 gcc amd64 4:5.3.1-1ubuntu1 [5244 B]
+Get:97 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libstdc++-5-dev amd64 5.4.0-6ubuntu1~16.04.12 [1428 kB]
+Get:98 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 g++-5 amd64 5.4.0-6ubuntu1~16.04.12 [8430 kB]
+Get:99 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libroken18-heimdal armhf 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [34.1 kB]
+Get:100 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libasn1-8-heimdal armhf 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [138 kB]
+Get:101 http://archive.ubuntu.com/ubuntu xenial/main amd64 g++ amd64 4:5.3.1-1ubuntu1 [1504 B]
+Get:102 http://archive.ubuntu.com/ubuntu xenial/main amd64 make amd64 4.1-6 [151 kB]
+Get:103 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdpkg-perl all 1.18.4ubuntu1.6 [195 kB]
+Get:104 http://archive.ubuntu.com/ubuntu xenial/main amd64 xz-utils amd64 5.1.1alpha+20120614-2ubuntu2 [78.8 kB]
+Get:105 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 patch amd64 2.7.5-1ubuntu0.16.04.2 [90.8 kB]
+Get:106 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 dpkg-dev all 1.18.4ubuntu1.6 [584 kB]
+Get:107 http://archive.ubuntu.com/ubuntu xenial/main amd64 build-essential amd64 12.1ubuntu2 [4758 B]
+Get:108 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 gcc-5-arm-linux-gnueabihf-base amd64 5.4.0-6ubuntu1~16.04.9cross1 [25.0 kB]
+Get:109 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 cpp-5-arm-linux-gnueabihf amd64 5.4.0-6ubuntu1~16.04.9cross1 [5575 kB]
+Get:110 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libkrb5support0 armhf 1.13.2+dfsg-5ubuntu2.1 [27.5 kB]
+Get:111 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libk5crypto3 armhf 1.13.2+dfsg-5ubuntu2.1 [77.6 kB]
+Get:112 http://ports.ubuntu.com/ubuntu-ports xenial/main armhf libkeyutils1 armhf 1.5.9-8ubuntu1 [9192 B]
+Get:113 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libkrb5-3 armhf 1.13.2+dfsg-5ubuntu2.1 [230 kB]
+Get:114 http://archive.ubuntu.com/ubuntu xenial/main amd64 cpp-arm-linux-gnueabihf amd64 4:5.3.1-1ubuntu1 [3446 B]
+Get:115 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 curl amd64 7.47.0-1ubuntu2.15 [139 kB]
+Get:116 http://archive.ubuntu.com/ubuntu xenial/main amd64 libcroco3 amd64 0.6.11-1 [81.6 kB]
+Get:117 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 gettext amd64 0.19.7-2ubuntu3.1 [1082 kB]
+Get:118 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libgssapi-krb5-2 armhf 1.13.2+dfsg-5ubuntu2.1 [98.8 kB]
+Get:119 http://archive.ubuntu.com/ubuntu xenial/main amd64 intltool-debian all 0.35.0+20060710.4 [24.9 kB]
+Get:120 http://archive.ubuntu.com/ubuntu xenial/main amd64 po-debconf all 1.0.19 [234 kB]
+Get:121 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libarchive-zip-perl all 1.56-2ubuntu0.1 [84.7 kB]
+Get:122 http://archive.ubuntu.com/ubuntu xenial/main amd64 libfile-stripnondeterminism-perl all 0.015-1 [10.3 kB]
+Get:123 http://archive.ubuntu.com/ubuntu xenial/main amd64 libtimedate-perl all 2.3000-2 [37.5 kB]
+Get:124 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libhcrypto4-heimdal armhf 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [75.7 kB]
+Get:125 http://archive.ubuntu.com/ubuntu xenial/main amd64 dh-strip-nondeterminism all 0.015-1 [4864 B]
+Get:126 http://archive.ubuntu.com/ubuntu xenial/main amd64 debhelper all 9.20160115ubuntu3 [739 kB]
+Get:127 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libheimbase1-heimdal armhf 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [24.0 kB]
+Get:128 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libwind0-heimdal armhf 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [47.0 kB]
+Get:129 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libhx509-5-heimdal armhf 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [88.4 kB]
+Get:130 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libkrb5-26-heimdal armhf 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [164 kB]
+Get:131 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libheimntlm0-heimdal armhf 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [13.4 kB]
+Get:132 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libgssapi3-heimdal armhf 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [78.5 kB]
+Get:133 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libsasl2-modules-db armhf 2.1.26.dfsg1-14ubuntu0.2 [13.0 kB]
+Get:134 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libsasl2-2 armhf 2.1.26.dfsg1-14ubuntu0.2 [42.0 kB]
+Get:135 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libldap-2.4-2 armhf 2.4.42+dfsg-2ubuntu3.8 [136 kB]
+Get:136 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf librtmp1 armhf 2.4+20151223.gitfa8646d-1ubuntu0.1 [49.4 kB]
+Get:137 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf linux-libc-dev armhf 4.4.0-185.215 [833 kB]
+Get:138 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 binutils-arm-linux-gnueabihf amd64 2.26.1-1ubuntu1~16.04.8 [2497 kB]
+Get:139 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libc6-dev armhf 2.23-0ubuntu11.2 [1643 kB]
+Get:140 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libcurl3 armhf 7.47.0-1ubuntu2.15 [162 kB]
+Get:141 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 gcc-5-cross-base all 5.4.0-6ubuntu1~16.04.9cross1 [17.7 kB]
+Get:142 http://archive.ubuntu.com/ubuntu xenial/main amd64 libc6-armhf-cross all 2.23-0ubuntu3cross1 [955 kB]
+Get:143 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgcc1-armhf-cross all 1:5.4.0-6ubuntu1~16.04.9cross1 [34.9 kB]
+Get:144 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgomp1-armhf-cross all 5.4.0-6ubuntu1~16.04.9cross1 [48.6 kB]
+Get:145 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libatomic1-armhf-cross all 5.4.0-6ubuntu1~16.04.9cross1 [5904 B]
+Get:146 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libasan2-armhf-cross all 5.4.0-6ubuntu1~16.04.9cross1 [233 kB]
+Get:147 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libcurl4-openssl-dev armhf 7.47.0-1ubuntu2.15 [241 kB]
+Get:148 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libstdc++6-armhf-cross all 5.4.0-6ubuntu1~16.04.9cross1 [309 kB]
+Get:149 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libubsan0-armhf-cross all 5.4.0-6ubuntu1~16.04.9cross1 [83.9 kB]
+Get:150 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgcc-5-dev-armhf-cross all 5.4.0-6ubuntu1~16.04.9cross1 [473 kB]
+Get:151 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 gcc-5-arm-linux-gnueabihf amd64 5.4.0-6ubuntu1~16.04.9cross1 [6468 kB]
+Get:152 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf zlib1g-dev armhf 1:1.2.8.dfsg-2ubuntu4.3 [161 kB]
+Get:153 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf libssl-dev armhf 1.0.2g-1ubuntu4.16 [984 kB]
+Get:154 http://archive.ubuntu.com/ubuntu xenial/main amd64 gcc-arm-linux-gnueabihf amd64 4:5.3.1-1ubuntu1 [1310 B]
+Get:155 http://archive.ubuntu.com/ubuntu xenial/main amd64 linux-libc-dev-armhf-cross all 4.4.0-18.34cross1 [733 kB]
+Get:156 http://archive.ubuntu.com/ubuntu xenial/main amd64 libc6-dev-armhf-cross all 2.23-0ubuntu3cross1 [1643 kB]
+Get:157 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libstdc++-5-dev-armhf-cross all 5.4.0-6ubuntu1~16.04.9cross1 [1439 kB]
+Get:158 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 g++-5-arm-linux-gnueabihf amd64 5.4.0-6ubuntu1~16.04.9cross1 [6010 kB]
+Get:159 http://ports.ubuntu.com/ubuntu-ports xenial-updates/main armhf uuid-dev armhf 2.27.1-6ubuntu3.10 [25.7 kB]
+Get:160 http://archive.ubuntu.com/ubuntu xenial/main amd64 g++-arm-linux-gnueabihf amd64 4:5.3.1-1ubuntu1 [1028 B]
+Get:161 http://archive.ubuntu.com/ubuntu xenial/main amd64 liberror-perl all 0.17-1.2 [19.6 kB]
+Get:162 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 git-man all 1:2.7.4-0ubuntu1.9 [736 kB]
+Get:163 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 git amd64 1:2.7.4-0ubuntu1.9 [3176 kB]
+Get:164 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 dh-systemd all 1.29ubuntu4 [18.0 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 108 MB in 14s (7507 kB/s)
+Selecting previously unselected package libgdbm3:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4781 files and directories currently installed.)
+Preparing to unpack .../libgdbm3_1.8.3-13.1_amd64.deb ...
+Unpacking libgdbm3:amd64 (1.8.3-13.1) ...
+Selecting previously unselected package libffi6:amd64.
+Preparing to unpack .../libffi6_3.2.1-4_amd64.deb ...
+Unpacking libffi6:amd64 (3.2.1-4) ...
+Selecting previously unselected package libglib2.0-0:amd64.
+Preparing to unpack .../libglib2.0-0_2.48.2-0ubuntu4.6_amd64.deb ...
+Unpacking libglib2.0-0:amd64 (2.48.2-0ubuntu4.6) ...
+Selecting previously unselected package groff-base.
+Preparing to unpack .../groff-base_1.22.3-7_amd64.deb ...
+Unpacking groff-base (1.22.3-7) ...
+Selecting previously unselected package bsdmainutils.
+Preparing to unpack .../bsdmainutils_9.0.6ubuntu3_amd64.deb ...
+Unpacking bsdmainutils (9.0.6ubuntu3) ...
+Selecting previously unselected package libpipeline1:amd64.
+Preparing to unpack .../libpipeline1_1.4.1-2_amd64.deb ...
+Unpacking libpipeline1:amd64 (1.4.1-2) ...
+Selecting previously unselected package man-db.
+Preparing to unpack .../man-db_2.7.5-1_amd64.deb ...
+Unpacking man-db (2.7.5-1) ...
+Selecting previously unselected package cmake-data.
+Preparing to unpack .../cmake-data_3.5.1-1ubuntu3_all.deb ...
+Unpacking cmake-data (3.5.1-1ubuntu3) ...
+Selecting previously unselected package liblzo2-2:amd64.
+Preparing to unpack .../liblzo2-2_2.08-1.2_amd64.deb ...
+Unpacking liblzo2-2:amd64 (2.08-1.2) ...
+Selecting previously unselected package libnettle6:amd64.
+Preparing to unpack .../libnettle6_3.2-1ubuntu0.16.04.1_amd64.deb ...
+Unpacking libnettle6:amd64 (3.2-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libicu55:amd64.
+Preparing to unpack .../libicu55_55.1-7ubuntu0.5_amd64.deb ...
+Unpacking libicu55:amd64 (55.1-7ubuntu0.5) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../libxml2_2.9.3+dfsg1-1ubuntu0.7_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.3+dfsg1-1ubuntu0.7) ...
+Selecting previously unselected package libarchive13:amd64.
+Preparing to unpack .../libarchive13_3.1.2-11ubuntu0.16.04.8_amd64.deb ...
+Unpacking libarchive13:amd64 (3.1.2-11ubuntu0.16.04.8) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../libkrb5support0_1.13.2+dfsg-5ubuntu2.1_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.13.2+dfsg-5ubuntu2.1) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../libk5crypto3_1.13.2+dfsg-5ubuntu2.1_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.13.2+dfsg-5ubuntu2.1) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../libkeyutils1_1.5.9-8ubuntu1_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.5.9-8ubuntu1) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../libkrb5-3_1.13.2+dfsg-5ubuntu2.1_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.13.2+dfsg-5ubuntu2.1) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../libgssapi-krb5-2_1.13.2+dfsg-5ubuntu2.1_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.13.2+dfsg-5ubuntu2.1) ...
+Selecting previously unselected package libidn11:amd64.
+Preparing to unpack .../libidn11_1.32-3ubuntu1.2_amd64.deb ...
+Unpacking libidn11:amd64 (1.32-3ubuntu1.2) ...
+Selecting previously unselected package libgmp10:amd64.
+Preparing to unpack .../libgmp10_2%3a6.1.0+dfsg-2_amd64.deb ...
+Unpacking libgmp10:amd64 (2:6.1.0+dfsg-2) ...
+Selecting previously unselected package libhogweed4:amd64.
+Preparing to unpack .../libhogweed4_3.2-1ubuntu0.16.04.1_amd64.deb ...
+Unpacking libhogweed4:amd64 (3.2-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libp11-kit0:amd64.
+Preparing to unpack .../libp11-kit0_0.23.2-5~ubuntu16.04.1_amd64.deb ...
+Unpacking libp11-kit0:amd64 (0.23.2-5~ubuntu16.04.1) ...
+Selecting previously unselected package libtasn1-6:amd64.
+Preparing to unpack .../libtasn1-6_4.7-3ubuntu0.16.04.3_amd64.deb ...
+Unpacking libtasn1-6:amd64 (4.7-3ubuntu0.16.04.3) ...
+Selecting previously unselected package libgnutls30:amd64.
+Preparing to unpack .../libgnutls30_3.4.10-4ubuntu1.8_amd64.deb ...
+Unpacking libgnutls30:amd64 (3.4.10-4ubuntu1.8) ...
+Selecting previously unselected package libroken18-heimdal:amd64.
+Preparing to unpack .../libroken18-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libroken18-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libasn1-8-heimdal:amd64.
+Preparing to unpack .../libasn1-8-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libasn1-8-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libhcrypto4-heimdal:amd64.
+Preparing to unpack .../libhcrypto4-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libhcrypto4-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libheimbase1-heimdal:amd64.
+Preparing to unpack .../libheimbase1-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libheimbase1-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libwind0-heimdal:amd64.
+Preparing to unpack .../libwind0-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libwind0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libhx509-5-heimdal:amd64.
+Preparing to unpack .../libhx509-5-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libhx509-5-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libsqlite3-0:amd64.
+Preparing to unpack .../libsqlite3-0_3.11.0-1ubuntu1.5_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.11.0-1ubuntu1.5) ...
+Selecting previously unselected package libkrb5-26-heimdal:amd64.
+Preparing to unpack .../libkrb5-26-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libkrb5-26-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libheimntlm0-heimdal:amd64.
+Preparing to unpack .../libheimntlm0-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libheimntlm0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libgssapi3-heimdal:amd64.
+Preparing to unpack .../libgssapi3-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libgssapi3-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../libsasl2-modules-db_2.1.26.dfsg1-14ubuntu0.2_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.26.dfsg1-14ubuntu0.2) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../libsasl2-2_2.1.26.dfsg1-14ubuntu0.2_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.26.dfsg1-14ubuntu0.2) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../libldap-2.4-2_2.4.42+dfsg-2ubuntu3.8_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.8) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../librtmp1_2.4+20151223.gitfa8646d-1ubuntu0.1_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d-1ubuntu0.1) ...
+Selecting previously unselected package libssl1.0.0:amd64.
+Preparing to unpack .../libssl1.0.0_1.0.2g-1ubuntu4.16_amd64.deb ...
+Unpacking libssl1.0.0:amd64 (1.0.2g-1ubuntu4.16) ...
+Selecting previously unselected package libcurl3:amd64.
+Preparing to unpack .../libcurl3_7.47.0-1ubuntu2.15_amd64.deb ...
+Unpacking libcurl3:amd64 (7.47.0-1ubuntu2.15) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../libexpat1_2.1.0-7ubuntu0.16.04.5_amd64.deb ...
+Unpacking libexpat1:amd64 (2.1.0-7ubuntu0.16.04.5) ...
+Selecting previously unselected package libjsoncpp1:amd64.
+Preparing to unpack .../libjsoncpp1_1.7.2-1_amd64.deb ...
+Unpacking libjsoncpp1:amd64 (1.7.2-1) ...
+Selecting previously unselected package cmake.
+Preparing to unpack .../cmake_3.5.1-1ubuntu3_amd64.deb ...
+Unpacking cmake (3.5.1-1ubuntu3) ...
+Selecting previously unselected package libunistring0:amd64.
+Preparing to unpack .../libunistring0_0.9.3-5.2ubuntu1_amd64.deb ...
+Unpacking libunistring0:amd64 (0.9.3-5.2ubuntu1) ...
+Selecting previously unselected package perl-modules-5.22.
+Preparing to unpack .../perl-modules-5.22_5.22.1-9ubuntu0.6_all.deb ...
+Unpacking perl-modules-5.22 (5.22.1-9ubuntu0.6) ...
+Selecting previously unselected package libperl5.22:amd64.
+Preparing to unpack .../libperl5.22_5.22.1-9ubuntu0.6_amd64.deb ...
+Unpacking libperl5.22:amd64 (5.22.1-9ubuntu0.6) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../perl_5.22.1-9ubuntu0.6_amd64.deb ...
+Unpacking perl (5.22.1-9ubuntu0.6) ...
+Selecting previously unselected package libmpfr4:amd64.
+Preparing to unpack .../libmpfr4_3.1.4-1_amd64.deb ...
+Unpacking libmpfr4:amd64 (3.1.4-1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../libmpc3_1.0.3-1_amd64.deb ...
+Unpacking libmpc3:amd64 (1.0.3-1) ...
+Selecting previously unselected package gcc-6-base:armhf.
+Preparing to unpack .../gcc-6-base_6.0.1-0ubuntu1_armhf.deb ...
+Unpacking gcc-6-base:armhf (6.0.1-0ubuntu1) ...
+Selecting previously unselected package libgcc1:armhf.
+Preparing to unpack .../libgcc1_1%3a6.0.1-0ubuntu1_armhf.deb ...
+Unpacking libgcc1:armhf (1:6.0.1-0ubuntu1) ...
+Selecting previously unselected package libc6:armhf.
+Preparing to unpack .../libc6_2.23-0ubuntu11.2_armhf.deb ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Unpacking libc6:armhf (2.23-0ubuntu11.2) ...
+Selecting previously unselected package libcomerr2:armhf.
+Preparing to unpack .../libcomerr2_1.42.13-1ubuntu1.2_armhf.deb ...
+Unpacking libcomerr2:armhf (1.42.13-1ubuntu1.2) ...
+Selecting previously unselected package libdb5.3:armhf.
+Preparing to unpack .../libdb5.3_5.3.28-11ubuntu0.2_armhf.deb ...
+Unpacking libdb5.3:armhf (5.3.28-11ubuntu0.2) ...
+Selecting previously unselected package libuuid1:armhf.
+Preparing to unpack .../libuuid1_2.27.1-6ubuntu3.10_armhf.deb ...
+Unpacking libuuid1:armhf (2.27.1-6ubuntu3.10) ...
+Selecting previously unselected package zlib1g:armhf.
+Preparing to unpack .../zlib1g_1%3a1.2.8.dfsg-2ubuntu4.3_armhf.deb ...
+Unpacking zlib1g:armhf (1:1.2.8.dfsg-2ubuntu4.3) ...
+Selecting previously unselected package bzip2.
+Preparing to unpack .../bzip2_1.0.6-8ubuntu0.2_amd64.deb ...
+Unpacking bzip2 (1.0.6-8ubuntu0.2) ...
+Selecting previously unselected package libmagic1:amd64.
+Preparing to unpack .../libmagic1_1%3a5.25-2ubuntu1.4_amd64.deb ...
+Unpacking libmagic1:amd64 (1:5.25-2ubuntu1.4) ...
+Selecting previously unselected package file.
+Preparing to unpack .../file_1%3a5.25-2ubuntu1.4_amd64.deb ...
+Unpacking file (1:5.25-2ubuntu1.4) ...
+Selecting previously unselected package libffi6:armhf.
+Preparing to unpack .../libffi6_3.2.1-4_armhf.deb ...
+Unpacking libffi6:armhf (3.2.1-4) ...
+Selecting previously unselected package libgmp10:armhf.
+Preparing to unpack .../libgmp10_2%3a6.1.0+dfsg-2_armhf.deb ...
+Unpacking libgmp10:armhf (2:6.1.0+dfsg-2) ...
+Selecting previously unselected package libnettle6:armhf.
+Preparing to unpack .../libnettle6_3.2-1ubuntu0.16.04.1_armhf.deb ...
+Unpacking libnettle6:armhf (3.2-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libhogweed4:armhf.
+Preparing to unpack .../libhogweed4_3.2-1ubuntu0.16.04.1_armhf.deb ...
+Unpacking libhogweed4:armhf (3.2-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libidn11:armhf.
+Preparing to unpack .../libidn11_1.32-3ubuntu1.2_armhf.deb ...
+Unpacking libidn11:armhf (1.32-3ubuntu1.2) ...
+Selecting previously unselected package libp11-kit0:armhf.
+Preparing to unpack .../libp11-kit0_0.23.2-5~ubuntu16.04.1_armhf.deb ...
+Unpacking libp11-kit0:armhf (0.23.2-5~ubuntu16.04.1) ...
+Selecting previously unselected package libtasn1-6:armhf.
+Preparing to unpack .../libtasn1-6_4.7-3ubuntu0.16.04.3_armhf.deb ...
+Unpacking libtasn1-6:armhf (4.7-3ubuntu0.16.04.3) ...
+Selecting previously unselected package libgnutls30:armhf.
+Preparing to unpack .../libgnutls30_3.4.10-4ubuntu1.8_armhf.deb ...
+Unpacking libgnutls30:armhf (3.4.10-4ubuntu1.8) ...
+Selecting previously unselected package libsqlite3-0:armhf.
+Preparing to unpack .../libsqlite3-0_3.11.0-1ubuntu1.5_armhf.deb ...
+Unpacking libsqlite3-0:armhf (3.11.0-1ubuntu1.5) ...
+Selecting previously unselected package libssl1.0.0:armhf.
+Preparing to unpack .../libssl1.0.0_1.0.2g-1ubuntu4.16_armhf.deb ...
+Unpacking libssl1.0.0:armhf (1.0.2g-1ubuntu4.16) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../openssl_1.0.2g-1ubuntu4.16_amd64.deb ...
+Unpacking openssl (1.0.2g-1ubuntu4.16) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../ca-certificates_20190110~16.04.1_all.deb ...
+Unpacking ca-certificates (20190110~16.04.1) ...
+Selecting previously unselected package libasprintf0v5:amd64.
+Preparing to unpack .../libasprintf0v5_0.19.7-2ubuntu3.1_amd64.deb ...
+Unpacking libasprintf0v5:amd64 (0.19.7-2ubuntu3.1) ...
+Selecting previously unselected package gettext-base.
+Preparing to unpack .../gettext-base_0.19.7-2ubuntu3.1_amd64.deb ...
+Unpacking gettext-base (0.19.7-2ubuntu3.1) ...
+Selecting previously unselected package libroken18-heimdal:armhf.
+Preparing to unpack .../libroken18-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_armhf.deb ...
+Unpacking libroken18-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libasn1-8-heimdal:armhf.
+Preparing to unpack .../libasn1-8-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_armhf.deb ...
+Unpacking libasn1-8-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libcurl3-gnutls:amd64.
+Preparing to unpack .../libcurl3-gnutls_7.47.0-1ubuntu2.15_amd64.deb ...
+Unpacking libcurl3-gnutls:amd64 (7.47.0-1ubuntu2.15) ...
+Selecting previously unselected package libkrb5support0:armhf.
+Preparing to unpack .../libkrb5support0_1.13.2+dfsg-5ubuntu2.1_armhf.deb ...
+Unpacking libkrb5support0:armhf (1.13.2+dfsg-5ubuntu2.1) ...
+Selecting previously unselected package libk5crypto3:armhf.
+Preparing to unpack .../libk5crypto3_1.13.2+dfsg-5ubuntu2.1_armhf.deb ...
+Unpacking libk5crypto3:armhf (1.13.2+dfsg-5ubuntu2.1) ...
+Selecting previously unselected package libkeyutils1:armhf.
+Preparing to unpack .../libkeyutils1_1.5.9-8ubuntu1_armhf.deb ...
+Unpacking libkeyutils1:armhf (1.5.9-8ubuntu1) ...
+Selecting previously unselected package libkrb5-3:armhf.
+Preparing to unpack .../libkrb5-3_1.13.2+dfsg-5ubuntu2.1_armhf.deb ...
+Unpacking libkrb5-3:armhf (1.13.2+dfsg-5ubuntu2.1) ...
+Selecting previously unselected package libgssapi-krb5-2:armhf.
+Preparing to unpack .../libgssapi-krb5-2_1.13.2+dfsg-5ubuntu2.1_armhf.deb ...
+Unpacking libgssapi-krb5-2:armhf (1.13.2+dfsg-5ubuntu2.1) ...
+Selecting previously unselected package libhcrypto4-heimdal:armhf.
+Preparing to unpack .../libhcrypto4-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_armhf.deb ...
+Unpacking libhcrypto4-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libheimbase1-heimdal:armhf.
+Preparing to unpack .../libheimbase1-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_armhf.deb ...
+Unpacking libheimbase1-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libwind0-heimdal:armhf.
+Preparing to unpack .../libwind0-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_armhf.deb ...
+Unpacking libwind0-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libhx509-5-heimdal:armhf.
+Preparing to unpack .../libhx509-5-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_armhf.deb ...
+Unpacking libhx509-5-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libkrb5-26-heimdal:armhf.
+Preparing to unpack .../libkrb5-26-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_armhf.deb ...
+Unpacking libkrb5-26-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libheimntlm0-heimdal:armhf.
+Preparing to unpack .../libheimntlm0-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_armhf.deb ...
+Unpacking libheimntlm0-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libgssapi3-heimdal:armhf.
+Preparing to unpack .../libgssapi3-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_armhf.deb ...
+Unpacking libgssapi3-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libsasl2-modules-db:armhf.
+Preparing to unpack .../libsasl2-modules-db_2.1.26.dfsg1-14ubuntu0.2_armhf.deb ...
+Unpacking libsasl2-modules-db:armhf (2.1.26.dfsg1-14ubuntu0.2) ...
+Selecting previously unselected package libsasl2-2:armhf.
+Preparing to unpack .../libsasl2-2_2.1.26.dfsg1-14ubuntu0.2_armhf.deb ...
+Unpacking libsasl2-2:armhf (2.1.26.dfsg1-14ubuntu0.2) ...
+Selecting previously unselected package libldap-2.4-2:armhf.
+Preparing to unpack .../libldap-2.4-2_2.4.42+dfsg-2ubuntu3.8_armhf.deb ...
+Unpacking libldap-2.4-2:armhf (2.4.42+dfsg-2ubuntu3.8) ...
+Selecting previously unselected package librtmp1:armhf.
+Preparing to unpack .../librtmp1_2.4+20151223.gitfa8646d-1ubuntu0.1_armhf.deb ...
+Unpacking librtmp1:armhf (2.4+20151223.gitfa8646d-1ubuntu0.1) ...
+Selecting previously unselected package autotools-dev.
+Preparing to unpack .../autotools-dev_20150820.1_all.deb ...
+Unpacking autotools-dev (20150820.1) ...
+Selecting previously unselected package binutils.
+Preparing to unpack .../binutils_2.26.1-1ubuntu1~16.04.8_amd64.deb ...
+Unpacking binutils (2.26.1-1ubuntu1~16.04.8) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../libc-dev-bin_2.23-0ubuntu11.2_amd64.deb ...
+Unpacking libc-dev-bin (2.23-0ubuntu11.2) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../linux-libc-dev_4.4.0-185.215_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (4.4.0-185.215) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../libc6-dev_2.23-0ubuntu11.2_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.23-0ubuntu11.2) ...
+Selecting previously unselected package libisl15:amd64.
+Preparing to unpack .../libisl15_0.16.1-1_amd64.deb ...
+Unpacking libisl15:amd64 (0.16.1-1) ...
+Selecting previously unselected package cpp-5.
+Preparing to unpack .../cpp-5_5.4.0-6ubuntu1~16.04.12_amd64.deb ...
+Unpacking cpp-5 (5.4.0-6ubuntu1~16.04.12) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../cpp_4%3a5.3.1-1ubuntu1_amd64.deb ...
+Unpacking cpp (4:5.3.1-1ubuntu1) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../libcc1-0_5.4.0-6ubuntu1~16.04.12_amd64.deb ...
+Unpacking libcc1-0:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../libgomp1_5.4.0-6ubuntu1~16.04.12_amd64.deb ...
+Unpacking libgomp1:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../libitm1_5.4.0-6ubuntu1~16.04.12_amd64.deb ...
+Unpacking libitm1:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../libatomic1_5.4.0-6ubuntu1~16.04.12_amd64.deb ...
+Unpacking libatomic1:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Selecting previously unselected package libasan2:amd64.
+Preparing to unpack .../libasan2_5.4.0-6ubuntu1~16.04.12_amd64.deb ...
+Unpacking libasan2:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../liblsan0_5.4.0-6ubuntu1~16.04.12_amd64.deb ...
+Unpacking liblsan0:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Selecting previously unselected package libtsan0:amd64.
+Preparing to unpack .../libtsan0_5.4.0-6ubuntu1~16.04.12_amd64.deb ...
+Unpacking libtsan0:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Selecting previously unselected package libubsan0:amd64.
+Preparing to unpack .../libubsan0_5.4.0-6ubuntu1~16.04.12_amd64.deb ...
+Unpacking libubsan0:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Selecting previously unselected package libcilkrts5:amd64.
+Preparing to unpack .../libcilkrts5_5.4.0-6ubuntu1~16.04.12_amd64.deb ...
+Unpacking libcilkrts5:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Selecting previously unselected package libmpx0:amd64.
+Preparing to unpack .../libmpx0_5.4.0-6ubuntu1~16.04.12_amd64.deb ...
+Unpacking libmpx0:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../libquadmath0_5.4.0-6ubuntu1~16.04.12_amd64.deb ...
+Unpacking libquadmath0:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Selecting previously unselected package libgcc-5-dev:amd64.
+Preparing to unpack .../libgcc-5-dev_5.4.0-6ubuntu1~16.04.12_amd64.deb ...
+Unpacking libgcc-5-dev:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Selecting previously unselected package gcc-5.
+Preparing to unpack .../gcc-5_5.4.0-6ubuntu1~16.04.12_amd64.deb ...
+Unpacking gcc-5 (5.4.0-6ubuntu1~16.04.12) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../gcc_4%3a5.3.1-1ubuntu1_amd64.deb ...
+Unpacking gcc (4:5.3.1-1ubuntu1) ...
+Selecting previously unselected package libstdc++-5-dev:amd64.
+Preparing to unpack .../libstdc++-5-dev_5.4.0-6ubuntu1~16.04.12_amd64.deb ...
+Unpacking libstdc++-5-dev:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Selecting previously unselected package g++-5.
+Preparing to unpack .../g++-5_5.4.0-6ubuntu1~16.04.12_amd64.deb ...
+Unpacking g++-5 (5.4.0-6ubuntu1~16.04.12) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../g++_4%3a5.3.1-1ubuntu1_amd64.deb ...
+Unpacking g++ (4:5.3.1-1ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../archives/make_4.1-6_amd64.deb ...
+Unpacking make (4.1-6) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../libdpkg-perl_1.18.4ubuntu1.6_all.deb ...
+Unpacking libdpkg-perl (1.18.4ubuntu1.6) ...
+Selecting previously unselected package xz-utils.
+Preparing to unpack .../xz-utils_5.1.1alpha+20120614-2ubuntu2_amd64.deb ...
+Unpacking xz-utils (5.1.1alpha+20120614-2ubuntu2) ...
+Selecting previously unselected package patch.
+Preparing to unpack .../patch_2.7.5-1ubuntu0.16.04.2_amd64.deb ...
+Unpacking patch (2.7.5-1ubuntu0.16.04.2) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../dpkg-dev_1.18.4ubuntu1.6_all.deb ...
+Unpacking dpkg-dev (1.18.4ubuntu1.6) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../build-essential_12.1ubuntu2_amd64.deb ...
+Unpacking build-essential (12.1ubuntu2) ...
+Selecting previously unselected package gcc-5-arm-linux-gnueabihf-base:amd64.
+Preparing to unpack .../gcc-5-arm-linux-gnueabihf-base_5.4.0-6ubuntu1~16.04.9cross1_amd64.deb ...
+Unpacking gcc-5-arm-linux-gnueabihf-base:amd64 (5.4.0-6ubuntu1~16.04.9cross1) ...
+Selecting previously unselected package cpp-5-arm-linux-gnueabihf.
+Preparing to unpack .../cpp-5-arm-linux-gnueabihf_5.4.0-6ubuntu1~16.04.9cross1_amd64.deb ...
+Unpacking cpp-5-arm-linux-gnueabihf (5.4.0-6ubuntu1~16.04.9cross1) ...
+Selecting previously unselected package cpp-arm-linux-gnueabihf.
+Preparing to unpack .../cpp-arm-linux-gnueabihf_4%3a5.3.1-1ubuntu1_amd64.deb ...
+Unpacking cpp-arm-linux-gnueabihf (4:5.3.1-1ubuntu1) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../curl_7.47.0-1ubuntu2.15_amd64.deb ...
+Unpacking curl (7.47.0-1ubuntu2.15) ...
+Selecting previously unselected package libcroco3:amd64.
+Preparing to unpack .../libcroco3_0.6.11-1_amd64.deb ...
+Unpacking libcroco3:amd64 (0.6.11-1) ...
+Selecting previously unselected package gettext.
+Preparing to unpack .../gettext_0.19.7-2ubuntu3.1_amd64.deb ...
+Unpacking gettext (0.19.7-2ubuntu3.1) ...
+Selecting previously unselected package intltool-debian.
+Preparing to unpack .../intltool-debian_0.35.0+20060710.4_all.deb ...
+Unpacking intltool-debian (0.35.0+20060710.4) ...
+Selecting previously unselected package po-debconf.
+Preparing to unpack .../po-debconf_1.0.19_all.deb ...
+Unpacking po-debconf (1.0.19) ...
+Selecting previously unselected package libarchive-zip-perl.
+Preparing to unpack .../libarchive-zip-perl_1.56-2ubuntu0.1_all.deb ...
+Unpacking libarchive-zip-perl (1.56-2ubuntu0.1) ...
+Selecting previously unselected package libfile-stripnondeterminism-perl.
+Preparing to unpack .../libfile-stripnondeterminism-perl_0.015-1_all.deb ...
+Unpacking libfile-stripnondeterminism-perl (0.015-1) ...
+Selecting previously unselected package libtimedate-perl.
+Preparing to unpack .../libtimedate-perl_2.3000-2_all.deb ...
+Unpacking libtimedate-perl (2.3000-2) ...
+Selecting previously unselected package dh-strip-nondeterminism.
+Preparing to unpack .../dh-strip-nondeterminism_0.015-1_all.deb ...
+Unpacking dh-strip-nondeterminism (0.015-1) ...
+Selecting previously unselected package debhelper.
+Preparing to unpack .../debhelper_9.20160115ubuntu3_all.deb ...
+Unpacking debhelper (9.20160115ubuntu3) ...
+Selecting previously unselected package binutils-arm-linux-gnueabihf.
+Preparing to unpack .../binutils-arm-linux-gnueabihf_2.26.1-1ubuntu1~16.04.8_amd64.deb ...
+Unpacking binutils-arm-linux-gnueabihf (2.26.1-1ubuntu1~16.04.8) ...
+Selecting previously unselected package gcc-5-cross-base.
+Preparing to unpack .../gcc-5-cross-base_5.4.0-6ubuntu1~16.04.9cross1_all.deb ...
+Unpacking gcc-5-cross-base (5.4.0-6ubuntu1~16.04.9cross1) ...
+Selecting previously unselected package libc6-armhf-cross.
+Preparing to unpack .../libc6-armhf-cross_2.23-0ubuntu3cross1_all.deb ...
+Unpacking libc6-armhf-cross (2.23-0ubuntu3cross1) ...
+Selecting previously unselected package libgcc1-armhf-cross.
+Preparing to unpack .../libgcc1-armhf-cross_1%3a5.4.0-6ubuntu1~16.04.9cross1_all.deb ...
+Unpacking libgcc1-armhf-cross (1:5.4.0-6ubuntu1~16.04.9cross1) ...
+Selecting previously unselected package libgomp1-armhf-cross.
+Preparing to unpack .../libgomp1-armhf-cross_5.4.0-6ubuntu1~16.04.9cross1_all.deb ...
+Unpacking libgomp1-armhf-cross (5.4.0-6ubuntu1~16.04.9cross1) ...
+Selecting previously unselected package libatomic1-armhf-cross.
+Preparing to unpack .../libatomic1-armhf-cross_5.4.0-6ubuntu1~16.04.9cross1_all.deb ...
+Unpacking libatomic1-armhf-cross (5.4.0-6ubuntu1~16.04.9cross1) ...
+Selecting previously unselected package libasan2-armhf-cross.
+Preparing to unpack .../libasan2-armhf-cross_5.4.0-6ubuntu1~16.04.9cross1_all.deb ...
+Unpacking libasan2-armhf-cross (5.4.0-6ubuntu1~16.04.9cross1) ...
+Selecting previously unselected package libstdc++6-armhf-cross.
+Preparing to unpack .../libstdc++6-armhf-cross_5.4.0-6ubuntu1~16.04.9cross1_all.deb ...
+Unpacking libstdc++6-armhf-cross (5.4.0-6ubuntu1~16.04.9cross1) ...
+Selecting previously unselected package libubsan0-armhf-cross.
+Preparing to unpack .../libubsan0-armhf-cross_5.4.0-6ubuntu1~16.04.9cross1_all.deb ...
+Unpacking libubsan0-armhf-cross (5.4.0-6ubuntu1~16.04.9cross1) ...
+Selecting previously unselected package libgcc-5-dev-armhf-cross.
+Preparing to unpack .../libgcc-5-dev-armhf-cross_5.4.0-6ubuntu1~16.04.9cross1_all.deb ...
+Unpacking libgcc-5-dev-armhf-cross (5.4.0-6ubuntu1~16.04.9cross1) ...
+Selecting previously unselected package gcc-5-arm-linux-gnueabihf.
+Preparing to unpack .../gcc-5-arm-linux-gnueabihf_5.4.0-6ubuntu1~16.04.9cross1_amd64.deb ...
+Unpacking gcc-5-arm-linux-gnueabihf (5.4.0-6ubuntu1~16.04.9cross1) ...
+Selecting previously unselected package gcc-arm-linux-gnueabihf.
+Preparing to unpack .../gcc-arm-linux-gnueabihf_4%3a5.3.1-1ubuntu1_amd64.deb ...
+Unpacking gcc-arm-linux-gnueabihf (4:5.3.1-1ubuntu1) ...
+Selecting previously unselected package linux-libc-dev-armhf-cross.
+Preparing to unpack .../linux-libc-dev-armhf-cross_4.4.0-18.34cross1_all.deb ...
+Unpacking linux-libc-dev-armhf-cross (4.4.0-18.34cross1) ...
+Selecting previously unselected package libc6-dev-armhf-cross.
+Preparing to unpack .../libc6-dev-armhf-cross_2.23-0ubuntu3cross1_all.deb ...
+Unpacking libc6-dev-armhf-cross (2.23-0ubuntu3cross1) ...
+Selecting previously unselected package libstdc++-5-dev-armhf-cross.
+Preparing to unpack .../libstdc++-5-dev-armhf-cross_5.4.0-6ubuntu1~16.04.9cross1_all.deb ...
+Unpacking libstdc++-5-dev-armhf-cross (5.4.0-6ubuntu1~16.04.9cross1) ...
+Selecting previously unselected package g++-5-arm-linux-gnueabihf.
+Preparing to unpack .../g++-5-arm-linux-gnueabihf_5.4.0-6ubuntu1~16.04.9cross1_amd64.deb ...
+Unpacking g++-5-arm-linux-gnueabihf (5.4.0-6ubuntu1~16.04.9cross1) ...
+Selecting previously unselected package g++-arm-linux-gnueabihf.
+Preparing to unpack .../g++-arm-linux-gnueabihf_4%3a5.3.1-1ubuntu1_amd64.deb ...
+Unpacking g++-arm-linux-gnueabihf (4:5.3.1-1ubuntu1) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../liberror-perl_0.17-1.2_all.deb ...
+Unpacking liberror-perl (0.17-1.2) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a2.7.4-0ubuntu1.9_all.deb ...
+Unpacking git-man (1:2.7.4-0ubuntu1.9) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a2.7.4-0ubuntu1.9_amd64.deb ...
+Unpacking git (1:2.7.4-0ubuntu1.9) ...
+Selecting previously unselected package linux-libc-dev:armhf.
+Preparing to unpack .../linux-libc-dev_4.4.0-185.215_armhf.deb ...
+Unpacking linux-libc-dev:armhf (4.4.0-185.215) ...
+Selecting previously unselected package libc6-dev:armhf.
+Preparing to unpack .../libc6-dev_2.23-0ubuntu11.2_armhf.deb ...
+Unpacking libc6-dev:armhf (2.23-0ubuntu11.2) ...
+Selecting previously unselected package libcurl3:armhf.
+Preparing to unpack .../libcurl3_7.47.0-1ubuntu2.15_armhf.deb ...
+Unpacking libcurl3:armhf (7.47.0-1ubuntu2.15) ...
+Selecting previously unselected package libcurl4-openssl-dev:armhf.
+Preparing to unpack .../libcurl4-openssl-dev_7.47.0-1ubuntu2.15_armhf.deb ...
+Unpacking libcurl4-openssl-dev:armhf (7.47.0-1ubuntu2.15) ...
+Selecting previously unselected package zlib1g-dev:armhf.
+Preparing to unpack .../zlib1g-dev_1%3a1.2.8.dfsg-2ubuntu4.3_armhf.deb ...
+Unpacking zlib1g-dev:armhf (1:1.2.8.dfsg-2ubuntu4.3) ...
+Selecting previously unselected package libssl-dev:armhf.
+Preparing to unpack .../libssl-dev_1.0.2g-1ubuntu4.16_armhf.deb ...
+Unpacking libssl-dev:armhf (1.0.2g-1ubuntu4.16) ...
+Selecting previously unselected package dh-systemd.
+Preparing to unpack .../dh-systemd_1.29ubuntu4_all.deb ...
+Unpacking dh-systemd (1.29ubuntu4) ...
+Selecting previously unselected package uuid-dev:armhf.
+Preparing to unpack .../uuid-dev_2.27.1-6ubuntu3.10_armhf.deb ...
+Unpacking uuid-dev:armhf (2.27.1-6ubuntu3.10) ...
+Processing triggers for libc-bin (2.23-0ubuntu11.2) ...
+Setting up libgdbm3:amd64 (1.8.3-13.1) ...
+Setting up libffi6:amd64 (3.2.1-4) ...
+Setting up gcc-6-base:armhf (6.0.1-0ubuntu1) ...
+Setting up libglib2.0-0:amd64 (2.48.2-0ubuntu4.6) ...
+No schema files found: doing nothing.
+Setting up groff-base (1.22.3-7) ...
+Setting up bsdmainutils (9.0.6ubuntu3) ...
+update-alternatives: using /usr/bin/bsd-write to provide /usr/bin/write (write) in auto mode
+update-alternatives: using /usr/bin/bsd-from to provide /usr/bin/from (from) in auto mode
+Setting up libpipeline1:amd64 (1.4.1-2) ...
+Setting up man-db (2.7.5-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Building database of manual pages ...
+Setting up cmake-data (3.5.1-1ubuntu3) ...
+Setting up liblzo2-2:amd64 (2.08-1.2) ...
+Setting up libnettle6:amd64 (3.2-1ubuntu0.16.04.1) ...
+Setting up libicu55:amd64 (55.1-7ubuntu0.5) ...
+Setting up libxml2:amd64 (2.9.3+dfsg1-1ubuntu0.7) ...
+Setting up libarchive13:amd64 (3.1.2-11ubuntu0.16.04.8) ...
+Setting up libkrb5support0:amd64 (1.13.2+dfsg-5ubuntu2.1) ...
+Setting up libk5crypto3:amd64 (1.13.2+dfsg-5ubuntu2.1) ...
+Setting up libkeyutils1:amd64 (1.5.9-8ubuntu1) ...
+Setting up libkrb5-3:amd64 (1.13.2+dfsg-5ubuntu2.1) ...
+Setting up libgssapi-krb5-2:amd64 (1.13.2+dfsg-5ubuntu2.1) ...
+Setting up libidn11:amd64 (1.32-3ubuntu1.2) ...
+Setting up libgmp10:amd64 (2:6.1.0+dfsg-2) ...
+Setting up libhogweed4:amd64 (3.2-1ubuntu0.16.04.1) ...
+Setting up libp11-kit0:amd64 (0.23.2-5~ubuntu16.04.1) ...
+Setting up libtasn1-6:amd64 (4.7-3ubuntu0.16.04.3) ...
+Setting up libgnutls30:amd64 (3.4.10-4ubuntu1.8) ...
+Setting up libroken18-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libasn1-8-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libhcrypto4-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libheimbase1-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libwind0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libhx509-5-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libsqlite3-0:amd64 (3.11.0-1ubuntu1.5) ...
+Setting up libkrb5-26-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libheimntlm0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libgssapi3-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libsasl2-modules-db:amd64 (2.1.26.dfsg1-14ubuntu0.2) ...
+Setting up libsasl2-2:amd64 (2.1.26.dfsg1-14ubuntu0.2) ...
+Setting up libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.8) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d-1ubuntu0.1) ...
+Setting up libssl1.0.0:amd64 (1.0.2g-1ubuntu4.16) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Setting up libcurl3:amd64 (7.47.0-1ubuntu2.15) ...
+Setting up libexpat1:amd64 (2.1.0-7ubuntu0.16.04.5) ...
+Setting up libjsoncpp1:amd64 (1.7.2-1) ...
+Setting up cmake (3.5.1-1ubuntu3) ...
+Setting up libunistring0:amd64 (0.9.3-5.2ubuntu1) ...
+Setting up perl-modules-5.22 (5.22.1-9ubuntu0.6) ...
+Setting up libperl5.22:amd64 (5.22.1-9ubuntu0.6) ...
+Setting up perl (5.22.1-9ubuntu0.6) ...
+update-alternatives: using /usr/bin/prename to provide /usr/bin/rename (rename) in auto mode
+Setting up libmpfr4:amd64 (3.1.4-1) ...
+Setting up libmpc3:amd64 (1.0.3-1) ...
+Setting up bzip2 (1.0.6-8ubuntu0.2) ...
+Setting up libmagic1:amd64 (1:5.25-2ubuntu1.4) ...
+Setting up file (1:5.25-2ubuntu1.4) ...
+Setting up openssl (1.0.2g-1ubuntu4.16) ...
+Setting up ca-certificates (20190110~16.04.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Setting up libasprintf0v5:amd64 (0.19.7-2ubuntu3.1) ...
+Setting up gettext-base (0.19.7-2ubuntu3.1) ...
+Setting up libcurl3-gnutls:amd64 (7.47.0-1ubuntu2.15) ...
+Setting up autotools-dev (20150820.1) ...
+Setting up binutils (2.26.1-1ubuntu1~16.04.8) ...
+Setting up libc-dev-bin (2.23-0ubuntu11.2) ...
+Setting up linux-libc-dev:amd64 (4.4.0-185.215) ...
+Setting up linux-libc-dev:armhf (4.4.0-185.215) ...
+Setting up libc6-dev:amd64 (2.23-0ubuntu11.2) ...
+Setting up libisl15:amd64 (0.16.1-1) ...
+Setting up cpp-5 (5.4.0-6ubuntu1~16.04.12) ...
+Setting up cpp (4:5.3.1-1ubuntu1) ...
+Setting up libcc1-0:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Setting up libgomp1:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Setting up libitm1:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Setting up libatomic1:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Setting up libasan2:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Setting up liblsan0:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Setting up libtsan0:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Setting up libubsan0:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Setting up libcilkrts5:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Setting up libmpx0:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Setting up libquadmath0:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Setting up libgcc-5-dev:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Setting up gcc-5 (5.4.0-6ubuntu1~16.04.12) ...
+Setting up gcc (4:5.3.1-1ubuntu1) ...
+Setting up libstdc++-5-dev:amd64 (5.4.0-6ubuntu1~16.04.12) ...
+Setting up g++-5 (5.4.0-6ubuntu1~16.04.12) ...
+Setting up g++ (4:5.3.1-1ubuntu1) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up make (4.1-6) ...
+Setting up libdpkg-perl (1.18.4ubuntu1.6) ...
+Setting up xz-utils (5.1.1alpha+20120614-2ubuntu2) ...
+update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
+Setting up patch (2.7.5-1ubuntu0.16.04.2) ...
+Setting up dpkg-dev (1.18.4ubuntu1.6) ...
+Setting up build-essential (12.1ubuntu2) ...
+Setting up gcc-5-arm-linux-gnueabihf-base:amd64 (5.4.0-6ubuntu1~16.04.9cross1) ...
+Setting up cpp-5-arm-linux-gnueabihf (5.4.0-6ubuntu1~16.04.9cross1) ...
+Setting up cpp-arm-linux-gnueabihf (4:5.3.1-1ubuntu1) ...
+Setting up curl (7.47.0-1ubuntu2.15) ...
+Setting up libcroco3:amd64 (0.6.11-1) ...
+Setting up gettext (0.19.7-2ubuntu3.1) ...
+Setting up intltool-debian (0.35.0+20060710.4) ...
+Setting up po-debconf (1.0.19) ...
+Setting up libarchive-zip-perl (1.56-2ubuntu0.1) ...
+Setting up libfile-stripnondeterminism-perl (0.015-1) ...
+Setting up libtimedate-perl (2.3000-2) ...
+Setting up binutils-arm-linux-gnueabihf (2.26.1-1ubuntu1~16.04.8) ...
+Setting up gcc-5-cross-base (5.4.0-6ubuntu1~16.04.9cross1) ...
+Setting up libc6-armhf-cross (2.23-0ubuntu3cross1) ...
+Setting up libgcc1-armhf-cross (1:5.4.0-6ubuntu1~16.04.9cross1) ...
+Setting up libgomp1-armhf-cross (5.4.0-6ubuntu1~16.04.9cross1) ...
+Setting up libatomic1-armhf-cross (5.4.0-6ubuntu1~16.04.9cross1) ...
+Setting up libasan2-armhf-cross (5.4.0-6ubuntu1~16.04.9cross1) ...
+Setting up libstdc++6-armhf-cross (5.4.0-6ubuntu1~16.04.9cross1) ...
+Setting up libubsan0-armhf-cross (5.4.0-6ubuntu1~16.04.9cross1) ...
+Setting up libgcc-5-dev-armhf-cross (5.4.0-6ubuntu1~16.04.9cross1) ...
+Setting up gcc-5-arm-linux-gnueabihf (5.4.0-6ubuntu1~16.04.9cross1) ...
+Setting up gcc-arm-linux-gnueabihf (4:5.3.1-1ubuntu1) ...
+Setting up linux-libc-dev-armhf-cross (4.4.0-18.34cross1) ...
+Setting up libc6-dev-armhf-cross (2.23-0ubuntu3cross1) ...
+Setting up libstdc++-5-dev-armhf-cross (5.4.0-6ubuntu1~16.04.9cross1) ...
+Setting up g++-5-arm-linux-gnueabihf (5.4.0-6ubuntu1~16.04.9cross1) ...
+Setting up g++-arm-linux-gnueabihf (4:5.3.1-1ubuntu1) ...
+Setting up liberror-perl (0.17-1.2) ...
+Setting up git-man (1:2.7.4-0ubuntu1.9) ...
+Setting up git (1:2.7.4-0ubuntu1.9) ...
+Setting up libc6:armhf (2.23-0ubuntu11.2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Setting up libnettle6:armhf (3.2-1ubuntu0.16.04.1) ...
+Setting up libkrb5support0:armhf (1.13.2+dfsg-5ubuntu2.1) ...
+Setting up libk5crypto3:armhf (1.13.2+dfsg-5ubuntu2.1) ...
+Setting up libkeyutils1:armhf (1.5.9-8ubuntu1) ...
+Setting up libcomerr2:armhf (1.42.13-1ubuntu1.2) ...
+Setting up libkrb5-3:armhf (1.13.2+dfsg-5ubuntu2.1) ...
+Setting up libgssapi-krb5-2:armhf (1.13.2+dfsg-5ubuntu2.1) ...
+Setting up libidn11:armhf (1.32-3ubuntu1.2) ...
+Setting up libgmp10:armhf (2:6.1.0+dfsg-2) ...
+Setting up libhogweed4:armhf (3.2-1ubuntu0.16.04.1) ...
+Setting up libtasn1-6:armhf (4.7-3ubuntu0.16.04.3) ...
+Setting up zlib1g:armhf (1:1.2.8.dfsg-2ubuntu4.3) ...
+Setting up libroken18-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libasn1-8-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libhcrypto4-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libheimbase1-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libwind0-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libhx509-5-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libsqlite3-0:armhf (3.11.0-1ubuntu1.5) ...
+Setting up libkrb5-26-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libheimntlm0-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libgssapi3-heimdal:armhf (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libdb5.3:armhf (5.3.28-11ubuntu0.2) ...
+Setting up libsasl2-modules-db:armhf (2.1.26.dfsg1-14ubuntu0.2) ...
+Setting up libsasl2-2:armhf (2.1.26.dfsg1-14ubuntu0.2) ...
+Setting up libssl1.0.0:armhf (1.0.2g-1ubuntu4.16) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Setting up libuuid1:armhf (2.27.1-6ubuntu3.10) ...
+Setting up libc6-dev:armhf (2.23-0ubuntu11.2) ...
+Setting up dh-strip-nondeterminism (0.015-1) ...
+Setting up debhelper (9.20160115ubuntu3) ...
+Setting up zlib1g-dev:armhf (1:1.2.8.dfsg-2ubuntu4.3) ...
+Setting up libssl-dev:armhf (1.0.2g-1ubuntu4.16) ...
+Setting up dh-systemd (1.29ubuntu4) ...
+Setting up uuid-dev:armhf (2.27.1-6ubuntu3.10) ...
+Setting up libgcc1:armhf (1:6.0.1-0ubuntu1) ...
+Setting up libffi6:armhf (3.2.1-4) ...
+Setting up libp11-kit0:armhf (0.23.2-5~ubuntu16.04.1) ...
+Setting up libgnutls30:armhf (3.4.10-4ubuntu1.8) ...
+Setting up libldap-2.4-2:armhf (2.4.42+dfsg-2ubuntu3.8) ...
+Setting up librtmp1:armhf (2.4+20151223.gitfa8646d-1ubuntu0.1) ...
+Setting up libcurl3:armhf (7.47.0-1ubuntu2.15) ...
+Setting up libcurl4-openssl-dev:armhf (7.47.0-1ubuntu2.15) ...
+Processing triggers for libc-bin (2.23-0ubuntu11.2) ...
+Processing triggers for ca-certificates (20190110~16.04.1) ...
+Updating certificates in /etc/ssl/certs...
+127 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+Installing rustup
+info: downloading installer
+info: profile set to 'default'
+info: default host triple is x86_64-unknown-linux-gnu
+info: syncing channel updates for 'stable-x86_64-unknown-linux-gnu'
+info: latest update on 2020-06-18, rust version 1.44.1 (c7087fe00 2020-06-17)
+info: downloading component 'cargo'
+info: downloading component 'clippy'
+info: downloading component 'rust-docs'
+info: downloading component 'rust-std'
+info: downloading component 'rustc'
+info: downloading component 'rustfmt'
+info: installing component 'cargo'
+info: Defaulting to 500.0 MiB unpack ram
+info: installing component 'clippy'
+info: installing component 'rust-docs'
+info: installing component 'rust-std'
+info: installing component 'rustc'
+info: installing component 'rustfmt'
+info: default toolchain set to 'stable'
+
+  stable installed - rustc 1.44.1 (c7087fe00 2020-06-17)
+
+
+Rust is installed now. Great!
+
+To get started you need Cargo's bin directory ($HOME/.cargo/bin) in your PATH
+environment variable. Next time you log in this will be done
+automatically.
+
+To configure your current shell run source $HOME/.cargo/env
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/arm-linux-gnueabihf-gcc
+-- Check for working C compiler: /usr/bin/arm-linux-gnueabihf-gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/arm-linux-gnueabihf-g++
+-- Check for working CXX compiler: /usr/bin/arm-linux-gnueabihf-g++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenSSL: /usr/lib/arm-linux-gnueabihf/libssl.so;/usr/lib/arm-linux-gnueabihf/libcrypto.so (found version "1.0.2g") 
+-- Looking for include file stdint.h
+-- Looking for include file stdint.h - found
+-- Looking for include file stdbool.h
+-- Looking for include file stdbool.h - found
+-- target architecture: ARM
+-- Performing Test CXX_FLAG_CXX11
+-- Performing Test CXX_FLAG_CXX11 - Success
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /project/edgelet/target/hsm
+Scanning dependencies of target aziotsharedutil
+[  1%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/gballoc.c.o
+[  2%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/singlylinkedlist.c.o
+[  3%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/constmap.c.o
+[  5%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/sha224.c.o
+[  6%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/azure_base32.c.o
+[  7%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/crt_abstractions.c.o
+[  8%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/string_token.c.o
+[ 10%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/gbnetwork.c.o
+[ 11%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/consolelogger.c.o
+[ 12%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/constbuffer.c.o
+[ 13%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/map.c.o
+[ 15%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/strings.c.o
+[ 16%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/connection_string_parser.c.o
+[ 18%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/xio.c.o
+[ 20%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/urlencode.c.o
+[ 21%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/buffer.c.o
+[ 22%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/doublylinkedlist.c.o
+[ 24%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/memory_data.c.o
+[ 25%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/hmacsha256.c.o
+[ 26%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/constbuffer_array.c.o
+[ 27%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/uuid.c.o
+[ 29%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/string_tokenizer.c.o
+[ 30%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/gb_time.c.o
+[ 31%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/gb_rand.c.o
+[ 34%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/gb_stdio.c.o
+[ 35%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/hmac.c.o
+[ 36%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/sha1.c.o
+[ 37%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/envvariable.c.o
+[ 37%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/sastoken.c.o
+[ 37%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/sha384-512.c.o
+[ 39%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/vector.c.o
+[ 40%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/optionhandler.c.o
+[ 41%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/agenttime.c.o
+[ 43%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/xlogging.c.o
+[ 44%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/lock_pthreads.c.o
+[ 45%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/condition_pthreads.c.o
+[ 46%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/tickcounter_linux.c.o
+[ 48%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/http_proxy_io.c.o
+[ 49%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/threadapi_pthreads.c.o
+[ 50%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/uniqueid_stub.c.o
+[ 51%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/usha.c.o
+[ 53%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/linux_time.c.o
+[ 54%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/tlsio_openssl.c.o
+[ 55%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/platform_linux.c.o
+[ 56%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/azure_base64.c.o
+[ 58%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/socketio_berkeley.c.o
+[ 59%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/x509_openssl.c.o
+[ 60%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/wsio.c.o
+[ 62%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/uws_client.c.o
+[ 63%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/utf8_checker.c.o
+[ 64%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/ws_url.c.o
+[ 65%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/uws_frame_encoder.c.o
+[ 67%] Linking C static library libaziotsharedutil.a
+[ 67%] Built target aziotsharedutil
+Scanning dependencies of target utpm
+[ 68%] Building C object deps/utpm/CMakeFiles/utpm.dir/src/Marshal.c.o
+[ 69%] Building C object deps/utpm/CMakeFiles/utpm.dir/src/tpm_codec.c.o
+[ 70%] Building C object deps/utpm/CMakeFiles/utpm.dir/src/gbfiledescript.c.o
+[ 72%] Building C object deps/utpm/CMakeFiles/utpm.dir/src/Memory.c.o
+[ 73%] Building C object deps/utpm/CMakeFiles/utpm.dir/src/tpm_comm_linux.c.o
+[ 74%] Building C object deps/utpm/CMakeFiles/utpm.dir/src/tpm_socket_comm.c.o
+[ 75%] Linking C static library libutpm.a
+[ 75%] Built target utpm
+Scanning dependencies of target iothsm
+[ 77%] Building C object CMakeFiles/iothsm.dir/src/edge_hsm_client_store.c.o
+[ 78%] Building C object CMakeFiles/iothsm.dir/src/constants.c.o
+[ 79%] Building C object CMakeFiles/iothsm.dir/src/certificate_info.c.o
+[ 81%] Building C object CMakeFiles/iothsm.dir/src/hsm_client_data.c.o
+[ 82%] Building C object CMakeFiles/iothsm.dir/src/hsm_client_tpm_device.c.o
+[ 83%] Building C object CMakeFiles/iothsm.dir/src/edge_sas_key.c.o
+[ 84%] Building C object CMakeFiles/iothsm.dir/src/edge_pki_openssl.c.o
+[ 86%] Building C object CMakeFiles/iothsm.dir/src/edge_hsm_client_x509.c.o
+[ 87%] Building C object CMakeFiles/iothsm.dir/src/hsm_certificate_props.c.o
+[ 88%] Building C object CMakeFiles/iothsm.dir/src/edge_hsm_client_crypto.c.o
+[ 89%] Building C object CMakeFiles/iothsm.dir/src/edge_openssl_common.c.o
+[ 91%] Building C object CMakeFiles/iothsm.dir/src/hsm_utils.c.o
+[ 92%] Building C object CMakeFiles/iothsm.dir/src/hsm_log.c.o
+[ 93%] Building C object CMakeFiles/iothsm.dir/src/hsm_client_tpm_in_mem.c.o
+[ 94%] Building C object CMakeFiles/iothsm.dir/src/hsm_client_tpm_select.c.o
+[ 96%] Building C object CMakeFiles/iothsm.dir/src/edge_sas_perform_sign_with_key.c.o
+[ 97%] Building C object CMakeFiles/iothsm.dir/src/edge_hsm_key_interface.c.o
+[ 98%] Building C object CMakeFiles/iothsm.dir/src/edge_enc_openssl_key.c.o
+[100%] Linking C shared library libiothsm.so
+[100%] Built target iothsm
+Run CPack packaging tool...
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: iothsm
+CPack: - Install project: iothsm
+CPack: Create package
+CPack: - package: /project/edgelet/target/hsm/libiothsm-std-1.0.10~dev-1-Linux.deb generated.
+info: downloading component 'rust-std' for 'armv7-unknown-linux-gnueabihf'
+info: installing component 'rust-std' for 'armv7-unknown-linux-gnueabihf'
+info: Defaulting to 500.0 MiB unpack ram
+VERSION=1.0.10~dev cargo build --target armv7-unknown-linux-gnueabihf --release -p iotedged -p iotedge
+    Updating crates.io index
+    Updating git repository `https://github.com/Azure/hyperlocal-windows`
+    Updating git repository `https://github.com/Azure/mio-uds-windows.git`
+    Updating git repository `https://github.com/Azure/tokio-uds-windows.git`
+ Downloading crates ...
+  Downloaded arrayvec v0.4.7
+  Downloaded net2 v0.2.32
+  Downloaded num_cpus v1.8.0
+  Downloaded num-rational v0.2.2
+  Downloaded bzip2-sys v0.1.7
+  Downloaded termcolor v0.3.6
+  Downloaded fnv v1.0.6
+  Downloaded matches v0.1.6
+  Downloaded quote v0.6.8
+  Downloaded chrono-humanize v0.0.11
+  Downloaded num-bigint v0.2.3
+  Downloaded slab v0.4.1
+  Downloaded regex v0.2.11
+  Downloaded tabwriter v1.0.4
+  Downloaded serde_yaml v0.7.4
+  Downloaded autocfg v0.1.6
+  Downloaded foreign-types v0.3.2
+  Downloaded either v1.5.3
+  Downloaded dtoa v0.4.2
+  Downloaded bzip2 v0.3.3
+  Downloaded crc32fast v1.2.0
+  Downloaded crossbeam-utils v0.6.6
+  Downloaded cmake v0.1.40
+  Downloaded hmac v0.5.0
+  Downloaded hyper-tls v0.3.2
+  Downloaded hyper-proxy v0.5.0
+  Downloaded crossbeam-epoch v0.7.2
+  Downloaded iovec v0.1.2
+  Downloaded lazy_static v1.4.0
+  Downloaded futures-cpupool v0.1.8
+  Downloaded ansi_term v0.11.0
+  Downloaded miniz_oxide v0.3.2
+  Downloaded lazycell v0.6.0
+  Downloaded atty v0.2.10
+  Downloaded arrayref v0.3.4
+  Downloaded mio v0.6.14
+  Downloaded byte-tools v0.2.0
+  Downloaded byte-unit v3.0.3
+  Downloaded constant_time_eq v0.1.3
+  Downloaded generic-array v0.9.0
+  Downloaded idna v0.1.4
+  Downloaded bytes v0.4.12
+  Downloaded backtrace v0.3.34
+  Downloaded base64 v0.9.1
+  Downloaded block-buffer v0.3.3
+  Downloaded aho-corasick v0.6.4
+  Downloaded adler32 v1.0.4
+  Downloaded clap v2.31.2
+  Downloaded cfg-if v0.1.9
+  Downloaded foreign-types-shared v0.1.1
+  Downloaded failure_derive v0.1.2
+  Downloaded http v0.1.18
+  Downloaded httparse v1.2.4
+  Downloaded http-body v0.1.0
+  Downloaded fake-simd v0.1.2
+  Downloaded failure v0.1.2
+  Downloaded linked-hash-map v0.5.1
+  Downloaded hyperlocal v0.6.0
+  Downloaded crypto-mac v0.5.2
+  Downloaded doc-comment v0.3.1
+  Downloaded consistenttime v0.2.0
+  Downloaded hyper v0.12.35
+  Downloaded indexmap v1.0.1
+  Downloaded futures v0.1.29
+  Downloaded crossbeam-queue v0.1.2
+  Downloaded num-complex v0.2.3
+  Downloaded h2 v0.1.26
+  Downloaded digest v0.7.2
+  Downloaded memoffset v0.5.1
+  Downloaded mime v0.3.5
+  Downloaded env_logger v0.5.9
+  Downloaded libc v0.2.66
+  Downloaded nom v4.2.3
+  Downloaded safemem v0.2.0
+  Downloaded openssl-sys v0.9.36
+  Downloaded openssl v0.10.12
+  Downloaded once_cell v1.3.1
+  Downloaded num v0.2.0
+  Downloaded native-tls v0.2.1
+  Downloaded nodrop v0.1.12
+  Downloaded memchr v2.0.1
+  Downloaded openssl-probe v0.1.2
+  Downloaded hex v0.3.2
+  Downloaded log v0.4.5
+  Downloaded num-iter v0.1.39
+  Downloaded mio-uds v0.6.7
+  Downloaded nix v0.14.1
+  Downloaded parse_duration v2.0.1
+  Downloaded bitflags v1.0.3
+  Downloaded semver v0.9.0
+  Downloaded regex-syntax v0.6.12
+  Downloaded synstructure v0.9.0
+  Downloaded sysinfo v0.9.6
+  Downloaded scopeguard v0.3.3
+  Downloaded ryu v0.2.7
+  Downloaded num-traits v0.2.8
+  Downloaded syn v0.14.9
+  Downloaded rayon-core v1.6.0
+  Downloaded proc-macro2 v0.4.19
+  Downloaded num-integer v0.1.41
+  Downloaded regex-syntax v0.5.6
+  Downloaded podio v0.1.6
+  Downloaded sha2 v0.7.1
+  Downloaded scopeguard v1.0.0
+  Downloaded string v0.2.1
+  Downloaded spin v0.5.2
+  Downloaded sysinfo v0.12.0
+  Downloaded strsim v0.7.0
+  Downloaded serde v1.0.92
+  Downloaded quick-error v1.2.1
+  Downloaded rustc_version v0.2.3
+  Downloaded syn v0.15.36
+  Downloaded semver-parser v0.7.0
+  Downloaded rustc-demangle v0.1.7
+  Downloaded percent-encoding v1.0.1
+  Downloaded pkg-config v0.3.11
+  Downloaded backtrace-sys v0.1.31
+  Downloaded rayon v1.2.0
+  Downloaded itoa v0.4.1
+  Downloaded flate2 v1.0.11
+  Downloaded serde_json v1.0.27
+  Downloaded textwrap v0.9.0
+  Downloaded try-lock v0.2.2
+  Downloaded url_serde v0.2.0
+  Downloaded want v0.2.0
+  Downloaded unicode-width v0.1.4
+  Downloaded zip v0.5.3
+  Downloaded version_check v0.1.3
+  Downloaded vec_map v0.8.0
+  Downloaded unicase v2.1.0
+  Downloaded void v1.0.2
+  Downloaded tokio-buf v0.1.1
+  Downloaded ucd-util v0.1.1
+  Downloaded tokio-udp v0.1.0
+  Downloaded time v0.1.39
+  Downloaded yaml-rust v0.4.0
+  Downloaded thread_local v0.3.5
+  Downloaded utf8-ranges v1.0.0
+  Downloaded unicode-xid v0.1.0
+  Downloaded serde_derive v1.0.92
+  Downloaded unreachable v1.0.0
+  Downloaded typenum v1.10.0
+  Downloaded tokio v0.1.22
+  Downloaded url v1.7.2
+  Downloaded typed-headers v0.1.0
+  Downloaded unicode-bidi v0.3.4
+  Downloaded tokio-uds v0.2.5
+  Downloaded tokio-tls v0.2.0
+  Downloaded byteorder v1.3.1
+  Downloaded config v0.9.3
+  Downloaded unicode-normalization v0.1.5
+  Downloaded tokio-timer v0.2.11
+  Downloaded tokio-fs v0.1.6
+  Downloaded tokio-signal v0.2.5
+  Downloaded tokio-io v0.1.8
+  Downloaded tokio-codec v0.1.0
+  Downloaded tokio-executor v0.1.8
+  Downloaded tokio-current-thread v0.1.6
+  Downloaded tokio-threadpool v0.1.16
+  Downloaded tokio-reactor v0.1.1
+  Downloaded tokio-tcp v0.1.0
+  Downloaded humantime v1.1.1
+  Downloaded cc v1.0.37
+  Downloaded regex v1.0.2
+  Downloaded chrono v0.4.9
+  Downloaded tokio-sync v0.1.7
+  Downloaded crossbeam-deque v0.7.1
+   Compiling libc v0.2.66
+   Compiling cfg-if v0.1.9
+   Compiling spin v0.5.2
+   Compiling cc v1.0.37
+   Compiling autocfg v0.1.6
+   Compiling futures v0.1.29
+   Compiling either v1.5.3
+   Compiling byteorder v1.3.1
+   Compiling semver-parser v0.7.0
+   Compiling slab v0.4.1
+   Compiling nodrop v0.1.12
+   Compiling proc-macro2 v0.4.19
+   Compiling serde v1.0.92
+   Compiling scopeguard v1.0.0
+   Compiling lazycell v0.6.0
+   Compiling unicode-xid v0.1.0
+   Compiling version_check v0.1.3
+   Compiling fnv v1.0.6
+   Compiling itoa v0.4.1
+   Compiling failure_derive v0.1.2
+   Compiling rustc-demangle v0.1.7
+   Compiling void v1.0.2
+   Compiling typenum v1.10.0
+   Compiling matches v0.1.6
+   Compiling pkg-config v0.3.11
+   Compiling ryu v0.2.7
+   Compiling linked-hash-map v0.5.1
+   Compiling try-lock v0.2.2
+   Compiling unicode-normalization v0.1.5
+   Compiling indexmap v1.0.1
+   Compiling safemem v0.2.0
+   Compiling syn v0.15.36
+   Compiling httparse v1.2.4
+   Compiling percent-encoding v1.0.1
+   Compiling bitflags v1.0.3
+   Compiling utf8-ranges v1.0.0
+   Compiling regex v1.0.2
+   Compiling foreign-types-shared v0.1.1
+   Compiling openssl v0.10.12
+   Compiling regex v0.2.11
+   Compiling ucd-util v0.1.1
+   Compiling arrayref v0.3.4
+   Compiling byte-tools v0.2.0
+   Compiling regex-syntax v0.6.12
+   Compiling native-tls v0.2.1
+   Compiling constant_time_eq v0.1.3
+   Compiling openssl-probe v0.1.2
+   Compiling fake-simd v0.1.2
+   Compiling nix v0.14.1
+   Compiling consistenttime v0.2.0
+   Compiling hex v0.3.2
+   Compiling dtoa v0.4.2
+   Compiling scopeguard v0.3.3
+   Compiling rayon-core v1.6.0
+   Compiling doc-comment v0.3.1
+   Compiling sysinfo v0.12.0
+   Compiling once_cell v1.3.1
+   Compiling unicode-width v0.1.4
+   Compiling crc32fast v1.2.0
+   Compiling ansi_term v0.11.0
+   Compiling strsim v0.7.0
+   Compiling adler32 v1.0.4
+   Compiling termcolor v0.3.6
+   Compiling vec_map v0.8.0
+   Compiling sysinfo v0.9.6
+   Compiling quick-error v1.2.1
+   Compiling podio v0.1.6
+   Compiling byte-unit v3.0.3
+   Compiling log v0.4.5
+   Compiling lazy_static v1.4.0
+   Compiling cmake v0.1.40
+   Compiling num-traits v0.2.8
+   Compiling num-integer v0.1.41
+   Compiling num-bigint v0.2.3
+   Compiling num-complex v0.2.3
+   Compiling num-rational v0.2.2
+   Compiling num-iter v0.1.39
+   Compiling signal-future v0.1.0 (/project/edgelet/signal-future)
+   Compiling backtrace-sys v0.1.31
+   Compiling bzip2-sys v0.1.7
+   Compiling semver v0.9.0
+   Compiling arrayvec v0.4.7
+   Compiling tokio-sync v0.1.7
+   Compiling unicase v2.1.0
+   Compiling nom v4.2.3
+   Compiling unreachable v1.0.0
+   Compiling unicode-bidi v0.3.4
+   Compiling yaml-rust v0.4.0
+   Compiling openssl-sys v0.9.36
+   Compiling foreign-types v0.3.2
+   Compiling regex-syntax v0.5.6
+   Compiling block-buffer v0.3.3
+   Compiling textwrap v0.9.0
+   Compiling tabwriter v1.0.4
+   Compiling miniz_oxide v0.3.2
+   Compiling humantime v1.1.1
+   Compiling want v0.2.0
+   Compiling crossbeam-utils v0.6.6
+   Compiling hsm-sys v0.1.0 (/project/edgelet/hsm-sys)
+   Compiling rustc_version v0.2.3
+   Compiling thread_local v0.3.5
+   Compiling idna v0.1.4
+   Compiling tokio-executor v0.1.8
+   Compiling crossbeam-queue v0.1.2
+   Compiling iovec v0.1.2
+   Compiling num_cpus v1.8.0
+   Compiling net2 v0.2.32
+   Compiling time v0.1.39
+   Compiling memchr v2.0.1
+   Compiling atty v0.2.10
+   Compiling base64 v0.9.1
+   Compiling quote v0.6.8
+   Compiling memoffset v0.5.1
+   Compiling hyper v0.12.35
+   Compiling generic-array v0.9.0
+   Compiling url v1.7.2
+   Compiling serde_json v1.0.27
+   Compiling serde_yaml v0.7.4
+   Compiling flate2 v1.0.11
+   Compiling tokio-current-thread v0.1.6
+   Compiling tokio-timer v0.2.11
+   Compiling bytes v0.4.12
+   Compiling futures-cpupool v0.1.8
+   Compiling mio v0.6.14
+   Compiling aho-corasick v0.6.4
+   Compiling clap v2.31.2
+   Compiling backtrace v0.3.34
+   Compiling bzip2 v0.3.3
+   Compiling syn v0.14.9
+   Compiling mime v0.3.5
+   Compiling digest v0.7.2
+   Compiling crypto-mac v0.5.2
+   Compiling url_serde v0.2.0
+   Compiling tokio-io v0.1.8
+   Compiling http v0.1.18
+   Compiling tokio-buf v0.1.1
+   Compiling string v0.2.1
+   Compiling mio-uds v0.6.7
+   Compiling config v0.9.3
+   Compiling chrono v0.4.9
+   Compiling zip v0.5.3
+   Compiling synstructure v0.9.0
+   Compiling serde_derive v1.0.92
+   Compiling sha2 v0.7.1
+   Compiling hmac v0.5.0
+   Compiling tokio-reactor v0.1.1
+   Compiling tokio-codec v0.1.0
+   Compiling http-body v0.1.0
+   Compiling h2 v0.1.26
+   Compiling env_logger v0.5.9
+   Compiling typed-headers v0.1.0
+   Compiling chrono-humanize v0.0.11
+   Compiling crossbeam-epoch v0.7.2
+   Compiling tokio-tls v0.2.0
+   Compiling tokio-udp v0.1.0
+   Compiling tokio-tcp v0.1.0
+   Compiling tokio-signal v0.2.5
+   Compiling tokio-uds v0.2.5
+   Compiling num v0.2.0
+   Compiling failure v0.1.2
+   Compiling crossbeam-deque v0.7.1
+   Compiling parse_duration v2.0.1
+   Compiling edgelet-utils v0.1.0 (/project/edgelet/edgelet-utils)
+   Compiling systemd v0.1.0 (/project/edgelet/systemd)
+   Compiling mini-sntp v0.1.0 (/project/edgelet/mini-sntp)
+   Compiling tokio-threadpool v0.1.16
+   Compiling tokio-fs v0.1.6
+   Compiling rayon v1.2.0
+   Compiling tokio v0.1.22
+   Compiling edgelet-core v0.1.0 (/project/edgelet/edgelet-core)
+   Compiling hyper-tls v0.3.2
+   Compiling hyperlocal v0.6.0
+   Compiling docker v0.1.0 (/project/edgelet/docker-rs)
+   Compiling management v0.1.0 (/project/edgelet/management)
+   Compiling workload v0.1.0 (/project/edgelet/workload)
+   Compiling hsm v0.1.0 (/project/edgelet/hsm-rs)
+   Compiling external-provisioning v0.1.0 (/project/edgelet/external-provisioning)
+   Compiling hyper-proxy v0.5.0
+   Compiling edgelet-hsm v0.1.0 (/project/edgelet/edgelet-hsm)
+   Compiling edgelet-http v0.1.0 (/project/edgelet/edgelet-http)
+   Compiling dps v0.1.0 (/project/edgelet/dps)
+   Compiling edgelet-http-external-provisioning v0.1.0 (/project/edgelet/edgelet-http-external-provisioning)
+   Compiling iothubservice v0.1.0 (/project/edgelet/iothubservice)
+   Compiling provisioning v0.1.0 (/project/edgelet/provisioning)
+   Compiling edgelet-iothub v0.1.0 (/project/edgelet/edgelet-iothub)
+   Compiling edgelet-docker v0.1.0 (/project/edgelet/edgelet-docker)
+   Compiling edgelet-http-mgmt v0.1.0 (/project/edgelet/edgelet-http-mgmt)
+   Compiling edgelet-http-workload v0.1.0 (/project/edgelet/edgelet-http-workload)
+   Compiling iotedge v0.1.0 (/project/edgelet/iotedge)
+   Compiling iotedged v0.1.0 (/project/edgelet/iotedged)
+    Finished release [optimized] target(s) in 6m 52s
+install -D target/armv7-unknown-linux-gnueabihf/release/iotedged target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/iotedged
+install -D target/armv7-unknown-linux-gnueabihf/release/iotedge target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/iotedge
+install -m 644 -D ./contrib/systemd/debian/iotedge.service target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/debian/iotedge.service
+install -m 644 -D ./contrib/systemd/debian/iotedge.socket target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/debian/iotedge.socket
+install -m 644 -D ./contrib/systemd/debian/iotedge.mgmt.socket target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/debian/iotedge.mgmt.socket
+install -m 644 -D ./contrib/man/man1/iotedge.1 target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/man/iotedge.1
+install -m 644 -D ./contrib/man/man8/iotedged.8 target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/man/iotedged.8
+install -m 644 -D ./contrib/config/linux/debian/config.yaml target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/etc/iotedge/config.yaml.template
+install -m 644 -D ./contrib/config/linux/logrotate target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/etc/logrotate.d/iotedge
+install -m 644 -D ./contrib/docs/LICENSE target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/usr/share/doc/iotedge/LICENSE
+install -m 644 -D ./contrib/docs/ThirdPartyNotices target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/usr/share/doc/iotedge/ThirdPartyNotices
+install -m 644 -D ./contrib/docs/trademark target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/usr/share/doc/iotedge/trademark
+cp -R ./contrib/debian target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"
+sed "s/@version@/1.0.10~dev/g; s/@revision@/1/g;" ./contrib/debian/changelog > target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/debian/changelog
+sed "s/@version@/1.0.10~dev/g; s/@revision@/1/g;" ./contrib/debian/control > target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/debian/control
+cd target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10" && dpkg-buildpackage -b -us -uc -i --host-arch armhf
+dpkg-buildpackage: source package iotedge
+dpkg-buildpackage: source version 1.0.10~dev-1
+dpkg-buildpackage: source distribution unstable
+dpkg-buildpackage: source changed by "Azure IoT Edge Devs" <>
+dpkg-architecture: warning: specified GNU system type arm-linux-gnueabihf does not match CC system type x86_64-linux-gnu, try setting a correct CC environment variable
+ dpkg-source -i --before-build iotedge-1.0.10
+dpkg-buildpackage: host architecture armhf
+ debian/rules clean
+make[1]: Entering directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+dh clean --with systemd
+   dh_testdir
+   dh_auto_clean
+   dh_clean
+make[1]: Leaving directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+ debian/rules build
+make[1]: Entering directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+dh build --with systemd
+   dh_testdir
+   dh_update_autotools_config
+   dh_auto_configure
+   dh_auto_build
+   dh_auto_test
+make[1]: Leaving directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+ debian/rules binary
+make[1]: Entering directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+dh binary --with systemd
+   dh_testroot
+   dh_prep
+   dh_auto_install
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_installman
+   dh_systemd_enable
+   debian/rules override_dh_installinit
+make[2]: Entering directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+dh_systemd_enable
+dh_installinit
+make[2]: Leaving directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+   debian/rules override_dh_systemd_start
+make[2]: Entering directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+echo "Not running dh_systemd_start"
+Not running dh_systemd_start
+make[2]: Leaving directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+   dh_lintian
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   debian/rules override_dh_strip
+make[2]: Entering directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+dh_strip --no-automatic-dbgsym
+make[2]: Leaving directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+   dh_makeshlibs
+   debian/rules override_dh_shlibdeps
+make[2]: Entering directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+dh_shlibdeps -l /project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10/../build/hsm-sys*/out/lib -- --ignore-missing-info
+make[2]: Leaving directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+   dh_installdeb
+   dh_gencontrol
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'iotedge' in '../iotedge_1.0.10~dev-1_armhf.deb'.
+make[1]: Leaving directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+ dpkg-genchanges -b >../iotedge_1.0.10~dev-1_armhf.changes
+dpkg-genchanges: binary-only upload (no source code included)
+ dpkg-source -i --after-build iotedge-1.0.10
+dpkg-buildpackage: binary-only upload (no source included)
+Renaming package libiothsm-std-1.0.10~dev-1-Linux.deb to libiothsm-std_1.0.10~dev-1_armhf.deb
+/home/dengzt/repo/azure_iotedge.git/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge_1.0.10~dev-1_armhf.deb
+/home/dengzt/repo/azure_iotedge.git/edgelet/target/hsm/_CPack_Packages/Linux/DEB/libiothsm-std-1.0.10~dev-1-Linux.deb
+/home/dengzt/repo/azure_iotedge.git/edgelet/target/hsm/libiothsm-std_1.0.10~dev-1_armhf.deb
