@@ -1,0 +1,1721 @@
++ set -e
++++ dirname ./edgelet/build/linux/package.sh
+++ cd ./edgelet/build/linux
+++ pwd
++ DIR=/home/dengzt/repo/azure_iotedge.git/edgelet/build/linux
+++ realpath /home/dengzt/repo/azure_iotedge.git/edgelet/build/linux/../../..
++ BUILD_REPOSITORY_LOCALPATH=/home/dengzt/repo/azure_iotedge.git
++ PROJECT_ROOT=/home/dengzt/repo/azure_iotedge.git/edgelet
++ LIBIOTHSM_BUILD_DIR=/home/dengzt/repo/azure_iotedge.git/edgelet/target/hsm
++ REVISION=1
+++ cat /home/dengzt/repo/azure_iotedge.git/edgelet/version.txt
++ DEFAULT_VERSION=1.0.10~dev
++ VERSION=1.0.10~dev
++ CMAKE_ARGS=-DCMAKE_BUILD_TYPE=Release
++ CMAKE_ARGS='-DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED=On -Drun_unittests=Off -Duse_default_uuid=On -Duse_emulator=Off -Duse_http=Off'
++ DOCKER_VOLUME_MOUNTS=
++ case "$PACKAGE_OS" in
++ DOCKER_IMAGE=debian:10-slim
++ CMAKE_ARGS='-DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED=On -Drun_unittests=Off -Duse_default_uuid=On -Duse_emulator=Off -Duse_http=Off -DCPACK_GENERATOR=DEB'
++ CMAKE_ARGS='-DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED=On -Drun_unittests=Off -Duse_default_uuid=On -Duse_emulator=Off -Duse_http=Off -DCPACK_GENERATOR=DEB '\''-DCPACK_PACKAGE_VERSION=1.0.10~dev'\'''
++ CMAKE_ARGS='-DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED=On -Drun_unittests=Off -Duse_default_uuid=On -Duse_emulator=Off -Duse_http=Off -DCPACK_GENERATOR=DEB '\''-DCPACK_PACKAGE_VERSION=1.0.10~dev'\'' '\''-DCPACK_DEBIAN_PACKAGE_RELEASE=1'\'''
++ CMAKE_ARGS='-DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED=On -Drun_unittests=Off -Duse_default_uuid=On -Duse_emulator=Off -Duse_http=Off -DCPACK_GENERATOR=DEB '\''-DCPACK_PACKAGE_VERSION=1.0.10~dev'\'' '\''-DCPACK_DEBIAN_PACKAGE_RELEASE=1'\'' '\''-DOPENSSL_DEPENDS_SPEC=libssl1.1'\'''
++ '[' -z debian:10-slim ']'
++ case "$PACKAGE_ARCH" in
++ CMAKE_ARGS='-DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED=On -Drun_unittests=Off -Duse_default_uuid=On -Duse_emulator=Off -Duse_http=Off -DCPACK_GENERATOR=DEB '\''-DCPACK_PACKAGE_VERSION=1.0.10~dev'\'' '\''-DCPACK_DEBIAN_PACKAGE_RELEASE=1'\'' '\''-DOPENSSL_DEPENDS_SPEC=libssl1.1'\'' -DCPACK_DEBIAN_PACKAGE_ARCHITECTURE=armhf'
++ CMAKE_ARGS='-DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED=On -Drun_unittests=Off -Duse_default_uuid=On -Duse_emulator=Off -Duse_http=Off -DCPACK_GENERATOR=DEB '\''-DCPACK_PACKAGE_VERSION=1.0.10~dev'\'' '\''-DCPACK_DEBIAN_PACKAGE_RELEASE=1'\'' '\''-DOPENSSL_DEPENDS_SPEC=libssl1.1'\'' -DCPACK_DEBIAN_PACKAGE_ARCHITECTURE=armhf -DCPACK_RPM_PACKAGE_ARCHITECTURE=armv7hl'
++ RUST_TARGET=armv7-unknown-linux-gnueabihf
++ '[' -n armv7-unknown-linux-gnueabihf ']'
++ RUST_TARGET_COMMAND='rustup target add armv7-unknown-linux-gnueabihf &&'
++ case "$PACKAGE_OS.$PACKAGE_ARCH" in
++ SETUP_COMMAND='
+            dpkg --add-architecture armhf &&
+            apt-get update &&
+            apt-get upgrade -y &&
+            apt-get install -y --no-install-recommends \
+                binutils build-essential ca-certificates cmake curl debhelper dh-systemd file git make \
+                gcc g++ \
+                gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf \
+                libcurl4-openssl-dev:armhf libssl-dev:armhf uuid-dev:armhf &&
+
+            mkdir -p ~/.cargo &&
+            echo '\''[target.armv7-unknown-linux-gnueabihf]'\'' > ~/.cargo/config &&
+            echo '\''linker = "arm-linux-gnueabihf-gcc"'\'' >> ~/.cargo/config &&
+            export ARMV7_UNKNOWN_LINUX_GNUEABIHF_OPENSSL_LIB_DIR=/usr/lib/arm-linux-gnueabihf &&
+            export ARMV7_UNKNOWN_LINUX_GNUEABIHF_OPENSSL_INCLUDE_DIR=/usr/include &&
+        '
++ CMAKE_ARGS='-DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED=On -Drun_unittests=Off -Duse_default_uuid=On -Duse_emulator=Off -Duse_http=Off -DCPACK_GENERATOR=DEB '\''-DCPACK_PACKAGE_VERSION=1.0.10~dev'\'' '\''-DCPACK_DEBIAN_PACKAGE_RELEASE=1'\'' '\''-DOPENSSL_DEPENDS_SPEC=libssl1.1'\'' -DCPACK_DEBIAN_PACKAGE_ARCHITECTURE=armhf -DCPACK_RPM_PACKAGE_ARCHITECTURE=armv7hl -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_VERSION=1'
++ CMAKE_ARGS='-DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED=On -Drun_unittests=Off -Duse_default_uuid=On -Duse_emulator=Off -Duse_http=Off -DCPACK_GENERATOR=DEB '\''-DCPACK_PACKAGE_VERSION=1.0.10~dev'\'' '\''-DCPACK_DEBIAN_PACKAGE_RELEASE=1'\'' '\''-DOPENSSL_DEPENDS_SPEC=libssl1.1'\'' -DCPACK_DEBIAN_PACKAGE_ARCHITECTURE=armhf -DCPACK_RPM_PACKAGE_ARCHITECTURE=armv7hl -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_VERSION=1 -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc'
++ CMAKE_ARGS='-DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED=On -Drun_unittests=Off -Duse_default_uuid=On -Duse_emulator=Off -Duse_http=Off -DCPACK_GENERATOR=DEB '\''-DCPACK_PACKAGE_VERSION=1.0.10~dev'\'' '\''-DCPACK_DEBIAN_PACKAGE_RELEASE=1'\'' '\''-DOPENSSL_DEPENDS_SPEC=libssl1.1'\'' -DCPACK_DEBIAN_PACKAGE_ARCHITECTURE=armhf -DCPACK_RPM_PACKAGE_ARCHITECTURE=armv7hl -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_VERSION=1 -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc -DCMAKE_CXX_COMPILER=arm-linux-gnueabihf-g++'
++ '[' -z '
+            dpkg --add-architecture armhf &&
+            apt-get update &&
+            apt-get upgrade -y &&
+            apt-get install -y --no-install-recommends \
+                binutils build-essential ca-certificates cmake curl debhelper dh-systemd file git make \
+                gcc g++ \
+                gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf \
+                libcurl4-openssl-dev:armhf libssl-dev:armhf uuid-dev:armhf &&
+
+            mkdir -p ~/.cargo &&
+            echo '\''[target.armv7-unknown-linux-gnueabihf]'\'' > ~/.cargo/config &&
+            echo '\''linker = "arm-linux-gnueabihf-gcc"'\'' >> ~/.cargo/config &&
+            export ARMV7_UNKNOWN_LINUX_GNUEABIHF_OPENSSL_LIB_DIR=/usr/lib/arm-linux-gnueabihf &&
+            export ARMV7_UNKNOWN_LINUX_GNUEABIHF_OPENSSL_INCLUDE_DIR=/usr/include &&
+        ' ']'
++ case "$PACKAGE_OS" in
++ case "$PACKAGE_OS" in
++ MAKE_TARGET=deb
++ case "$PACKAGE_ARCH" in
++ MAKE_FLAGS=''\''CARGOFLAGS=--target armv7-unknown-linux-gnueabihf'\'''
++ MAKE_FLAGS=''\''CARGOFLAGS=--target armv7-unknown-linux-gnueabihf'\'' '\''TARGET=target/armv7-unknown-linux-gnueabihf/release'\'''
++ MAKE_FLAGS=''\''CARGOFLAGS=--target armv7-unknown-linux-gnueabihf'\'' '\''TARGET=target/armv7-unknown-linux-gnueabihf/release'\'' '\''DPKGFLAGS=-b -us -uc -i --host-arch armhf'\'''
++ MAKE_COMMAND='make deb '\''VERSION=1.0.10~dev'\'' '\''REVISION=1'\'' '\''CARGOFLAGS=--target armv7-unknown-linux-gnueabihf'\'' '\''TARGET=target/armv7-unknown-linux-gnueabihf/release'\'' '\''DPKGFLAGS=-b -us -uc -i --host-arch armhf'\'''
++ mkdir -p /home/dengzt/repo/azure_iotedge.git/edgelet/target/hsm
++ docker run --rm --user root -e USER=root -v /home/dengzt/repo/azure_iotedge.git:/project -i debian:10-slim sh -c '
+        set -e &&
+
+        cat /etc/os-release &&
+
+        
+            dpkg --add-architecture armhf &&
+            apt-get update &&
+            apt-get upgrade -y &&
+            apt-get install -y --no-install-recommends \
+                binutils build-essential ca-certificates cmake curl debhelper dh-systemd file git make \
+                gcc g++ \
+                gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf \
+                libcurl4-openssl-dev:armhf libssl-dev:armhf uuid-dev:armhf &&
+
+            mkdir -p ~/.cargo &&
+            echo '\''[target.armv7-unknown-linux-gnueabihf]'\'' > ~/.cargo/config &&
+            echo '\''linker = "arm-linux-gnueabihf-gcc"'\'' >> ~/.cargo/config &&
+            export ARMV7_UNKNOWN_LINUX_GNUEABIHF_OPENSSL_LIB_DIR=/usr/lib/arm-linux-gnueabihf &&
+            export ARMV7_UNKNOWN_LINUX_GNUEABIHF_OPENSSL_INCLUDE_DIR=/usr/include &&
+        
+
+        echo '\''Installing rustup'\'' &&
+        curl -sSLf https://sh.rustup.rs | sh -s -- -y &&
+        . ~/.cargo/env &&
+
+        # libiothsm
+        cd /project/edgelet/target/hsm &&
+        cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED=On -Drun_unittests=Off -Duse_default_uuid=On -Duse_emulator=Off -Duse_http=Off -DCPACK_GENERATOR=DEB '\''-DCPACK_PACKAGE_VERSION=1.0.10~dev'\'' '\''-DCPACK_DEBIAN_PACKAGE_RELEASE=1'\'' '\''-DOPENSSL_DEPENDS_SPEC=libssl1.1'\'' -DCPACK_DEBIAN_PACKAGE_ARCHITECTURE=armhf -DCPACK_RPM_PACKAGE_ARCHITECTURE=armv7hl -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_VERSION=1 -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc -DCMAKE_CXX_COMPILER=arm-linux-gnueabihf-g++ /project/edgelet/hsm-sys/azure-iot-hsm-c/ &&
+        make -j package &&
+
+        # iotedged
+        cd /project/edgelet &&
+        rustup target add armv7-unknown-linux-gnueabihf &&
+        make deb '\''VERSION=1.0.10~dev'\'' '\''REVISION=1'\'' '\''CARGOFLAGS=--target armv7-unknown-linux-gnueabihf'\'' '\''TARGET=target/armv7-unknown-linux-gnueabihf/release'\'' '\''DPKGFLAGS=-b -us -uc -i --host-arch armhf'\''
+    '
+Unable to find image 'debian:10-slim' locally
+10-slim: Pulling from library/debian
+8559a31e96f4: Pulling fs layer
+8559a31e96f4: Verifying Checksum
+8559a31e96f4: Download complete
+8559a31e96f4: Pull complete
+Digest: sha256:d67632d49fcae559f86bd2b685c9159d0b1e799fd1d109dfbfccfab4ea773ba5
+Status: Downloaded newer image for debian:10-slim
+PRETTY_NAME="Debian GNU/Linux 10 (buster)"
+NAME="Debian GNU/Linux"
+VERSION_ID="10"
+VERSION="10 (buster)"
+VERSION_CODENAME=buster
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+Get:1 http://security.debian.org/debian-security buster/updates InRelease [65.4 kB]
+Get:2 http://deb.debian.org/debian buster InRelease [121 kB]
+Get:3 http://security.debian.org/debian-security buster/updates/main armhf Packages [209 kB]
+Get:4 http://deb.debian.org/debian buster-updates InRelease [51.9 kB]
+Get:5 http://security.debian.org/debian-security buster/updates/main amd64 Packages [212 kB]
+Get:6 http://deb.debian.org/debian buster/main armhf Packages [7697 kB]
+Get:7 http://deb.debian.org/debian buster/main amd64 Packages [7905 kB]
+Get:8 http://deb.debian.org/debian buster-updates/main amd64 Packages [7868 B]
+Get:9 http://deb.debian.org/debian buster-updates/main armhf Packages [7848 B]
+Fetched 16.3 MB in 3s (6244 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  autoconf automake autopoint autotools-dev binutils-arm-linux-gnueabihf
+  binutils-common binutils-x86-64-linux-gnu bsdmainutils bzip2 cmake-data cpp
+  cpp-8 cpp-8-arm-linux-gnueabihf cpp-arm-linux-gnueabihf dh-autoreconf
+  dh-strip-nondeterminism dpkg-dev dwz g++-8 g++-8-arm-linux-gnueabihf gcc-8
+  gcc-8-arm-linux-gnueabihf gcc-8-arm-linux-gnueabihf-base gcc-8-base:armhf
+  gcc-8-cross-base gettext gettext-base git-man groff-base intltool-debian
+  libarchive-zip-perl libarchive13 libasan5 libasan5-armhf-cross libatomic1
+  libatomic1-armhf-cross libbinutils libbsd0 libc-dev-bin libc6:armhf
+  libc6-armhf-cross libc6-dev libc6-dev:armhf libc6-dev-armhf-cross libcc1-0
+  libcom-err2:armhf libcroco3 libcurl3-gnutls libcurl4 libcurl4:armhf
+  libdb5.3:armhf libdpkg-perl libelf1 liberror-perl libexpat1 libffi6:armhf
+  libfile-stripnondeterminism-perl libgcc-8-dev libgcc-8-dev-armhf-cross
+  libgcc1:armhf libgcc1-armhf-cross libgcrypt20:armhf libgdbm-compat4 libgdbm6
+  libglib2.0-0 libgmp10:armhf libgnutls30:armhf libgomp1 libgomp1-armhf-cross
+  libgpg-error0:armhf libgssapi-krb5-2 libgssapi-krb5-2:armhf
+  libhogweed4:armhf libicu63 libidn2-0:armhf libisl19 libitm1 libjsoncpp1
+  libk5crypto3 libk5crypto3:armhf libkeyutils1 libkeyutils1:armhf libkrb5-3
+  libkrb5-3:armhf libkrb5support0 libkrb5support0:armhf libldap-2.4-2
+  libldap-2.4-2:armhf libldap-common liblsan0 libmagic-mgc libmagic1 libmpc3
+  libmpfr6 libmpx2 libncurses6 libnettle6:armhf libnghttp2-14
+  libnghttp2-14:armhf libp11-kit0:armhf libpcre2-8-0 libperl5.28 libpipeline1
+  libprocps7 libpsl5 libpsl5:armhf libquadmath0 librhash0 librtmp1
+  librtmp1:armhf libsasl2-2 libsasl2-2:armhf libsasl2-modules-db
+  libsasl2-modules-db:armhf libsigsegv2 libssh2-1 libssh2-1:armhf libssl1.1
+  libssl1.1:armhf libstdc++-8-dev libstdc++-8-dev-armhf-cross
+  libstdc++6-armhf-cross libtasn1-6:armhf libtool libtsan0 libubsan1
+  libubsan1-armhf-cross libuchardet0 libunistring2:armhf libuuid1:armhf libuv1
+  libxml2 linux-libc-dev linux-libc-dev:armhf linux-libc-dev-armhf-cross
+  lsb-base m4 man-db openssl patch perl perl-modules-5.28 po-debconf procps
+  sensible-utils xz-utils zlib1g:armhf
+Suggested packages:
+  autoconf-archive gnu-standards autoconf-doc binutils-doc wamerican
+  | wordlist whois vacation bzip2-doc cmake-doc ninja-build cpp-doc
+  gcc-8-locales dh-make debian-keyring g++-multilib g++-8-multilib gcc-8-doc
+  libstdc++6-8-dbg libstdc++6-8-dbg-armhf-cross gcc-multilib manpages-dev flex
+  bison gdb gcc-doc gcc-8-multilib libgcc1-dbg libgomp1-dbg libitm1-dbg
+  libatomic1-dbg libasan5-dbg liblsan0-dbg libtsan0-dbg libubsan1-dbg
+  libmpx2-dbg libquadmath0-dbg libgcc1-dbg-armhf-cross
+  libgomp1-dbg-armhf-cross libitm1-dbg-armhf-cross libatomic1-dbg-armhf-cross
+  libasan5-dbg-armhf-cross liblsan0-dbg-armhf-cross libtsan0-dbg-armhf-cross
+  libubsan1-dbg-armhf-cross libmpx2-dbg-armhf-cross
+  libquadmath0-dbg-armhf-cross gdb-arm-linux-gnueabihf gettext-doc
+  libasprintf-dev libgettextpo-dev git-daemon-run | git-daemon-sysvinit
+  git-doc git-el git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn
+  groff lrzip glibc-doc:armhf libc-l10n:armhf locales:armhf glibc-doc
+  manpages-dev:armhf libcurl4-doc:armhf libidn11-dev:armhf libkrb5-dev:armhf
+  libldap2-dev:armhf librtmp-dev:armhf libssh2-1-dev:armhf pkg-config:armhf
+  zlib1g-dev:armhf gnupg | gnupg2 bzr rng-tools:armhf gdbm-l10n
+  gnutls-bin:armhf krb5-doc krb5-user krb5-doc:armhf krb5-user:armhf
+  libssl-doc:armhf libstdc++-8-doc libtool-doc gfortran | fortran95-compiler
+  gcj-jdk m4-doc make-doc apparmor less www-browser ed diffutils-doc perl-doc
+  libterm-readline-gnu-perl | libterm-readline-perl-perl libb-debug-perl
+  liblocale-codes-perl libmail-box-perl
+Recommended packages:
+  fakeroot gnupg | gnupg2 libalgorithm-merge-perl less ssh-client manpages
+  manpages-dev libfile-fcntllock-perl liblocale-gettext-perl
+  libarchive-cpio-perl libglib2.0-data shared-mime-info xdg-user-dirs
+  libgpg-error-l10n:armhf krb5-locales krb5-locales:armhf libgpm2 publicsuffix
+  publicsuffix:armhf libsasl2-modules libsasl2-modules:armhf libltdl-dev
+  uuid-runtime:armhf netbase libmail-sendmail-perl psmisc
+The following NEW packages will be installed:
+  autoconf automake autopoint autotools-dev binutils
+  binutils-arm-linux-gnueabihf binutils-common binutils-x86-64-linux-gnu
+  bsdmainutils build-essential bzip2 ca-certificates cmake cmake-data cpp
+  cpp-8 cpp-8-arm-linux-gnueabihf cpp-arm-linux-gnueabihf curl debhelper
+  dh-autoreconf dh-strip-nondeterminism dh-systemd dpkg-dev dwz file g++ g++-8
+  g++-8-arm-linux-gnueabihf g++-arm-linux-gnueabihf gcc gcc-8
+  gcc-8-arm-linux-gnueabihf gcc-8-arm-linux-gnueabihf-base gcc-8-base:armhf
+  gcc-8-cross-base gcc-arm-linux-gnueabihf gettext gettext-base git git-man
+  groff-base intltool-debian libarchive-zip-perl libarchive13 libasan5
+  libasan5-armhf-cross libatomic1 libatomic1-armhf-cross libbinutils libbsd0
+  libc-dev-bin libc6:armhf libc6-armhf-cross libc6-dev libc6-dev:armhf
+  libc6-dev-armhf-cross libcc1-0 libcom-err2:armhf libcroco3 libcurl3-gnutls
+  libcurl4 libcurl4:armhf libcurl4-openssl-dev:armhf libdb5.3:armhf
+  libdpkg-perl libelf1 liberror-perl libexpat1 libffi6:armhf
+  libfile-stripnondeterminism-perl libgcc-8-dev libgcc-8-dev-armhf-cross
+  libgcc1:armhf libgcc1-armhf-cross libgcrypt20:armhf libgdbm-compat4 libgdbm6
+  libglib2.0-0 libgmp10:armhf libgnutls30:armhf libgomp1 libgomp1-armhf-cross
+  libgpg-error0:armhf libgssapi-krb5-2 libgssapi-krb5-2:armhf
+  libhogweed4:armhf libicu63 libidn2-0:armhf libisl19 libitm1 libjsoncpp1
+  libk5crypto3 libk5crypto3:armhf libkeyutils1 libkeyutils1:armhf libkrb5-3
+  libkrb5-3:armhf libkrb5support0 libkrb5support0:armhf libldap-2.4-2
+  libldap-2.4-2:armhf libldap-common liblsan0 libmagic-mgc libmagic1 libmpc3
+  libmpfr6 libmpx2 libncurses6 libnettle6:armhf libnghttp2-14
+  libnghttp2-14:armhf libp11-kit0:armhf libpcre2-8-0 libperl5.28 libpipeline1
+  libprocps7 libpsl5 libpsl5:armhf libquadmath0 librhash0 librtmp1
+  librtmp1:armhf libsasl2-2 libsasl2-2:armhf libsasl2-modules-db
+  libsasl2-modules-db:armhf libsigsegv2 libssh2-1 libssh2-1:armhf
+  libssl-dev:armhf libssl1.1 libssl1.1:armhf libstdc++-8-dev
+  libstdc++-8-dev-armhf-cross libstdc++6-armhf-cross libtasn1-6:armhf libtool
+  libtsan0 libubsan1 libubsan1-armhf-cross libuchardet0 libunistring2:armhf
+  libuuid1:armhf libuv1 libxml2 linux-libc-dev linux-libc-dev:armhf
+  linux-libc-dev-armhf-cross lsb-base m4 make man-db openssl patch perl
+  perl-modules-5.28 po-debconf procps sensible-utils uuid-dev:armhf xz-utils
+  zlib1g:armhf
+0 upgraded, 164 newly installed, 0 to remove and 0 not upgraded.
+Need to get 138 MB of archives.
+After this operation, 533 MB of additional disk space will be used.
+Get:1 http://security.debian.org/debian-security buster/updates/main armhf libgnutls30 armhf 3.6.7-4+deb10u4 [1064 kB]
+Get:2 http://deb.debian.org/debian buster/main amd64 libbsd0 amd64 0.9.1-2 [99.5 kB]
+Get:3 http://deb.debian.org/debian buster/main amd64 bsdmainutils amd64 11.1.2+b1 [191 kB]
+Get:4 http://deb.debian.org/debian buster/main amd64 libuchardet0 amd64 0.0.6-3 [64.9 kB]
+Get:5 http://deb.debian.org/debian buster/main amd64 groff-base amd64 1.22.4-3 [916 kB]
+Get:6 http://security.debian.org/debian-security buster/updates/main amd64 linux-libc-dev amd64 4.19.118-2+deb10u1 [1354 kB]
+Get:7 http://deb.debian.org/debian buster/main amd64 libgdbm6 amd64 1.18.1-4 [64.7 kB]
+Get:8 http://deb.debian.org/debian buster/main amd64 libpipeline1 amd64 1.5.1-2 [31.2 kB]
+Get:9 http://deb.debian.org/debian buster/main amd64 man-db amd64 2.8.5-2 [1274 kB]
+Get:10 http://security.debian.org/debian-security buster/updates/main armhf linux-libc-dev armhf 4.19.118-2+deb10u1 [1336 kB]
+Get:11 http://deb.debian.org/debian buster/main amd64 perl-modules-5.28 all 5.28.1-6 [2873 kB]
+Get:12 http://deb.debian.org/debian buster/main amd64 libgdbm-compat4 amd64 1.18.1-4 [44.1 kB]
+Get:13 http://deb.debian.org/debian buster/main amd64 libperl5.28 amd64 5.28.1-6 [3883 kB]
+Get:14 http://deb.debian.org/debian buster/main amd64 perl amd64 5.28.1-6 [204 kB]
+Get:15 http://deb.debian.org/debian buster/main amd64 libncurses6 amd64 6.1+20181013-2+deb10u2 [102 kB]
+Get:16 http://deb.debian.org/debian buster/main amd64 libprocps7 amd64 2:3.3.15-2 [61.7 kB]
+Get:17 http://deb.debian.org/debian buster/main amd64 lsb-base all 10.2019051400 [28.4 kB]
+Get:18 http://deb.debian.org/debian buster/main amd64 procps amd64 2:3.3.15-2 [259 kB]
+Get:19 http://deb.debian.org/debian buster/main amd64 sensible-utils all 0.0.12 [15.8 kB]
+Get:20 http://deb.debian.org/debian buster/main amd64 bzip2 amd64 1.0.6-9.2~deb10u1 [48.4 kB]
+Get:21 http://deb.debian.org/debian buster/main amd64 libmagic-mgc amd64 1:5.35-4+deb10u1 [242 kB]
+Get:22 http://deb.debian.org/debian buster/main amd64 libmagic1 amd64 1:5.35-4+deb10u1 [117 kB]
+Get:23 http://deb.debian.org/debian buster/main amd64 file amd64 1:5.35-4+deb10u1 [66.4 kB]
+Get:24 http://deb.debian.org/debian buster/main amd64 gettext-base amd64 0.19.8.1-9 [123 kB]
+Get:25 http://deb.debian.org/debian buster/main armhf gcc-8-base armhf 8.3.0-6 [191 kB]
+Get:26 http://deb.debian.org/debian buster/main armhf libgcc1 armhf 1:8.3.0-6 [37.2 kB]
+Get:27 http://deb.debian.org/debian buster/main armhf libc6 armhf 2.28-10 [2390 kB]
+Get:28 http://deb.debian.org/debian buster/main armhf libgmp10 armhf 2:6.1.2+dfsg-4 [205 kB]
+Get:29 http://deb.debian.org/debian buster/main armhf libnettle6 armhf 3.4.1-1 [227 kB]
+Get:30 http://deb.debian.org/debian buster/main armhf libhogweed4 armhf 3.4.1-1 [130 kB]
+Get:31 http://deb.debian.org/debian buster/main armhf libunistring2 armhf 0.9.10-1 [368 kB]
+Get:32 http://deb.debian.org/debian buster/main armhf libidn2-0 armhf 2.0.5-1+deb10u1 [74.3 kB]
+Get:33 http://deb.debian.org/debian buster/main armhf libffi6 armhf 3.2.1-9 [18.9 kB]
+Get:34 http://deb.debian.org/debian buster/main armhf libp11-kit0 armhf 0.23.15-2 [292 kB]
+Get:35 http://deb.debian.org/debian buster/main armhf libtasn1-6 armhf 4.13-3 [46.8 kB]
+Get:36 http://deb.debian.org/debian buster/main amd64 xz-utils amd64 5.2.4-1 [183 kB]
+Get:37 http://deb.debian.org/debian buster/main amd64 libsigsegv2 amd64 2.12-2 [32.8 kB]
+Get:38 http://deb.debian.org/debian buster/main amd64 m4 amd64 1.4.18-2 [203 kB]
+Get:39 http://deb.debian.org/debian buster/main amd64 autoconf all 2.69-11 [341 kB]
+Get:40 http://deb.debian.org/debian buster/main amd64 autotools-dev all 20180224.1 [77.0 kB]
+Get:41 http://deb.debian.org/debian buster/main amd64 automake all 1:1.16.1-4 [771 kB]
+Get:42 http://deb.debian.org/debian buster/main amd64 autopoint all 0.19.8.1-9 [434 kB]
+Get:43 http://deb.debian.org/debian buster/main amd64 binutils-common amd64 2.31.1-16 [2073 kB]
+Get:44 http://deb.debian.org/debian buster/main amd64 libbinutils amd64 2.31.1-16 [478 kB]
+Get:45 http://deb.debian.org/debian buster/main amd64 binutils-x86-64-linux-gnu amd64 2.31.1-16 [1823 kB]
+Get:46 http://deb.debian.org/debian buster/main amd64 binutils amd64 2.31.1-16 [56.8 kB]
+Get:47 http://deb.debian.org/debian buster/main amd64 binutils-arm-linux-gnueabihf amd64 2.31.1-16 [2834 kB]
+Get:48 http://deb.debian.org/debian buster/main amd64 libc-dev-bin amd64 2.28-10 [275 kB]
+Get:49 http://deb.debian.org/debian buster/main amd64 libc6-dev amd64 2.28-10 [2691 kB]
+Get:50 http://deb.debian.org/debian buster/main amd64 libisl19 amd64 0.20-2 [587 kB]
+Get:51 http://deb.debian.org/debian buster/main amd64 libmpfr6 amd64 4.0.2-1 [775 kB]
+Get:52 http://deb.debian.org/debian buster/main amd64 libmpc3 amd64 1.1.0-1 [41.3 kB]
+Get:53 http://deb.debian.org/debian buster/main amd64 cpp-8 amd64 8.3.0-6 [8914 kB]
+Get:54 http://deb.debian.org/debian buster/main amd64 cpp amd64 4:8.3.0-1 [19.4 kB]
+Get:55 http://deb.debian.org/debian buster/main amd64 libcc1-0 amd64 8.3.0-6 [46.6 kB]
+Get:56 http://deb.debian.org/debian buster/main amd64 libgomp1 amd64 8.3.0-6 [75.8 kB]
+Get:57 http://deb.debian.org/debian buster/main amd64 libitm1 amd64 8.3.0-6 [27.7 kB]
+Get:58 http://deb.debian.org/debian buster/main amd64 libatomic1 amd64 8.3.0-6 [9032 B]
+Get:59 http://deb.debian.org/debian buster/main amd64 libasan5 amd64 8.3.0-6 [362 kB]
+Get:60 http://deb.debian.org/debian buster/main amd64 liblsan0 amd64 8.3.0-6 [131 kB]
+Get:61 http://deb.debian.org/debian buster/main amd64 libtsan0 amd64 8.3.0-6 [283 kB]
+Get:62 http://deb.debian.org/debian buster/main amd64 libubsan1 amd64 8.3.0-6 [120 kB]
+Get:63 http://deb.debian.org/debian buster/main amd64 libmpx2 amd64 8.3.0-6 [11.4 kB]
+Get:64 http://deb.debian.org/debian buster/main amd64 libquadmath0 amd64 8.3.0-6 [133 kB]
+Get:65 http://deb.debian.org/debian buster/main amd64 libgcc-8-dev amd64 8.3.0-6 [2298 kB]
+Get:66 http://deb.debian.org/debian buster/main amd64 gcc-8 amd64 8.3.0-6 [9452 kB]
+Get:67 http://deb.debian.org/debian buster/main amd64 gcc amd64 4:8.3.0-1 [5196 B]
+Get:68 http://deb.debian.org/debian buster/main amd64 libstdc++-8-dev amd64 8.3.0-6 [1532 kB]
+Get:69 http://deb.debian.org/debian buster/main amd64 g++-8 amd64 8.3.0-6 [9752 kB]
+Get:70 http://deb.debian.org/debian buster/main amd64 g++ amd64 4:8.3.0-1 [1644 B]
+Get:71 http://deb.debian.org/debian buster/main amd64 make amd64 4.2.1-1.2 [341 kB]
+Get:72 http://deb.debian.org/debian buster/main amd64 libdpkg-perl all 1.19.7 [1414 kB]
+Get:73 http://deb.debian.org/debian buster/main amd64 patch amd64 2.7.6-3+deb10u1 [126 kB]
+Get:74 http://deb.debian.org/debian buster/main amd64 dpkg-dev all 1.19.7 [1773 kB]
+Get:75 http://deb.debian.org/debian buster/main amd64 build-essential amd64 12.6 [7576 B]
+Get:76 http://deb.debian.org/debian buster/main amd64 libssl1.1 amd64 1.1.1d-0+deb10u3 [1538 kB]
+Get:77 http://deb.debian.org/debian buster/main amd64 openssl amd64 1.1.1d-0+deb10u3 [844 kB]
+Get:78 http://deb.debian.org/debian buster-updates/main amd64 ca-certificates all 20200601~deb10u1 [158 kB]
+Get:79 http://deb.debian.org/debian buster/main amd64 cmake-data all 3.13.4-1 [1476 kB]
+Get:80 http://deb.debian.org/debian buster/main amd64 libicu63 amd64 63.1-6+deb10u1 [8300 kB]
+Get:81 http://deb.debian.org/debian buster/main amd64 libxml2 amd64 2.9.4+dfsg1-7+b3 [687 kB]
+Get:82 http://deb.debian.org/debian buster/main amd64 libarchive13 amd64 3.3.3-4+deb10u1 [313 kB]
+Get:83 http://deb.debian.org/debian buster/main amd64 libkeyutils1 amd64 1.6-6 [15.0 kB]
+Get:84 http://deb.debian.org/debian buster/main amd64 libkrb5support0 amd64 1.17-3 [65.6 kB]
+Get:85 http://deb.debian.org/debian buster/main amd64 libk5crypto3 amd64 1.17-3 [121 kB]
+Get:86 http://deb.debian.org/debian buster/main amd64 libkrb5-3 amd64 1.17-3 [370 kB]
+Get:87 http://deb.debian.org/debian buster/main amd64 libgssapi-krb5-2 amd64 1.17-3 [158 kB]
+Get:88 http://deb.debian.org/debian buster/main amd64 libsasl2-modules-db amd64 2.1.27+dfsg-1+deb10u1 [69.1 kB]
+Get:89 http://deb.debian.org/debian buster/main amd64 libsasl2-2 amd64 2.1.27+dfsg-1+deb10u1 [106 kB]
+Get:90 http://deb.debian.org/debian buster/main amd64 libldap-common all 2.4.47+dfsg-3+deb10u2 [89.7 kB]
+Get:91 http://deb.debian.org/debian buster/main amd64 libldap-2.4-2 amd64 2.4.47+dfsg-3+deb10u2 [224 kB]
+Get:92 http://deb.debian.org/debian buster/main amd64 libnghttp2-14 amd64 1.36.0-2+deb10u1 [85.0 kB]
+Get:93 http://deb.debian.org/debian buster/main amd64 libpsl5 amd64 0.20.2-2 [53.7 kB]
+Get:94 http://deb.debian.org/debian buster/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2 [60.5 kB]
+Get:95 http://deb.debian.org/debian buster/main amd64 libssh2-1 amd64 1.8.0-2.1 [140 kB]
+Get:96 http://deb.debian.org/debian buster/main amd64 libcurl4 amd64 7.64.0-4+deb10u1 [331 kB]
+Get:97 http://deb.debian.org/debian buster/main amd64 libexpat1 amd64 2.2.6-2+deb10u1 [106 kB]
+Get:98 http://deb.debian.org/debian buster/main amd64 libjsoncpp1 amd64 1.7.4-3 [75.6 kB]
+Get:99 http://deb.debian.org/debian buster/main amd64 librhash0 amd64 1.3.8-1 [122 kB]
+Get:100 http://deb.debian.org/debian buster/main amd64 libuv1 amd64 1.24.1-1 [110 kB]
+Get:101 http://deb.debian.org/debian buster/main amd64 cmake amd64 3.13.4-1 [3480 kB]
+Get:102 http://deb.debian.org/debian buster/main amd64 gcc-8-arm-linux-gnueabihf-base amd64 8.3.0-2cross1 [190 kB]
+Get:103 http://deb.debian.org/debian buster/main amd64 cpp-8-arm-linux-gnueabihf amd64 8.3.0-2cross1 [6554 kB]
+Get:104 http://deb.debian.org/debian buster/main amd64 cpp-arm-linux-gnueabihf amd64 4:8.3.0-1 [16.5 kB]
+Get:105 http://deb.debian.org/debian buster/main amd64 curl amd64 7.64.0-4+deb10u1 [264 kB]
+Get:106 http://deb.debian.org/debian buster/main amd64 libtool all 2.4.6-9 [547 kB]
+Get:107 http://deb.debian.org/debian buster/main amd64 dh-autoreconf all 19 [16.9 kB]
+Get:108 http://deb.debian.org/debian buster/main amd64 libarchive-zip-perl all 1.64-1 [96.8 kB]
+Get:109 http://deb.debian.org/debian buster/main amd64 libfile-stripnondeterminism-perl all 1.1.2-1 [19.8 kB]
+Get:110 http://deb.debian.org/debian buster/main amd64 dh-strip-nondeterminism all 1.1.2-1 [13.0 kB]
+Get:111 http://deb.debian.org/debian buster/main amd64 libelf1 amd64 0.176-1.1 [161 kB]
+Get:112 http://deb.debian.org/debian buster/main amd64 dwz amd64 0.12-3 [78.0 kB]
+Get:113 http://deb.debian.org/debian buster/main amd64 libglib2.0-0 amd64 2.58.3-2+deb10u2 [1258 kB]
+Get:114 http://deb.debian.org/debian buster/main amd64 libcroco3 amd64 0.6.12-3 [145 kB]
+Get:115 http://deb.debian.org/debian buster/main amd64 gettext amd64 0.19.8.1-9 [1303 kB]
+Get:116 http://deb.debian.org/debian buster/main amd64 intltool-debian all 0.35.0+20060710.5 [26.8 kB]
+Get:117 http://deb.debian.org/debian buster/main amd64 po-debconf all 1.0.21 [248 kB]
+Get:118 http://deb.debian.org/debian buster/main amd64 debhelper all 12.1.1 [1016 kB]
+Get:119 http://deb.debian.org/debian buster/main amd64 dh-systemd all 12.1.1 [122 kB]
+Get:120 http://deb.debian.org/debian buster/main amd64 gcc-8-cross-base all 8.3.0-2cross1 [185 kB]
+Get:121 http://deb.debian.org/debian buster/main amd64 libc6-armhf-cross all 2.28-7cross1 [1170 kB]
+Get:122 http://deb.debian.org/debian buster/main amd64 libgcc1-armhf-cross all 1:8.3.0-2cross1 [37.1 kB]
+Get:123 http://deb.debian.org/debian buster/main amd64 libgomp1-armhf-cross all 8.3.0-2cross1 [63.1 kB]
+Get:124 http://deb.debian.org/debian buster/main amd64 libatomic1-armhf-cross all 8.3.0-2cross1 [6580 B]
+Get:125 http://deb.debian.org/debian buster/main amd64 libstdc++6-armhf-cross all 8.3.0-2cross1 [301 kB]
+Get:126 http://deb.debian.org/debian buster/main amd64 libasan5-armhf-cross all 8.3.0-2cross1 [330 kB]
+Get:127 http://deb.debian.org/debian buster/main amd64 libubsan1-armhf-cross all 8.3.0-2cross1 [103 kB]
+Get:128 http://deb.debian.org/debian buster/main amd64 libgcc-8-dev-armhf-cross all 8.3.0-2cross1 [612 kB]
+Get:129 http://deb.debian.org/debian buster/main amd64 gcc-8-arm-linux-gnueabihf amd64 8.3.0-2cross1 [6974 kB]
+Get:130 http://deb.debian.org/debian buster/main amd64 linux-libc-dev-armhf-cross all 4.19.20-1cross1 [1212 kB]
+Get:131 http://deb.debian.org/debian buster/main amd64 libc6-dev-armhf-cross all 2.28-7cross1 [2148 kB]
+Get:132 http://deb.debian.org/debian buster/main amd64 libstdc++-8-dev-armhf-cross all 8.3.0-2cross1 [1556 kB]
+Get:133 http://deb.debian.org/debian buster/main amd64 g++-8-arm-linux-gnueabihf amd64 8.3.0-2cross1 [7133 kB]
+Get:134 http://deb.debian.org/debian buster/main amd64 gcc-arm-linux-gnueabihf amd64 4:8.3.0-1 [1456 B]
+Get:135 http://deb.debian.org/debian buster/main amd64 g++-arm-linux-gnueabihf amd64 4:8.3.0-1 [1180 B]
+Get:136 http://deb.debian.org/debian buster/main amd64 libcurl3-gnutls amd64 7.64.0-4+deb10u1 [330 kB]
+Get:137 http://deb.debian.org/debian buster/main amd64 libpcre2-8-0 amd64 10.32-5 [213 kB]
+Get:138 http://deb.debian.org/debian buster/main amd64 liberror-perl all 0.17027-2 [30.9 kB]
+Get:139 http://deb.debian.org/debian buster/main amd64 git-man all 1:2.20.1-2+deb10u3 [1620 kB]
+Get:140 http://deb.debian.org/debian buster/main amd64 git amd64 1:2.20.1-2+deb10u3 [5633 kB]
+Get:141 http://deb.debian.org/debian buster/main armhf libc6-dev armhf 2.28-10 [2149 kB]
+Get:142 http://deb.debian.org/debian buster/main armhf libcom-err2 armhf 1.44.5-1+deb10u3 [67.5 kB]
+Get:143 http://deb.debian.org/debian buster/main armhf libkeyutils1 armhf 1.6-6 [13.9 kB]
+Get:144 http://deb.debian.org/debian buster/main armhf libkrb5support0 armhf 1.17-3 [62.3 kB]
+Get:145 http://deb.debian.org/debian buster/main armhf libk5crypto3 armhf 1.17-3 [119 kB]
+Get:146 http://deb.debian.org/debian buster/main armhf libssl1.1 armhf 1.1.1d-0+deb10u3 [1299 kB]
+Get:147 http://deb.debian.org/debian buster/main armhf libkrb5-3 armhf 1.17-3 [323 kB]
+Get:148 http://deb.debian.org/debian buster/main armhf libgssapi-krb5-2 armhf 1.17-3 [137 kB]
+Get:149 http://deb.debian.org/debian buster/main armhf libdb5.3 armhf 5.3.28+dfsg1-0.5 [597 kB]
+Get:150 http://deb.debian.org/debian buster/main armhf libsasl2-modules-db armhf 2.1.27+dfsg-1+deb10u1 [67.4 kB]
+Get:151 http://deb.debian.org/debian buster/main armhf libsasl2-2 armhf 2.1.27+dfsg-1+deb10u1 [98.9 kB]
+Get:152 http://deb.debian.org/debian buster/main armhf libldap-2.4-2 armhf 2.4.47+dfsg-3+deb10u2 [202 kB]
+Get:153 http://deb.debian.org/debian buster/main armhf libnghttp2-14 armhf 1.36.0-2+deb10u1 [74.4 kB]
+Get:154 http://deb.debian.org/debian buster/main armhf libpsl5 armhf 0.20.2-2 [52.4 kB]
+Get:155 http://deb.debian.org/debian buster/main armhf zlib1g armhf 1:1.2.11.dfsg-1 [87.9 kB]
+Get:156 http://deb.debian.org/debian buster/main armhf librtmp1 armhf 2.4+20151223.gitfa8646d.1-2 [54.9 kB]
+Get:157 http://deb.debian.org/debian buster/main armhf libgpg-error0 armhf 1.35-1 [62.6 kB]
+Get:158 http://deb.debian.org/debian buster/main armhf libgcrypt20 armhf 1.8.4-5 [501 kB]
+Get:159 http://deb.debian.org/debian buster/main armhf libssh2-1 armhf 1.8.0-2.1 [129 kB]
+Get:160 http://deb.debian.org/debian buster/main armhf libcurl4 armhf 7.64.0-4+deb10u1 [297 kB]
+Get:161 http://deb.debian.org/debian buster/main armhf libcurl4-openssl-dev armhf 7.64.0-4+deb10u1 [390 kB]
+Get:162 http://deb.debian.org/debian buster/main armhf libssl-dev armhf 1.1.1d-0+deb10u3 [1597 kB]
+Get:163 http://deb.debian.org/debian buster/main armhf libuuid1 armhf 2.33.1-0.1 [77.5 kB]
+Get:164 http://deb.debian.org/debian buster/main armhf uuid-dev armhf 2.33.1-0.1 [92.6 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 138 MB in 10s (13.9 MB/s)
+Selecting previously unselected package libbsd0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6460 files and directories currently installed.)
+Preparing to unpack .../000-libbsd0_0.9.1-2_amd64.deb ...
+Unpacking libbsd0:amd64 (0.9.1-2) ...
+Selecting previously unselected package bsdmainutils.
+Preparing to unpack .../001-bsdmainutils_11.1.2+b1_amd64.deb ...
+Unpacking bsdmainutils (11.1.2+b1) ...
+Selecting previously unselected package libuchardet0:amd64.
+Preparing to unpack .../002-libuchardet0_0.0.6-3_amd64.deb ...
+Unpacking libuchardet0:amd64 (0.0.6-3) ...
+Selecting previously unselected package groff-base.
+Preparing to unpack .../003-groff-base_1.22.4-3_amd64.deb ...
+Unpacking groff-base (1.22.4-3) ...
+Selecting previously unselected package libgdbm6:amd64.
+Preparing to unpack .../004-libgdbm6_1.18.1-4_amd64.deb ...
+Unpacking libgdbm6:amd64 (1.18.1-4) ...
+Selecting previously unselected package libpipeline1:amd64.
+Preparing to unpack .../005-libpipeline1_1.5.1-2_amd64.deb ...
+Unpacking libpipeline1:amd64 (1.5.1-2) ...
+Selecting previously unselected package man-db.
+Preparing to unpack .../006-man-db_2.8.5-2_amd64.deb ...
+Unpacking man-db (2.8.5-2) ...
+Selecting previously unselected package perl-modules-5.28.
+Preparing to unpack .../007-perl-modules-5.28_5.28.1-6_all.deb ...
+Unpacking perl-modules-5.28 (5.28.1-6) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../008-libgdbm-compat4_1.18.1-4_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.18.1-4) ...
+Selecting previously unselected package libperl5.28:amd64.
+Preparing to unpack .../009-libperl5.28_5.28.1-6_amd64.deb ...
+Unpacking libperl5.28:amd64 (5.28.1-6) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../010-perl_5.28.1-6_amd64.deb ...
+Unpacking perl (5.28.1-6) ...
+Selecting previously unselected package libncurses6:amd64.
+Preparing to unpack .../011-libncurses6_6.1+20181013-2+deb10u2_amd64.deb ...
+Unpacking libncurses6:amd64 (6.1+20181013-2+deb10u2) ...
+Selecting previously unselected package libprocps7:amd64.
+Preparing to unpack .../012-libprocps7_2%3a3.3.15-2_amd64.deb ...
+Unpacking libprocps7:amd64 (2:3.3.15-2) ...
+Selecting previously unselected package lsb-base.
+Preparing to unpack .../013-lsb-base_10.2019051400_all.deb ...
+Unpacking lsb-base (10.2019051400) ...
+Selecting previously unselected package procps.
+Preparing to unpack .../014-procps_2%3a3.3.15-2_amd64.deb ...
+Unpacking procps (2:3.3.15-2) ...
+Selecting previously unselected package sensible-utils.
+Preparing to unpack .../015-sensible-utils_0.0.12_all.deb ...
+Unpacking sensible-utils (0.0.12) ...
+Selecting previously unselected package bzip2.
+Preparing to unpack .../016-bzip2_1.0.6-9.2~deb10u1_amd64.deb ...
+Unpacking bzip2 (1.0.6-9.2~deb10u1) ...
+Selecting previously unselected package libmagic-mgc.
+Preparing to unpack .../017-libmagic-mgc_1%3a5.35-4+deb10u1_amd64.deb ...
+Unpacking libmagic-mgc (1:5.35-4+deb10u1) ...
+Selecting previously unselected package libmagic1:amd64.
+Preparing to unpack .../018-libmagic1_1%3a5.35-4+deb10u1_amd64.deb ...
+Unpacking libmagic1:amd64 (1:5.35-4+deb10u1) ...
+Selecting previously unselected package file.
+Preparing to unpack .../019-file_1%3a5.35-4+deb10u1_amd64.deb ...
+Unpacking file (1:5.35-4+deb10u1) ...
+Selecting previously unselected package gettext-base.
+Preparing to unpack .../020-gettext-base_0.19.8.1-9_amd64.deb ...
+Unpacking gettext-base (0.19.8.1-9) ...
+Selecting previously unselected package gcc-8-base:armhf.
+Preparing to unpack .../021-gcc-8-base_8.3.0-6_armhf.deb ...
+Unpacking gcc-8-base:armhf (8.3.0-6) ...
+Selecting previously unselected package libgcc1:armhf.
+Preparing to unpack .../022-libgcc1_1%3a8.3.0-6_armhf.deb ...
+Unpacking libgcc1:armhf (1:8.3.0-6) ...
+Selecting previously unselected package libc6:armhf.
+Preparing to unpack .../023-libc6_2.28-10_armhf.deb ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Unpacking libc6:armhf (2.28-10) ...
+Selecting previously unselected package libgmp10:armhf.
+Preparing to unpack .../024-libgmp10_2%3a6.1.2+dfsg-4_armhf.deb ...
+Unpacking libgmp10:armhf (2:6.1.2+dfsg-4) ...
+Selecting previously unselected package libnettle6:armhf.
+Preparing to unpack .../025-libnettle6_3.4.1-1_armhf.deb ...
+Unpacking libnettle6:armhf (3.4.1-1) ...
+Selecting previously unselected package libhogweed4:armhf.
+Preparing to unpack .../026-libhogweed4_3.4.1-1_armhf.deb ...
+Unpacking libhogweed4:armhf (3.4.1-1) ...
+Selecting previously unselected package libunistring2:armhf.
+Preparing to unpack .../027-libunistring2_0.9.10-1_armhf.deb ...
+Unpacking libunistring2:armhf (0.9.10-1) ...
+Selecting previously unselected package libidn2-0:armhf.
+Preparing to unpack .../028-libidn2-0_2.0.5-1+deb10u1_armhf.deb ...
+Unpacking libidn2-0:armhf (2.0.5-1+deb10u1) ...
+Selecting previously unselected package libffi6:armhf.
+Preparing to unpack .../029-libffi6_3.2.1-9_armhf.deb ...
+Unpacking libffi6:armhf (3.2.1-9) ...
+Selecting previously unselected package libp11-kit0:armhf.
+Preparing to unpack .../030-libp11-kit0_0.23.15-2_armhf.deb ...
+Unpacking libp11-kit0:armhf (0.23.15-2) ...
+Selecting previously unselected package libtasn1-6:armhf.
+Preparing to unpack .../031-libtasn1-6_4.13-3_armhf.deb ...
+Unpacking libtasn1-6:armhf (4.13-3) ...
+Selecting previously unselected package libgnutls30:armhf.
+Preparing to unpack .../032-libgnutls30_3.6.7-4+deb10u4_armhf.deb ...
+Unpacking libgnutls30:armhf (3.6.7-4+deb10u4) ...
+Selecting previously unselected package xz-utils.
+Preparing to unpack .../033-xz-utils_5.2.4-1_amd64.deb ...
+Unpacking xz-utils (5.2.4-1) ...
+Selecting previously unselected package libsigsegv2:amd64.
+Preparing to unpack .../034-libsigsegv2_2.12-2_amd64.deb ...
+Unpacking libsigsegv2:amd64 (2.12-2) ...
+Selecting previously unselected package m4.
+Preparing to unpack .../035-m4_1.4.18-2_amd64.deb ...
+Unpacking m4 (1.4.18-2) ...
+Selecting previously unselected package autoconf.
+Preparing to unpack .../036-autoconf_2.69-11_all.deb ...
+Unpacking autoconf (2.69-11) ...
+Selecting previously unselected package autotools-dev.
+Preparing to unpack .../037-autotools-dev_20180224.1_all.deb ...
+Unpacking autotools-dev (20180224.1) ...
+Selecting previously unselected package automake.
+Preparing to unpack .../038-automake_1%3a1.16.1-4_all.deb ...
+Unpacking automake (1:1.16.1-4) ...
+Selecting previously unselected package autopoint.
+Preparing to unpack .../039-autopoint_0.19.8.1-9_all.deb ...
+Unpacking autopoint (0.19.8.1-9) ...
+Selecting previously unselected package binutils-common:amd64.
+Preparing to unpack .../040-binutils-common_2.31.1-16_amd64.deb ...
+Unpacking binutils-common:amd64 (2.31.1-16) ...
+Selecting previously unselected package libbinutils:amd64.
+Preparing to unpack .../041-libbinutils_2.31.1-16_amd64.deb ...
+Unpacking libbinutils:amd64 (2.31.1-16) ...
+Selecting previously unselected package binutils-x86-64-linux-gnu.
+Preparing to unpack .../042-binutils-x86-64-linux-gnu_2.31.1-16_amd64.deb ...
+Unpacking binutils-x86-64-linux-gnu (2.31.1-16) ...
+Selecting previously unselected package binutils.
+Preparing to unpack .../043-binutils_2.31.1-16_amd64.deb ...
+Unpacking binutils (2.31.1-16) ...
+Selecting previously unselected package binutils-arm-linux-gnueabihf.
+Preparing to unpack .../044-binutils-arm-linux-gnueabihf_2.31.1-16_amd64.deb ...
+Unpacking binutils-arm-linux-gnueabihf (2.31.1-16) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../045-libc-dev-bin_2.28-10_amd64.deb ...
+Unpacking libc-dev-bin (2.28-10) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../046-linux-libc-dev_4.19.118-2+deb10u1_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (4.19.118-2+deb10u1) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../047-libc6-dev_2.28-10_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.28-10) ...
+Selecting previously unselected package libisl19:amd64.
+Preparing to unpack .../048-libisl19_0.20-2_amd64.deb ...
+Unpacking libisl19:amd64 (0.20-2) ...
+Selecting previously unselected package libmpfr6:amd64.
+Preparing to unpack .../049-libmpfr6_4.0.2-1_amd64.deb ...
+Unpacking libmpfr6:amd64 (4.0.2-1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../050-libmpc3_1.1.0-1_amd64.deb ...
+Unpacking libmpc3:amd64 (1.1.0-1) ...
+Selecting previously unselected package cpp-8.
+Preparing to unpack .../051-cpp-8_8.3.0-6_amd64.deb ...
+Unpacking cpp-8 (8.3.0-6) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../052-cpp_4%3a8.3.0-1_amd64.deb ...
+Unpacking cpp (4:8.3.0-1) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../053-libcc1-0_8.3.0-6_amd64.deb ...
+Unpacking libcc1-0:amd64 (8.3.0-6) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../054-libgomp1_8.3.0-6_amd64.deb ...
+Unpacking libgomp1:amd64 (8.3.0-6) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../055-libitm1_8.3.0-6_amd64.deb ...
+Unpacking libitm1:amd64 (8.3.0-6) ...
+Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../056-libatomic1_8.3.0-6_amd64.deb ...
+Unpacking libatomic1:amd64 (8.3.0-6) ...
+Selecting previously unselected package libasan5:amd64.
+Preparing to unpack .../057-libasan5_8.3.0-6_amd64.deb ...
+Unpacking libasan5:amd64 (8.3.0-6) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../058-liblsan0_8.3.0-6_amd64.deb ...
+Unpacking liblsan0:amd64 (8.3.0-6) ...
+Selecting previously unselected package libtsan0:amd64.
+Preparing to unpack .../059-libtsan0_8.3.0-6_amd64.deb ...
+Unpacking libtsan0:amd64 (8.3.0-6) ...
+Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../060-libubsan1_8.3.0-6_amd64.deb ...
+Unpacking libubsan1:amd64 (8.3.0-6) ...
+Selecting previously unselected package libmpx2:amd64.
+Preparing to unpack .../061-libmpx2_8.3.0-6_amd64.deb ...
+Unpacking libmpx2:amd64 (8.3.0-6) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../062-libquadmath0_8.3.0-6_amd64.deb ...
+Unpacking libquadmath0:amd64 (8.3.0-6) ...
+Selecting previously unselected package libgcc-8-dev:amd64.
+Preparing to unpack .../063-libgcc-8-dev_8.3.0-6_amd64.deb ...
+Unpacking libgcc-8-dev:amd64 (8.3.0-6) ...
+Selecting previously unselected package gcc-8.
+Preparing to unpack .../064-gcc-8_8.3.0-6_amd64.deb ...
+Unpacking gcc-8 (8.3.0-6) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../065-gcc_4%3a8.3.0-1_amd64.deb ...
+Unpacking gcc (4:8.3.0-1) ...
+Selecting previously unselected package libstdc++-8-dev:amd64.
+Preparing to unpack .../066-libstdc++-8-dev_8.3.0-6_amd64.deb ...
+Unpacking libstdc++-8-dev:amd64 (8.3.0-6) ...
+Selecting previously unselected package g++-8.
+Preparing to unpack .../067-g++-8_8.3.0-6_amd64.deb ...
+Unpacking g++-8 (8.3.0-6) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../068-g++_4%3a8.3.0-1_amd64.deb ...
+Unpacking g++ (4:8.3.0-1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../069-make_4.2.1-1.2_amd64.deb ...
+Unpacking make (4.2.1-1.2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../070-libdpkg-perl_1.19.7_all.deb ...
+Unpacking libdpkg-perl (1.19.7) ...
+Selecting previously unselected package patch.
+Preparing to unpack .../071-patch_2.7.6-3+deb10u1_amd64.deb ...
+Unpacking patch (2.7.6-3+deb10u1) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../072-dpkg-dev_1.19.7_all.deb ...
+Unpacking dpkg-dev (1.19.7) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../073-build-essential_12.6_amd64.deb ...
+Unpacking build-essential (12.6) ...
+Selecting previously unselected package libssl1.1:amd64.
+Preparing to unpack .../074-libssl1.1_1.1.1d-0+deb10u3_amd64.deb ...
+Unpacking libssl1.1:amd64 (1.1.1d-0+deb10u3) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../075-openssl_1.1.1d-0+deb10u3_amd64.deb ...
+Unpacking openssl (1.1.1d-0+deb10u3) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../076-ca-certificates_20200601~deb10u1_all.deb ...
+Unpacking ca-certificates (20200601~deb10u1) ...
+Selecting previously unselected package cmake-data.
+Preparing to unpack .../077-cmake-data_3.13.4-1_all.deb ...
+Unpacking cmake-data (3.13.4-1) ...
+Selecting previously unselected package libicu63:amd64.
+Preparing to unpack .../078-libicu63_63.1-6+deb10u1_amd64.deb ...
+Unpacking libicu63:amd64 (63.1-6+deb10u1) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../079-libxml2_2.9.4+dfsg1-7+b3_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.4+dfsg1-7+b3) ...
+Selecting previously unselected package libarchive13:amd64.
+Preparing to unpack .../080-libarchive13_3.3.3-4+deb10u1_amd64.deb ...
+Unpacking libarchive13:amd64 (3.3.3-4+deb10u1) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../081-libkeyutils1_1.6-6_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6-6) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../082-libkrb5support0_1.17-3_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.17-3) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../083-libk5crypto3_1.17-3_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.17-3) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../084-libkrb5-3_1.17-3_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.17-3) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../085-libgssapi-krb5-2_1.17-3_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.17-3) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../086-libsasl2-modules-db_2.1.27+dfsg-1+deb10u1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.27+dfsg-1+deb10u1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../087-libsasl2-2_2.1.27+dfsg-1+deb10u1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.27+dfsg-1+deb10u1) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../088-libldap-common_2.4.47+dfsg-3+deb10u2_all.deb ...
+Unpacking libldap-common (2.4.47+dfsg-3+deb10u2) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../089-libldap-2.4-2_2.4.47+dfsg-3+deb10u2_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.47+dfsg-3+deb10u2) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../090-libnghttp2-14_1.36.0-2+deb10u1_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.36.0-2+deb10u1) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../091-libpsl5_0.20.2-2_amd64.deb ...
+Unpacking libpsl5:amd64 (0.20.2-2) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../092-librtmp1_2.4+20151223.gitfa8646d.1-2_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2) ...
+Selecting previously unselected package libssh2-1:amd64.
+Preparing to unpack .../093-libssh2-1_1.8.0-2.1_amd64.deb ...
+Unpacking libssh2-1:amd64 (1.8.0-2.1) ...
+Selecting previously unselected package libcurl4:amd64.
+Preparing to unpack .../094-libcurl4_7.64.0-4+deb10u1_amd64.deb ...
+Unpacking libcurl4:amd64 (7.64.0-4+deb10u1) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../095-libexpat1_2.2.6-2+deb10u1_amd64.deb ...
+Unpacking libexpat1:amd64 (2.2.6-2+deb10u1) ...
+Selecting previously unselected package libjsoncpp1:amd64.
+Preparing to unpack .../096-libjsoncpp1_1.7.4-3_amd64.deb ...
+Unpacking libjsoncpp1:amd64 (1.7.4-3) ...
+Selecting previously unselected package librhash0:amd64.
+Preparing to unpack .../097-librhash0_1.3.8-1_amd64.deb ...
+Unpacking librhash0:amd64 (1.3.8-1) ...
+Selecting previously unselected package libuv1:amd64.
+Preparing to unpack .../098-libuv1_1.24.1-1_amd64.deb ...
+Unpacking libuv1:amd64 (1.24.1-1) ...
+Selecting previously unselected package cmake.
+Preparing to unpack .../099-cmake_3.13.4-1_amd64.deb ...
+Unpacking cmake (3.13.4-1) ...
+Selecting previously unselected package gcc-8-arm-linux-gnueabihf-base:amd64.
+Preparing to unpack .../100-gcc-8-arm-linux-gnueabihf-base_8.3.0-2cross1_amd64.deb ...
+Unpacking gcc-8-arm-linux-gnueabihf-base:amd64 (8.3.0-2cross1) ...
+Selecting previously unselected package cpp-8-arm-linux-gnueabihf.
+Preparing to unpack .../101-cpp-8-arm-linux-gnueabihf_8.3.0-2cross1_amd64.deb ...
+Unpacking cpp-8-arm-linux-gnueabihf (8.3.0-2cross1) ...
+Selecting previously unselected package cpp-arm-linux-gnueabihf.
+Preparing to unpack .../102-cpp-arm-linux-gnueabihf_4%3a8.3.0-1_amd64.deb ...
+Unpacking cpp-arm-linux-gnueabihf (4:8.3.0-1) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../103-curl_7.64.0-4+deb10u1_amd64.deb ...
+Unpacking curl (7.64.0-4+deb10u1) ...
+Selecting previously unselected package libtool.
+Preparing to unpack .../104-libtool_2.4.6-9_all.deb ...
+Unpacking libtool (2.4.6-9) ...
+Selecting previously unselected package dh-autoreconf.
+Preparing to unpack .../105-dh-autoreconf_19_all.deb ...
+Unpacking dh-autoreconf (19) ...
+Selecting previously unselected package libarchive-zip-perl.
+Preparing to unpack .../106-libarchive-zip-perl_1.64-1_all.deb ...
+Unpacking libarchive-zip-perl (1.64-1) ...
+Selecting previously unselected package libfile-stripnondeterminism-perl.
+Preparing to unpack .../107-libfile-stripnondeterminism-perl_1.1.2-1_all.deb ...
+Unpacking libfile-stripnondeterminism-perl (1.1.2-1) ...
+Selecting previously unselected package dh-strip-nondeterminism.
+Preparing to unpack .../108-dh-strip-nondeterminism_1.1.2-1_all.deb ...
+Unpacking dh-strip-nondeterminism (1.1.2-1) ...
+Selecting previously unselected package libelf1:amd64.
+Preparing to unpack .../109-libelf1_0.176-1.1_amd64.deb ...
+Unpacking libelf1:amd64 (0.176-1.1) ...
+Selecting previously unselected package dwz.
+Preparing to unpack .../110-dwz_0.12-3_amd64.deb ...
+Unpacking dwz (0.12-3) ...
+Selecting previously unselected package libglib2.0-0:amd64.
+Preparing to unpack .../111-libglib2.0-0_2.58.3-2+deb10u2_amd64.deb ...
+Unpacking libglib2.0-0:amd64 (2.58.3-2+deb10u2) ...
+Selecting previously unselected package libcroco3:amd64.
+Preparing to unpack .../112-libcroco3_0.6.12-3_amd64.deb ...
+Unpacking libcroco3:amd64 (0.6.12-3) ...
+Selecting previously unselected package gettext.
+Preparing to unpack .../113-gettext_0.19.8.1-9_amd64.deb ...
+Unpacking gettext (0.19.8.1-9) ...
+Selecting previously unselected package intltool-debian.
+Preparing to unpack .../114-intltool-debian_0.35.0+20060710.5_all.deb ...
+Unpacking intltool-debian (0.35.0+20060710.5) ...
+Selecting previously unselected package po-debconf.
+Preparing to unpack .../115-po-debconf_1.0.21_all.deb ...
+Unpacking po-debconf (1.0.21) ...
+Selecting previously unselected package debhelper.
+Preparing to unpack .../116-debhelper_12.1.1_all.deb ...
+Unpacking debhelper (12.1.1) ...
+Selecting previously unselected package dh-systemd.
+Preparing to unpack .../117-dh-systemd_12.1.1_all.deb ...
+Unpacking dh-systemd (12.1.1) ...
+Selecting previously unselected package gcc-8-cross-base.
+Preparing to unpack .../118-gcc-8-cross-base_8.3.0-2cross1_all.deb ...
+Unpacking gcc-8-cross-base (8.3.0-2cross1) ...
+Selecting previously unselected package libc6-armhf-cross.
+Preparing to unpack .../119-libc6-armhf-cross_2.28-7cross1_all.deb ...
+Unpacking libc6-armhf-cross (2.28-7cross1) ...
+Selecting previously unselected package libgcc1-armhf-cross.
+Preparing to unpack .../120-libgcc1-armhf-cross_1%3a8.3.0-2cross1_all.deb ...
+Unpacking libgcc1-armhf-cross (1:8.3.0-2cross1) ...
+Selecting previously unselected package libgomp1-armhf-cross.
+Preparing to unpack .../121-libgomp1-armhf-cross_8.3.0-2cross1_all.deb ...
+Unpacking libgomp1-armhf-cross (8.3.0-2cross1) ...
+Selecting previously unselected package libatomic1-armhf-cross.
+Preparing to unpack .../122-libatomic1-armhf-cross_8.3.0-2cross1_all.deb ...
+Unpacking libatomic1-armhf-cross (8.3.0-2cross1) ...
+Selecting previously unselected package libstdc++6-armhf-cross.
+Preparing to unpack .../123-libstdc++6-armhf-cross_8.3.0-2cross1_all.deb ...
+Unpacking libstdc++6-armhf-cross (8.3.0-2cross1) ...
+Selecting previously unselected package libasan5-armhf-cross.
+Preparing to unpack .../124-libasan5-armhf-cross_8.3.0-2cross1_all.deb ...
+Unpacking libasan5-armhf-cross (8.3.0-2cross1) ...
+Selecting previously unselected package libubsan1-armhf-cross.
+Preparing to unpack .../125-libubsan1-armhf-cross_8.3.0-2cross1_all.deb ...
+Unpacking libubsan1-armhf-cross (8.3.0-2cross1) ...
+Selecting previously unselected package libgcc-8-dev-armhf-cross.
+Preparing to unpack .../126-libgcc-8-dev-armhf-cross_8.3.0-2cross1_all.deb ...
+Unpacking libgcc-8-dev-armhf-cross (8.3.0-2cross1) ...
+Selecting previously unselected package gcc-8-arm-linux-gnueabihf.
+Preparing to unpack .../127-gcc-8-arm-linux-gnueabihf_8.3.0-2cross1_amd64.deb ...
+Unpacking gcc-8-arm-linux-gnueabihf (8.3.0-2cross1) ...
+Selecting previously unselected package linux-libc-dev-armhf-cross.
+Preparing to unpack .../128-linux-libc-dev-armhf-cross_4.19.20-1cross1_all.deb ...
+Unpacking linux-libc-dev-armhf-cross (4.19.20-1cross1) ...
+Selecting previously unselected package libc6-dev-armhf-cross.
+Preparing to unpack .../129-libc6-dev-armhf-cross_2.28-7cross1_all.deb ...
+Unpacking libc6-dev-armhf-cross (2.28-7cross1) ...
+Selecting previously unselected package libstdc++-8-dev-armhf-cross.
+Preparing to unpack .../130-libstdc++-8-dev-armhf-cross_8.3.0-2cross1_all.deb ...
+Unpacking libstdc++-8-dev-armhf-cross (8.3.0-2cross1) ...
+Selecting previously unselected package g++-8-arm-linux-gnueabihf.
+Preparing to unpack .../131-g++-8-arm-linux-gnueabihf_8.3.0-2cross1_amd64.deb ...
+Unpacking g++-8-arm-linux-gnueabihf (8.3.0-2cross1) ...
+Selecting previously unselected package gcc-arm-linux-gnueabihf.
+Preparing to unpack .../132-gcc-arm-linux-gnueabihf_4%3a8.3.0-1_amd64.deb ...
+Unpacking gcc-arm-linux-gnueabihf (4:8.3.0-1) ...
+Selecting previously unselected package g++-arm-linux-gnueabihf.
+Preparing to unpack .../133-g++-arm-linux-gnueabihf_4%3a8.3.0-1_amd64.deb ...
+Unpacking g++-arm-linux-gnueabihf (4:8.3.0-1) ...
+Selecting previously unselected package libcurl3-gnutls:amd64.
+Preparing to unpack .../134-libcurl3-gnutls_7.64.0-4+deb10u1_amd64.deb ...
+Unpacking libcurl3-gnutls:amd64 (7.64.0-4+deb10u1) ...
+Selecting previously unselected package libpcre2-8-0:amd64.
+Preparing to unpack .../135-libpcre2-8-0_10.32-5_amd64.deb ...
+Unpacking libpcre2-8-0:amd64 (10.32-5) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../136-liberror-perl_0.17027-2_all.deb ...
+Unpacking liberror-perl (0.17027-2) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../137-git-man_1%3a2.20.1-2+deb10u3_all.deb ...
+Unpacking git-man (1:2.20.1-2+deb10u3) ...
+Selecting previously unselected package git.
+Preparing to unpack .../138-git_1%3a2.20.1-2+deb10u3_amd64.deb ...
+Unpacking git (1:2.20.1-2+deb10u3) ...
+Selecting previously unselected package linux-libc-dev:armhf.
+Preparing to unpack .../139-linux-libc-dev_4.19.118-2+deb10u1_armhf.deb ...
+Unpacking linux-libc-dev:armhf (4.19.118-2+deb10u1) ...
+Selecting previously unselected package libc6-dev:armhf.
+Preparing to unpack .../140-libc6-dev_2.28-10_armhf.deb ...
+Unpacking libc6-dev:armhf (2.28-10) ...
+Selecting previously unselected package libcom-err2:armhf.
+Preparing to unpack .../141-libcom-err2_1.44.5-1+deb10u3_armhf.deb ...
+Unpacking libcom-err2:armhf (1.44.5-1+deb10u3) ...
+Selecting previously unselected package libkeyutils1:armhf.
+Preparing to unpack .../142-libkeyutils1_1.6-6_armhf.deb ...
+Unpacking libkeyutils1:armhf (1.6-6) ...
+Selecting previously unselected package libkrb5support0:armhf.
+Preparing to unpack .../143-libkrb5support0_1.17-3_armhf.deb ...
+Unpacking libkrb5support0:armhf (1.17-3) ...
+Selecting previously unselected package libk5crypto3:armhf.
+Preparing to unpack .../144-libk5crypto3_1.17-3_armhf.deb ...
+Unpacking libk5crypto3:armhf (1.17-3) ...
+Selecting previously unselected package libssl1.1:armhf.
+Preparing to unpack .../145-libssl1.1_1.1.1d-0+deb10u3_armhf.deb ...
+Unpacking libssl1.1:armhf (1.1.1d-0+deb10u3) ...
+Selecting previously unselected package libkrb5-3:armhf.
+Preparing to unpack .../146-libkrb5-3_1.17-3_armhf.deb ...
+Unpacking libkrb5-3:armhf (1.17-3) ...
+Selecting previously unselected package libgssapi-krb5-2:armhf.
+Preparing to unpack .../147-libgssapi-krb5-2_1.17-3_armhf.deb ...
+Unpacking libgssapi-krb5-2:armhf (1.17-3) ...
+Selecting previously unselected package libdb5.3:armhf.
+Preparing to unpack .../148-libdb5.3_5.3.28+dfsg1-0.5_armhf.deb ...
+Unpacking libdb5.3:armhf (5.3.28+dfsg1-0.5) ...
+Selecting previously unselected package libsasl2-modules-db:armhf.
+Preparing to unpack .../149-libsasl2-modules-db_2.1.27+dfsg-1+deb10u1_armhf.deb ...
+Unpacking libsasl2-modules-db:armhf (2.1.27+dfsg-1+deb10u1) ...
+Selecting previously unselected package libsasl2-2:armhf.
+Preparing to unpack .../150-libsasl2-2_2.1.27+dfsg-1+deb10u1_armhf.deb ...
+Unpacking libsasl2-2:armhf (2.1.27+dfsg-1+deb10u1) ...
+Selecting previously unselected package libldap-2.4-2:armhf.
+Preparing to unpack .../151-libldap-2.4-2_2.4.47+dfsg-3+deb10u2_armhf.deb ...
+Unpacking libldap-2.4-2:armhf (2.4.47+dfsg-3+deb10u2) ...
+Selecting previously unselected package libnghttp2-14:armhf.
+Preparing to unpack .../152-libnghttp2-14_1.36.0-2+deb10u1_armhf.deb ...
+Unpacking libnghttp2-14:armhf (1.36.0-2+deb10u1) ...
+Selecting previously unselected package libpsl5:armhf.
+Preparing to unpack .../153-libpsl5_0.20.2-2_armhf.deb ...
+Unpacking libpsl5:armhf (0.20.2-2) ...
+Selecting previously unselected package zlib1g:armhf.
+Preparing to unpack .../154-zlib1g_1%3a1.2.11.dfsg-1_armhf.deb ...
+Unpacking zlib1g:armhf (1:1.2.11.dfsg-1) ...
+Selecting previously unselected package librtmp1:armhf.
+Preparing to unpack .../155-librtmp1_2.4+20151223.gitfa8646d.1-2_armhf.deb ...
+Unpacking librtmp1:armhf (2.4+20151223.gitfa8646d.1-2) ...
+Selecting previously unselected package libgpg-error0:armhf.
+Preparing to unpack .../156-libgpg-error0_1.35-1_armhf.deb ...
+Unpacking libgpg-error0:armhf (1.35-1) ...
+Selecting previously unselected package libgcrypt20:armhf.
+Preparing to unpack .../157-libgcrypt20_1.8.4-5_armhf.deb ...
+Unpacking libgcrypt20:armhf (1.8.4-5) ...
+Selecting previously unselected package libssh2-1:armhf.
+Preparing to unpack .../158-libssh2-1_1.8.0-2.1_armhf.deb ...
+Unpacking libssh2-1:armhf (1.8.0-2.1) ...
+Selecting previously unselected package libcurl4:armhf.
+Preparing to unpack .../159-libcurl4_7.64.0-4+deb10u1_armhf.deb ...
+Unpacking libcurl4:armhf (7.64.0-4+deb10u1) ...
+Selecting previously unselected package libcurl4-openssl-dev:armhf.
+Preparing to unpack .../160-libcurl4-openssl-dev_7.64.0-4+deb10u1_armhf.deb ...
+Unpacking libcurl4-openssl-dev:armhf (7.64.0-4+deb10u1) ...
+Selecting previously unselected package libssl-dev:armhf.
+Preparing to unpack .../161-libssl-dev_1.1.1d-0+deb10u3_armhf.deb ...
+Unpacking libssl-dev:armhf (1.1.1d-0+deb10u3) ...
+Selecting previously unselected package libuuid1:armhf.
+Preparing to unpack .../162-libuuid1_2.33.1-0.1_armhf.deb ...
+Unpacking libuuid1:armhf (2.33.1-0.1) ...
+Selecting previously unselected package uuid-dev:armhf.
+Preparing to unpack .../163-uuid-dev_2.33.1-0.1_armhf.deb ...
+Unpacking uuid-dev:armhf (2.33.1-0.1) ...
+Setting up perl-modules-5.28 (5.28.1-6) ...
+Setting up libexpat1:amd64 (2.2.6-2+deb10u1) ...
+Setting up libpipeline1:amd64 (1.5.1-2) ...
+Setting up lsb-base (10.2019051400) ...
+Setting up libkeyutils1:amd64 (1.6-6) ...
+Setting up libpsl5:amd64 (0.20.2-2) ...
+Setting up libc6-armhf-cross (2.28-7cross1) ...
+Setting up libmagic-mgc (1:5.35-4+deb10u1) ...
+Setting up libglib2.0-0:amd64 (2.58.3-2+deb10u2) ...
+No schema files found: doing nothing.
+Setting up libssl1.1:amd64 (1.1.1d-0+deb10u3) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Setting up gcc-8-cross-base (8.3.0-2cross1) ...
+Setting up libprocps7:amd64 (2:3.3.15-2) ...
+Setting up binutils-common:amd64 (2.31.1-16) ...
+Setting up libnghttp2-14:amd64 (1.36.0-2+deb10u1) ...
+Setting up libmagic1:amd64 (1:5.35-4+deb10u1) ...
+Setting up linux-libc-dev:amd64 (4.19.118-2+deb10u1) ...
+Setting up linux-libc-dev:armhf (4.19.118-2+deb10u1) ...
+Setting up gettext-base (0.19.8.1-9) ...
+Setting up file (1:5.35-4+deb10u1) ...
+Setting up libatomic1-armhf-cross (8.3.0-2cross1) ...
+Setting up libgomp1:amd64 (8.3.0-6) ...
+Setting up bzip2 (1.0.6-9.2~deb10u1) ...
+Setting up libldap-common (2.4.47+dfsg-3+deb10u2) ...
+Setting up libicu63:amd64 (63.1-6+deb10u1) ...
+Setting up libkrb5support0:amd64 (1.17-3) ...
+Setting up libsasl2-modules-db:amd64 (2.1.27+dfsg-1+deb10u1) ...
+Setting up libasan5:amd64 (8.3.0-6) ...
+Setting up autotools-dev (20180224.1) ...
+Setting up libuv1:amd64 (1.24.1-1) ...
+Setting up libgcc1-armhf-cross (1:8.3.0-2cross1) ...
+Setting up make (4.2.1-1.2) ...
+Setting up libmpfr6:amd64 (4.0.2-1) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2) ...
+Setting up gcc-8-arm-linux-gnueabihf-base:amd64 (8.3.0-2cross1) ...
+Setting up libncurses6:amd64 (6.1+20181013-2+deb10u2) ...
+Setting up libsigsegv2:amd64 (2.12-2) ...
+Setting up xz-utils (5.2.4-1) ...
+update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzma.1.gz because associated file /usr/share/man/man1/xz.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/unlzma.1.gz because associated file /usr/share/man/man1/unxz.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzcat.1.gz because associated file /usr/share/man/man1/xzcat.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzmore.1.gz because associated file /usr/share/man/man1/xzmore.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzless.1.gz because associated file /usr/share/man/man1/xzless.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzdiff.1.gz because associated file /usr/share/man/man1/xzdiff.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzcmp.1.gz because associated file /usr/share/man/man1/xzcmp.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzgrep.1.gz because associated file /usr/share/man/man1/xzgrep.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzegrep.1.gz because associated file /usr/share/man/man1/xzegrep.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzfgrep.1.gz because associated file /usr/share/man/man1/xzfgrep.1.gz (of link group lzma) doesn't exist
+Setting up libquadmath0:amd64 (8.3.0-6) ...
+Setting up libmpc3:amd64 (1.1.0-1) ...
+Setting up libatomic1:amd64 (8.3.0-6) ...
+Setting up patch (2.7.6-3+deb10u1) ...
+Setting up gcc-8-base:armhf (8.3.0-6) ...
+Setting up linux-libc-dev-armhf-cross (4.19.20-1cross1) ...
+Setting up autopoint (0.19.8.1-9) ...
+Setting up libpcre2-8-0:amd64 (10.32-5) ...
+Setting up libk5crypto3:amd64 (1.17-3) ...
+Setting up libsasl2-2:amd64 (2.1.27+dfsg-1+deb10u1) ...
+Setting up libmpx2:amd64 (8.3.0-6) ...
+Setting up libubsan1:amd64 (8.3.0-6) ...
+Setting up libisl19:amd64 (0.20-2) ...
+Setting up sensible-utils (0.0.12) ...
+Setting up librhash0:amd64 (1.3.8-1) ...
+Setting up libuchardet0:amd64 (0.0.6-3) ...
+Setting up procps (2:3.3.15-2) ...
+update-alternatives: using /usr/bin/w.procps to provide /usr/bin/w (w) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/w.1.gz because associated file /usr/share/man/man1/w.procps.1.gz (of link group w) doesn't exist
+Setting up git-man (1:2.20.1-2+deb10u3) ...
+Setting up libssh2-1:amd64 (1.8.0-2.1) ...
+Setting up cmake-data (3.13.4-1) ...
+Setting up libkrb5-3:amd64 (1.17-3) ...
+Setting up libbinutils:amd64 (2.31.1-16) ...
+Setting up cpp-8 (8.3.0-6) ...
+Setting up libc-dev-bin (2.28-10) ...
+Setting up openssl (1.1.1d-0+deb10u3) ...
+Setting up libbsd0:amd64 (0.9.1-2) ...
+Setting up binutils-arm-linux-gnueabihf (2.31.1-16) ...
+Setting up libelf1:amd64 (0.176-1.1) ...
+Setting up libxml2:amd64 (2.9.4+dfsg1-7+b3) ...
+Setting up libcc1-0:amd64 (8.3.0-6) ...
+Setting up liblsan0:amd64 (8.3.0-6) ...
+Setting up libitm1:amd64 (8.3.0-6) ...
+Setting up libjsoncpp1:amd64 (1.7.4-3) ...
+Setting up libgdbm6:amd64 (1.18.1-4) ...
+Setting up binutils-x86-64-linux-gnu (2.31.1-16) ...
+Setting up libtsan0:amd64 (8.3.0-6) ...
+Setting up cpp-8-arm-linux-gnueabihf (8.3.0-2cross1) ...
+Setting up libgomp1-armhf-cross (8.3.0-2cross1) ...
+Setting up libarchive13:amd64 (3.3.3-4+deb10u1) ...
+Setting up libc6-dev-armhf-cross (2.28-7cross1) ...
+Setting up libldap-2.4-2:amd64 (2.4.47+dfsg-3+deb10u2) ...
+Setting up m4 (1.4.18-2) ...
+Setting up binutils (2.31.1-16) ...
+Setting up ca-certificates (20200601~deb10u1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Updating certificates in /etc/ssl/certs...
+126 added, 0 removed; done.
+Setting up libstdc++6-armhf-cross (8.3.0-2cross1) ...
+Setting up bsdmainutils (11.1.2+b1) ...
+update-alternatives: using /usr/bin/bsd-write to provide /usr/bin/write (write) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/write.1.gz because associated file /usr/share/man/man1/bsd-write.1.gz (of link group write) doesn't exist
+update-alternatives: using /usr/bin/bsd-from to provide /usr/bin/from (from) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/from.1.gz because associated file /usr/share/man/man1/bsd-from.1.gz (of link group from) doesn't exist
+Setting up libgssapi-krb5-2:amd64 (1.17-3) ...
+Setting up libcroco3:amd64 (0.6.12-3) ...
+Setting up libgdbm-compat4:amd64 (1.18.1-4) ...
+Setting up libubsan1-armhf-cross (8.3.0-2cross1) ...
+Setting up libgcc-8-dev:amd64 (8.3.0-6) ...
+Setting up libperl5.28:amd64 (5.28.1-6) ...
+Setting up dwz (0.12-3) ...
+Setting up groff-base (1.22.4-3) ...
+Setting up cpp (4:8.3.0-1) ...
+Setting up libcurl4:amd64 (7.64.0-4+deb10u1) ...
+Setting up libc6-dev:amd64 (2.28-10) ...
+Setting up curl (7.64.0-4+deb10u1) ...
+Setting up cpp-arm-linux-gnueabihf (4:8.3.0-1) ...
+Setting up libstdc++-8-dev:amd64 (8.3.0-6) ...
+Setting up gettext (0.19.8.1-9) ...
+Setting up gcc-8 (8.3.0-6) ...
+Setting up libtool (2.4.6-9) ...
+Setting up libcurl3-gnutls:amd64 (7.64.0-4+deb10u1) ...
+Setting up man-db (2.8.5-2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Building database of manual pages ...
+Setting up libasan5-armhf-cross (8.3.0-2cross1) ...
+Setting up gcc (4:8.3.0-1) ...
+Setting up perl (5.28.1-6) ...
+Setting up libgcc-8-dev-armhf-cross (8.3.0-2cross1) ...
+Setting up libdpkg-perl (1.19.7) ...
+Setting up autoconf (2.69-11) ...
+Setting up g++-8 (8.3.0-6) ...
+Setting up cmake (3.13.4-1) ...
+Setting up libstdc++-8-dev-armhf-cross (8.3.0-2cross1) ...
+Setting up gcc-8-arm-linux-gnueabihf (8.3.0-2cross1) ...
+Setting up gcc-arm-linux-gnueabihf (4:8.3.0-1) ...
+Setting up automake (1:1.16.1-4) ...
+update-alternatives: using /usr/bin/automake-1.16 to provide /usr/bin/automake (automake) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/automake.1.gz because associated file /usr/share/man/man1/automake-1.16.1.gz (of link group automake) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/aclocal.1.gz because associated file /usr/share/man/man1/aclocal-1.16.1.gz (of link group automake) doesn't exist
+Setting up libarchive-zip-perl (1.64-1) ...
+Setting up dpkg-dev (1.19.7) ...
+Setting up intltool-debian (0.35.0+20060710.5) ...
+Setting up liberror-perl (0.17027-2) ...
+Setting up g++-8-arm-linux-gnueabihf (8.3.0-2cross1) ...
+Setting up git (1:2.20.1-2+deb10u3) ...
+Setting up g++ (4:8.3.0-1) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up build-essential (12.6) ...
+Setting up libfile-stripnondeterminism-perl (1.1.2-1) ...
+Setting up g++-arm-linux-gnueabihf (4:8.3.0-1) ...
+Setting up po-debconf (1.0.21) ...
+Setting up libc6:armhf (2.28-10) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Setting up libtasn1-6:armhf (4.13-3) ...
+Setting up libc6-dev:armhf (2.28-10) ...
+Setting up libdb5.3:armhf (5.3.28+dfsg1-0.5) ...
+Setting up libkeyutils1:armhf (1.6-6) ...
+Setting up libgpg-error0:armhf (1.35-1) ...
+Setting up libgcc1:armhf (1:8.3.0-6) ...
+Setting up libssl1.1:armhf (1.1.1d-0+deb10u3) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Setting up libnghttp2-14:armhf (1.36.0-2+deb10u1) ...
+Setting up libunistring2:armhf (0.9.10-1) ...
+Setting up libgcrypt20:armhf (1.8.4-5) ...
+Setting up debhelper (12.1.1) ...
+Setting up zlib1g:armhf (1:1.2.11.dfsg-1) ...
+Setting up libffi6:armhf (3.2.1-9) ...
+Setting up libidn2-0:armhf (2.0.5-1+deb10u1) ...
+Setting up libcom-err2:armhf (1.44.5-1+deb10u3) ...
+Setting up libkrb5support0:armhf (1.17-3) ...
+Setting up libsasl2-modules-db:armhf (2.1.27+dfsg-1+deb10u1) ...
+Setting up dh-autoreconf (19) ...
+Setting up libgmp10:armhf (2:6.1.2+dfsg-4) ...
+Setting up libp11-kit0:armhf (0.23.15-2) ...
+Setting up libssl-dev:armhf (1.1.1d-0+deb10u3) ...
+Setting up libuuid1:armhf (2.33.1-0.1) ...
+Setting up libk5crypto3:armhf (1.17-3) ...
+Setting up libnettle6:armhf (3.4.1-1) ...
+Setting up libsasl2-2:armhf (2.1.27+dfsg-1+deb10u1) ...
+Setting up dh-strip-nondeterminism (1.1.2-1) ...
+Setting up libssh2-1:armhf (1.8.0-2.1) ...
+Setting up libkrb5-3:armhf (1.17-3) ...
+Setting up dh-systemd (12.1.1) ...
+Setting up libpsl5:armhf (0.20.2-2) ...
+Setting up libhogweed4:armhf (3.4.1-1) ...
+Setting up libgnutls30:armhf (3.6.7-4+deb10u4) ...
+Setting up librtmp1:armhf (2.4+20151223.gitfa8646d.1-2) ...
+Setting up uuid-dev:armhf (2.33.1-0.1) ...
+Setting up libgssapi-krb5-2:armhf (1.17-3) ...
+Setting up libldap-2.4-2:armhf (2.4.47+dfsg-3+deb10u2) ...
+Setting up libcurl4:armhf (7.64.0-4+deb10u1) ...
+Setting up libcurl4-openssl-dev:armhf (7.64.0-4+deb10u1) ...
+Processing triggers for libc-bin (2.28-10) ...
+Processing triggers for ca-certificates (20200601~deb10u1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+Installing rustup
+info: downloading installer
+info: profile set to 'default'
+info: default host triple is x86_64-unknown-linux-gnu
+info: syncing channel updates for 'stable-x86_64-unknown-linux-gnu'
+info: latest update on 2020-07-16, rust version 1.45.0 (5c1f21c3b 2020-07-13)
+info: downloading component 'cargo'
+info: downloading component 'clippy'
+info: downloading component 'rust-docs'
+info: downloading component 'rust-std'
+info: downloading component 'rustc'
+info: downloading component 'rustfmt'
+info: installing component 'cargo'
+info: Defaulting to 500.0 MiB unpack ram
+info: installing component 'clippy'
+info: installing component 'rust-docs'
+info: installing component 'rust-std'
+info: installing component 'rustc'
+info: installing component 'rustfmt'
+info: default toolchain set to 'stable'
+
+  stable installed - rustc 1.45.0 (5c1f21c3b 2020-07-13)
+
+
+Rust is installed now. Great!
+
+To get started you need Cargo's bin directory ($HOME/.cargo/bin) in your PATH
+environment variable. Next time you log in this will be done
+automatically.
+
+To configure your current shell run source $HOME/.cargo/env
+-- The C compiler identification is GNU 8.3.0
+-- The CXX compiler identification is GNU 8.3.0
+-- Check for working C compiler: /usr/bin/arm-linux-gnueabihf-gcc
+-- Check for working C compiler: /usr/bin/arm-linux-gnueabihf-gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/arm-linux-gnueabihf-g++
+-- Check for working CXX compiler: /usr/bin/arm-linux-gnueabihf-g++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenSSL: /usr/lib/arm-linux-gnueabihf/libcrypto.so (found version "1.1.1d")  
+-- Looking for include file stdint.h
+-- Looking for include file stdint.h - found
+-- Looking for include file stdbool.h
+-- Looking for include file stdbool.h - found
+-- target architecture: ARM
+-- Performing Test CXX_FLAG_CXX11
+-- Performing Test CXX_FLAG_CXX11 - Success
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /project/edgelet/target/hsm
+Scanning dependencies of target aziotsharedutil
+[  1%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/azure_base64.c.o
+[  2%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/azure_base32.c.o
+[  3%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/constbuffer_array.c.o
+[  5%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/buffer.c.o
+[  6%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/connection_string_parser.c.o
+[  7%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/consolelogger.c.o
+[  8%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/crt_abstractions.c.o
+[ 10%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/constbuffer.c.o
+[ 11%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/constmap.c.o
+[ 12%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/doublylinkedlist.c.o
+[ 13%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/gballoc.c.o
+[ 15%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/gbnetwork.c.o
+[ 16%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/gb_rand.c.o
+[ 17%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/gb_time.c.o
+[ 18%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/gb_stdio.c.o
+[ 20%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/hmacsha256.c.o
+[ 21%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/hmac.c.o
+[ 22%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/singlylinkedlist.c.o
+[ 24%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/xio.c.o
+[ 25%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/map.c.o
+[ 26%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/sastoken.c.o
+[ 27%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/strings.c.o
+[ 29%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/sha1.c.o
+[ 30%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/sha224.c.o
+[ 31%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/string_token.c.o
+[ 32%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/uuid.c.o
+[ 34%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/sha384-512.c.o
+[ 35%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/string_tokenizer.c.o
+[ 36%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/usha.c.o
+[ 37%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/urlencode.c.o
+[ 39%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/vector.c.o
+[ 40%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/optionhandler.c.o
+[ 41%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/xlogging.c.o
+[ 43%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/agenttime.c.o
+[ 44%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/memory_data.c.o
+[ 46%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/platform_linux.c.o
+[ 45%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/condition_pthreads.c.o
+[ 48%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/lock_pthreads.c.o
+[ 49%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/socketio_berkeley.c.o
+[ 50%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/tickcounter_linux.c.o
+[ 51%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/threadapi_pthreads.c.o
+[ 53%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/uniqueid_stub.c.o
+[ 55%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/envvariable.c.o
+[ 54%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/linux_time.c.o
+[ 56%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/http_proxy_io.c.o
+[ 58%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/tlsio_openssl.c.o
+[ 59%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/adapters/x509_openssl.c.o
+[ 60%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/wsio.c.o
+[ 62%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/uws_client.c.o
+[ 63%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/uws_frame_encoder.c.o
+[ 64%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/utf8_checker.c.o
+[ 65%] Building C object deps/c-shared/CMakeFiles/aziotsharedutil.dir/src/ws_url.c.o
+[ 67%] Linking C static library libaziotsharedutil.a
+[ 67%] Built target aziotsharedutil
+Scanning dependencies of target utpm
+[ 68%] Building C object deps/utpm/CMakeFiles/utpm.dir/src/tpm_codec.c.o
+[ 69%] Building C object deps/utpm/CMakeFiles/utpm.dir/src/Marshal.c.o
+[ 70%] Building C object deps/utpm/CMakeFiles/utpm.dir/src/gbfiledescript.c.o
+[ 72%] Building C object deps/utpm/CMakeFiles/utpm.dir/src/tpm_comm_linux.c.o
+[ 73%] Building C object deps/utpm/CMakeFiles/utpm.dir/src/Memory.c.o
+[ 74%] Building C object deps/utpm/CMakeFiles/utpm.dir/src/tpm_socket_comm.c.o
+[ 75%] Linking C static library libutpm.a
+[ 75%] Built target utpm
+Scanning dependencies of target iothsm
+[ 77%] Building C object CMakeFiles/iothsm.dir/src/edge_hsm_client_crypto.c.o
+[ 78%] Building C object CMakeFiles/iothsm.dir/src/certificate_info.c.o
+[ 79%] Building C object CMakeFiles/iothsm.dir/src/constants.c.o
+[ 81%] Building C object CMakeFiles/iothsm.dir/src/edge_enc_openssl_key.c.o
+[ 82%] Building C object CMakeFiles/iothsm.dir/src/edge_sas_perform_sign_with_key.c.o
+[ 83%] Building C object CMakeFiles/iothsm.dir/src/edge_sas_key.c.o
+[ 84%] Building C object CMakeFiles/iothsm.dir/src/hsm_client_data.c.o
+[ 86%] Building C object CMakeFiles/iothsm.dir/src/edge_hsm_client_store.c.o
+[ 87%] Building C object CMakeFiles/iothsm.dir/src/edge_pki_openssl.c.o
+[ 88%] Building C object CMakeFiles/iothsm.dir/src/edge_hsm_client_x509.c.o
+[ 89%] Building C object CMakeFiles/iothsm.dir/src/edge_openssl_common.c.o
+[ 91%] Building C object CMakeFiles/iothsm.dir/src/hsm_client_tpm_device.c.o
+[ 92%] Building C object CMakeFiles/iothsm.dir/src/edge_hsm_key_interface.c.o
+[ 93%] Building C object CMakeFiles/iothsm.dir/src/hsm_certificate_props.c.o
+[ 94%] Building C object CMakeFiles/iothsm.dir/src/hsm_client_tpm_in_mem.c.o
+[ 96%] Building C object CMakeFiles/iothsm.dir/src/hsm_client_tpm_select.c.o
+[ 97%] Building C object CMakeFiles/iothsm.dir/src/hsm_log.c.o
+[ 98%] Building C object CMakeFiles/iothsm.dir/src/hsm_utils.c.o
+[100%] Linking C shared library libiothsm.so
+[100%] Built target iothsm
+Run CPack packaging tool...
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: iothsm
+CPack: - Install project: iothsm
+CPack: Create package
+CPack: - package: /project/edgelet/target/hsm/libiothsm-std_1.0.10~dev-1_armhf.deb generated.
+info: downloading component 'rust-std' for 'armv7-unknown-linux-gnueabihf'
+info: installing component 'rust-std' for 'armv7-unknown-linux-gnueabihf'
+info: Defaulting to 500.0 MiB unpack ram
+VERSION=1.0.10~dev cargo build --target armv7-unknown-linux-gnueabihf --release -p iotedged -p iotedge
+    Updating crates.io index
+    Updating git repository `https://github.com/Azure/hyperlocal-windows`
+    Updating git repository `https://github.com/Azure/mio-uds-windows.git`
+    Updating git repository `https://github.com/Azure/tokio-uds-windows.git`
+ Downloading crates ...
+  Downloaded ansi_term v0.11.0
+  Downloaded foreign-types v0.3.2
+  Downloaded foreign-types-shared v0.1.1
+  Downloaded futures-cpupool v0.1.8
+  Downloaded hmac v0.5.0
+  Downloaded memoffset v0.5.1
+  Downloaded semver v0.9.0
+  Downloaded libc v0.2.66
+  Downloaded quick-error v1.2.1
+  Downloaded crossbeam-epoch v0.7.2
+  Downloaded tokio-executor v0.1.8
+  Downloaded syn v0.14.9
+  Downloaded percent-encoding v1.0.1
+  Downloaded spin v0.5.2
+  Downloaded sysinfo v0.12.0
+  Downloaded regex-syntax v0.6.12
+  Downloaded string v0.2.1
+  Downloaded either v1.5.3
+  Downloaded lazy_static v1.4.0
+  Downloaded failure_derive v0.1.2
+  Downloaded num-integer v0.1.41
+  Downloaded arrayvec v0.4.7
+  Downloaded num-iter v0.1.39
+  Downloaded bytes v0.4.12
+  Downloaded autocfg v0.1.6
+  Downloaded adler32 v1.0.4
+  Downloaded h2 v0.1.26
+  Downloaded hyper v0.12.35
+  Downloaded futures v0.1.29
+  Downloaded http-body v0.1.0
+  Downloaded crypto-mac v0.5.2
+  Downloaded constant_time_eq v0.1.3
+  Downloaded bzip2 v0.3.3
+  Downloaded num_cpus v1.8.0
+  Downloaded generic-array v0.9.0
+  Downloaded nom v4.2.3
+  Downloaded openssl-probe v0.1.2
+  Downloaded once_cell v1.3.1
+  Downloaded iovec v0.1.2
+  Downloaded nix v0.14.1
+  Downloaded semver-parser v0.7.0
+  Downloaded scopeguard v0.3.3
+  Downloaded scopeguard v1.0.0
+  Downloaded rayon-core v1.6.0
+  Downloaded fnv v1.0.6
+  Downloaded ryu v0.2.7
+  Downloaded nodrop v0.1.12
+  Downloaded podio v0.1.6
+  Downloaded num v0.2.0
+  Downloaded hex v0.3.2
+  Downloaded rustc_version v0.2.3
+  Downloaded byte-tools v0.2.0
+  Downloaded regex v0.2.11
+  Downloaded sha2 v0.7.1
+  Downloaded num-complex v0.2.3
+  Downloaded crossbeam-deque v0.7.1
+  Downloaded block-buffer v0.3.3
+  Downloaded cfg-if v0.1.9
+  Downloaded http v0.1.18
+  Downloaded openssl v0.10.12
+  Downloaded slab v0.4.1
+  Downloaded crossbeam-queue v0.1.2
+  Downloaded serde_json v1.0.27
+  Downloaded fake-simd v0.1.2
+  Downloaded crc32fast v1.2.0
+  Downloaded rayon v1.2.0
+  Downloaded backtrace-sys v0.1.31
+  Downloaded regex-syntax v0.5.6
+  Downloaded safemem v0.2.0
+  Downloaded serde_yaml v0.7.4
+  Downloaded num-rational v0.2.2
+  Downloaded memchr v2.0.1
+  Downloaded doc-comment v0.3.1
+  Downloaded hyper-tls v0.3.2
+  Downloaded crossbeam-utils v0.6.6
+  Downloaded bitflags v1.0.3
+  Downloaded clap v2.31.2
+  Downloaded mio-uds v0.6.7
+  Downloaded env_logger v0.5.9
+  Downloaded strsim v0.7.0
+  Downloaded url v1.7.2
+  Downloaded pkg-config v0.3.11
+  Downloaded linked-hash-map v0.5.1
+  Downloaded proc-macro2 v0.4.19
+  Downloaded serde_derive v1.0.92
+  Downloaded native-tls v0.2.1
+  Downloaded ucd-util v0.1.1
+  Downloaded tokio-buf v0.1.1
+  Downloaded void v1.0.2
+  Downloaded url_serde v0.2.0
+  Downloaded want v0.2.0
+  Downloaded thread_local v0.3.5
+  Downloaded tokio-fs v0.1.6
+  Downloaded time v0.1.39
+  Downloaded tokio v0.1.22
+  Downloaded chrono v0.4.9
+  Downloaded tokio-io v0.1.8
+  Downloaded tokio-codec v0.1.0
+  Downloaded termcolor v0.3.6
+  Downloaded chrono-humanize v0.0.11
+  Downloaded tokio-threadpool v0.1.16
+  Downloaded mime v0.3.5
+  Downloaded tokio-uds v0.2.5
+  Downloaded openssl-sys v0.9.36
+  Downloaded tokio-tcp v0.1.0
+  Downloaded backtrace v0.3.34
+  Downloaded try-lock v0.2.2
+  Downloaded typenum v1.10.0
+  Downloaded atty v0.2.10
+  Downloaded byte-unit v3.0.3
+  Downloaded config v0.9.3
+  Downloaded arrayref v0.3.4
+  Downloaded failure v0.1.2
+  Downloaded log v0.4.5
+  Downloaded miniz_oxide v0.3.2
+  Downloaded consistenttime v0.2.0
+  Downloaded tokio-timer v0.2.11
+  Downloaded lazycell v0.6.0
+  Downloaded humantime v1.1.1
+  Downloaded flate2 v1.0.11
+  Downloaded num-bigint v0.2.3
+  Downloaded tokio-signal v0.2.5
+  Downloaded idna v0.1.4
+  Downloaded dtoa v0.4.2
+  Downloaded cmake v0.1.40
+  Downloaded serde v1.0.92
+  Downloaded digest v0.7.2
+  Downloaded base64 v0.9.1
+  Downloaded utf8-ranges v1.0.0
+  Downloaded httparse v1.2.4
+  Downloaded syn v0.15.36
+  Downloaded quote v0.6.8
+  Downloaded tabwriter v1.0.4
+  Downloaded parse_duration v2.0.1
+  Downloaded tokio-udp v0.1.0
+  Downloaded rustc-demangle v0.1.7
+  Downloaded sysinfo v0.9.6
+  Downloaded itoa v0.4.1
+  Downloaded cc v1.0.37
+  Downloaded hyperlocal v0.6.0
+  Downloaded indexmap v1.0.1
+  Downloaded matches v0.1.6
+  Downloaded mio v0.6.14
+  Downloaded regex v1.0.2
+  Downloaded hyper-proxy v0.5.0
+  Downloaded synstructure v0.9.0
+  Downloaded unicode-xid v0.1.0
+  Downloaded unicode-bidi v0.3.4
+  Downloaded unreachable v1.0.0
+  Downloaded unicode-width v0.1.4
+  Downloaded aho-corasick v0.6.4
+  Downloaded net2 v0.2.32
+  Downloaded tokio-tls v0.2.0
+  Downloaded byteorder v1.3.1
+  Downloaded bzip2-sys v0.1.7
+  Downloaded num-traits v0.2.8
+  Downloaded textwrap v0.9.0
+  Downloaded zip v0.5.3
+  Downloaded vec_map v0.8.0
+  Downloaded tokio-sync v0.1.7
+  Downloaded yaml-rust v0.4.0
+  Downloaded tokio-current-thread v0.1.6
+  Downloaded tokio-reactor v0.1.1
+  Downloaded unicase v2.1.0
+  Downloaded unicode-normalization v0.1.5
+  Downloaded typed-headers v0.1.0
+  Downloaded version_check v0.1.3
+   Compiling libc v0.2.66
+   Compiling cfg-if v0.1.9
+   Compiling spin v0.5.2
+   Compiling cc v1.0.37
+   Compiling autocfg v0.1.6
+   Compiling futures v0.1.29
+   Compiling byteorder v1.3.1
+   Compiling either v1.5.3
+   Compiling semver-parser v0.7.0
+   Compiling slab v0.4.1
+   Compiling nodrop v0.1.12
+   Compiling proc-macro2 v0.4.19
+   Compiling serde v1.0.92
+   Compiling scopeguard v1.0.0
+   Compiling unicode-xid v0.1.0
+   Compiling lazycell v0.6.0
+   Compiling version_check v0.1.3
+   Compiling itoa v0.4.1
+   Compiling fnv v1.0.6
+   Compiling failure_derive v0.1.2
+   Compiling rustc-demangle v0.1.7
+   Compiling void v1.0.2
+   Compiling matches v0.1.6
+   Compiling ryu v0.2.7
+   Compiling pkg-config v0.3.11
+   Compiling linked-hash-map v0.5.1
+   Compiling typenum v1.10.0
+   Compiling indexmap v1.0.1
+   Compiling try-lock v0.2.2
+   Compiling syn v0.15.36
+   Compiling safemem v0.2.0
+   Compiling unicode-normalization v0.1.5
+   Compiling percent-encoding v1.0.1
+   Compiling httparse v1.2.4
+   Compiling bitflags v1.0.3
+   Compiling utf8-ranges v1.0.0
+   Compiling ucd-util v0.1.1
+   Compiling regex v1.0.2
+   Compiling regex v0.2.11
+   Compiling foreign-types-shared v0.1.1
+   Compiling openssl v0.10.12
+   Compiling regex-syntax v0.6.12
+   Compiling native-tls v0.2.1
+   Compiling byte-tools v0.2.0
+   Compiling arrayref v0.3.4
+   Compiling constant_time_eq v0.1.3
+   Compiling fake-simd v0.1.2
+   Compiling openssl-probe v0.1.2
+   Compiling nix v0.14.1
+   Compiling consistenttime v0.2.0
+   Compiling dtoa v0.4.2
+   Compiling hex v0.3.2
+   Compiling scopeguard v0.3.3
+   Compiling rayon-core v1.6.0
+   Compiling doc-comment v0.3.1
+   Compiling sysinfo v0.12.0
+   Compiling once_cell v1.3.1
+   Compiling unicode-width v0.1.4
+   Compiling crc32fast v1.2.0
+   Compiling termcolor v0.3.6
+   Compiling ansi_term v0.11.0
+   Compiling strsim v0.7.0
+   Compiling adler32 v1.0.4
+   Compiling vec_map v0.8.0
+   Compiling sysinfo v0.9.6
+   Compiling quick-error v1.2.1
+   Compiling podio v0.1.6
+   Compiling byte-unit v3.0.3
+   Compiling log v0.4.5
+   Compiling lazy_static v1.4.0
+   Compiling cmake v0.1.40
+   Compiling num-traits v0.2.8
+   Compiling num-integer v0.1.41
+   Compiling num-bigint v0.2.3
+   Compiling num-rational v0.2.2
+   Compiling num-complex v0.2.3
+   Compiling num-iter v0.1.39
+   Compiling signal-future v0.1.0 (/project/edgelet/signal-future)
+   Compiling backtrace-sys v0.1.31
+   Compiling bzip2-sys v0.1.7
+   Compiling semver v0.9.0
+   Compiling arrayvec v0.4.7
+   Compiling tokio-sync v0.1.7
+   Compiling unicase v2.1.0
+   Compiling nom v4.2.3
+   Compiling unicode-bidi v0.3.4
+   Compiling unreachable v1.0.0
+   Compiling yaml-rust v0.4.0
+   Compiling openssl-sys v0.9.36
+   Compiling regex-syntax v0.5.6
+   Compiling foreign-types v0.3.2
+   Compiling block-buffer v0.3.3
+   Compiling textwrap v0.9.0
+   Compiling tabwriter v1.0.4
+   Compiling miniz_oxide v0.3.2
+   Compiling humantime v1.1.1
+   Compiling want v0.2.0
+   Compiling crossbeam-utils v0.6.6
+   Compiling hsm-sys v0.1.0 (/project/edgelet/hsm-sys)
+   Compiling rustc_version v0.2.3
+   Compiling thread_local v0.3.5
+   Compiling idna v0.1.4
+   Compiling tokio-executor v0.1.8
+   Compiling crossbeam-queue v0.1.2
+   Compiling iovec v0.1.2
+   Compiling num_cpus v1.8.0
+   Compiling net2 v0.2.32
+   Compiling time v0.1.39
+   Compiling memchr v2.0.1
+   Compiling atty v0.2.10
+   Compiling base64 v0.9.1
+   Compiling memoffset v0.5.1
+   Compiling hyper v0.12.35
+   Compiling quote v0.6.8
+   Compiling url v1.7.2
+   Compiling serde_json v1.0.27
+   Compiling serde_yaml v0.7.4
+   Compiling generic-array v0.9.0
+   Compiling flate2 v1.0.11
+   Compiling tokio-current-thread v0.1.6
+   Compiling tokio-timer v0.2.11
+   Compiling bytes v0.4.12
+   Compiling futures-cpupool v0.1.8
+   Compiling mio v0.6.14
+   Compiling aho-corasick v0.6.4
+   Compiling clap v2.31.2
+   Compiling bzip2 v0.3.3
+   Compiling backtrace v0.3.34
+   Compiling syn v0.14.9
+   Compiling mime v0.3.5
+   Compiling url_serde v0.2.0
+   Compiling digest v0.7.2
+   Compiling crypto-mac v0.5.2
+   Compiling tokio-io v0.1.8
+   Compiling http v0.1.18
+   Compiling tokio-buf v0.1.1
+   Compiling string v0.2.1
+   Compiling mio-uds v0.6.7
+   Compiling config v0.9.3
+   Compiling chrono v0.4.9
+   Compiling zip v0.5.3
+   Compiling synstructure v0.9.0
+   Compiling serde_derive v1.0.92
+   Compiling sha2 v0.7.1
+   Compiling hmac v0.5.0
+   Compiling tokio-reactor v0.1.1
+   Compiling tokio-codec v0.1.0
+   Compiling http-body v0.1.0
+   Compiling h2 v0.1.26
+   Compiling env_logger v0.5.9
+   Compiling typed-headers v0.1.0
+   Compiling chrono-humanize v0.0.11
+   Compiling crossbeam-epoch v0.7.2
+   Compiling tokio-tls v0.2.0
+   Compiling tokio-tcp v0.1.0
+   Compiling tokio-udp v0.1.0
+   Compiling tokio-signal v0.2.5
+   Compiling tokio-uds v0.2.5
+   Compiling num v0.2.0
+   Compiling crossbeam-deque v0.7.1
+   Compiling failure v0.1.2
+   Compiling parse_duration v2.0.1
+   Compiling tokio-threadpool v0.1.16
+   Compiling edgelet-utils v0.1.0 (/project/edgelet/edgelet-utils)
+   Compiling systemd v0.1.0 (/project/edgelet/systemd)
+   Compiling mini-sntp v0.1.0 (/project/edgelet/mini-sntp)
+   Compiling tokio-fs v0.1.6
+   Compiling rayon v1.2.0
+   Compiling tokio v0.1.22
+   Compiling edgelet-core v0.1.0 (/project/edgelet/edgelet-core)
+   Compiling hyper-tls v0.3.2
+   Compiling hyperlocal v0.6.0
+   Compiling docker v0.1.0 (/project/edgelet/docker-rs)
+   Compiling management v0.1.0 (/project/edgelet/management)
+   Compiling workload v0.1.0 (/project/edgelet/workload)
+   Compiling hyper-proxy v0.5.0
+   Compiling external-provisioning v0.1.0 (/project/edgelet/external-provisioning)
+   Compiling hsm v0.1.0 (/project/edgelet/hsm-rs)
+   Compiling edgelet-http v0.1.0 (/project/edgelet/edgelet-http)
+   Compiling edgelet-hsm v0.1.0 (/project/edgelet/edgelet-hsm)
+   Compiling dps v0.1.0 (/project/edgelet/dps)
+   Compiling edgelet-http-external-provisioning v0.1.0 (/project/edgelet/edgelet-http-external-provisioning)
+   Compiling iothubservice v0.1.0 (/project/edgelet/iothubservice)
+   Compiling provisioning v0.1.0 (/project/edgelet/provisioning)
+   Compiling edgelet-iothub v0.1.0 (/project/edgelet/edgelet-iothub)
+   Compiling edgelet-docker v0.1.0 (/project/edgelet/edgelet-docker)
+   Compiling edgelet-http-mgmt v0.1.0 (/project/edgelet/edgelet-http-mgmt)
+   Compiling edgelet-http-workload v0.1.0 (/project/edgelet/edgelet-http-workload)
+   Compiling iotedge v0.1.0 (/project/edgelet/iotedge)
+   Compiling iotedged v0.1.0 (/project/edgelet/iotedged)
+    Finished release [optimized] target(s) in 8m 01s
+install -D target/armv7-unknown-linux-gnueabihf/release/iotedged target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/iotedged
+install -D target/armv7-unknown-linux-gnueabihf/release/iotedge target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/iotedge
+install -m 644 -D ./contrib/systemd/debian/iotedge.service target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/debian/iotedge.service
+install -m 644 -D ./contrib/systemd/debian/iotedge.socket target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/debian/iotedge.socket
+install -m 644 -D ./contrib/systemd/debian/iotedge.mgmt.socket target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/debian/iotedge.mgmt.socket
+install -m 644 -D ./contrib/man/man1/iotedge.1 target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/man/iotedge.1
+install -m 644 -D ./contrib/man/man8/iotedged.8 target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/man/iotedged.8
+install -m 644 -D ./contrib/config/linux/debian/config.yaml target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/etc/iotedge/config.yaml.template
+install -m 644 -D ./contrib/config/linux/logrotate target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/etc/logrotate.d/iotedge
+install -m 644 -D ./contrib/docs/LICENSE target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/usr/share/doc/iotedge/LICENSE
+install -m 644 -D ./contrib/docs/ThirdPartyNotices target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/usr/share/doc/iotedge/ThirdPartyNotices
+install -m 644 -D ./contrib/docs/trademark target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/usr/share/doc/iotedge/trademark
+cp -R ./contrib/debian target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"
+sed "s/@version@/1.0.10~dev/g; s/@revision@/1/g;" ./contrib/debian/changelog > target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/debian/changelog
+sed "s/@version@/1.0.10~dev/g; s/@revision@/1/g;" ./contrib/debian/control > target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10"/debian/control
+cd target/armv7-unknown-linux-gnueabihf/release/"iotedge-1.0.10" && dpkg-buildpackage -b -us -uc -i --host-arch armhf
+dpkg-buildpackage: info: source package iotedge
+dpkg-buildpackage: info: source version 1.0.10~dev-1
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by "Azure IoT Edge Devs" <>
+dpkg-architecture: warning: specified GNU system type arm-linux-gnueabihf does not match CC system type x86_64-linux-gnu, try setting a correct CC environment variable
+dpkg-buildpackage: info: host architecture armhf
+ dpkg-source -i --before-build .
+ debian/rules clean
+make[1]: Entering directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+dh clean --with systemd
+   dh_clean
+make[1]: Leaving directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+ debian/rules build
+make[1]: Entering directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+dh build --with systemd
+   dh_update_autotools_config
+make[1]: Leaving directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+ debian/rules binary
+make[1]: Entering directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+dh binary --with systemd
+   dh_testroot
+   dh_prep
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_installman
+   dh_systemd_enable
+   debian/rules override_dh_installinit
+make[2]: Entering directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+dh_systemd_enable
+dh_installinit
+make[2]: Leaving directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+   debian/rules override_dh_systemd_start
+make[2]: Entering directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+echo "Not running dh_systemd_start"
+Not running dh_systemd_start
+make[2]: Leaving directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+   dh_lintian
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   debian/rules override_dh_strip
+make[2]: Entering directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+dh_strip --no-automatic-dbgsym
+make[2]: Leaving directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+   dh_makeshlibs
+   debian/rules override_dh_shlibdeps
+make[2]: Entering directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+dh_shlibdeps -l /project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10/../build/hsm-sys*/out/lib -- --ignore-missing-info
+make[2]: Leaving directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'iotedge' in '../iotedge_1.0.10~dev-1_armhf.deb'.
+make[1]: Leaving directory '/project/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge-1.0.10'
+ dpkg-genbuildinfo --build=binary
+ dpkg-genchanges --build=binary >../iotedge_1.0.10~dev-1_armhf.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source -i --after-build .
+dpkg-buildpackage: info: binary-only upload (no source included)
++ LIBIOTHSM_PACKAGE_NAME=libiothsm-std
++ case "$PACKAGE_OS" in
++ find /home/dengzt/repo/azure_iotedge.git/edgelet/target/hsm -maxdepth 1 -name 'libiothsm-std-*-Linux.deb'
++ read -r f
++ find /home/dengzt/repo/azure_iotedge.git/edgelet -name '*.deb'
+/home/dengzt/repo/azure_iotedge.git/edgelet/target/armv7-unknown-linux-gnueabihf/release/iotedge_1.0.10~dev-1_armhf.deb
+/home/dengzt/repo/azure_iotedge.git/edgelet/target/hsm/_CPack_Packages/Linux/DEB/libiothsm-std_1.0.10~dev-1_armhf.deb
+/home/dengzt/repo/azure_iotedge.git/edgelet/target/hsm/libiothsm-std_1.0.10~dev-1_armhf.deb
++ find /home/dengzt/repo/azure_iotedge.git/edgelet -name '*.rpm'
